@@ -19,9 +19,34 @@ import {
 } from "@/lib/design-system-showcase-fixtures";
 
 export default function DesignSystemPage() {
+  const designSystemHeaderItems = [
+    { href: "#primitives", label: "Primitives" },
+    { href: "#acoes", label: "Ações" },
+    { href: "#surfaces", label: "Superfícies" },
+    { href: "#forms", label: "Formulários" },
+    { href: "#navigation", label: "Navegação" },
+  ];
+
+  const designSystemHeaderCtas = [
+    { href: "#primitives", label: "Ver primitives", variant: "primary" as const },
+    { href: "#navigation", label: "Ver navegação", variant: "secondary" as const },
+  ];
+
+  const designSystemFooterPrimaryLinks = {
+    title: "Seções",
+    ariaLabel: "Seções do design system",
+    links: [
+      { href: "#primitives", label: "Primitives" },
+      { href: "#acoes", label: "Ações" },
+      { href: "#surfaces", label: "Superfícies" },
+      { href: "#forms", label: "Formulários" },
+      { href: "#navigation", label: "Navegação" },
+    ],
+  };
+
   return (
-    <main>
-      <HeaderNav />
+    <main id="fundacao">
+      <HeaderNav items={designSystemHeaderItems} ctas={designSystemHeaderCtas} />
       <Container className="py-16" size="content" gutter="md">
         <Stack gap="lg">
           <Section
@@ -129,7 +154,7 @@ export default function DesignSystemPage() {
           </Section>
         </Stack>
       </Container>
-      <Footer />
+      <Footer primaryLinks={designSystemFooterPrimaryLinks} />
     </main>
   );
 }

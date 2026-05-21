@@ -13,15 +13,16 @@ type HeaderNavCta = {
 };
 
 const defaultNavItems = [
-  { href: "#fundacao", label: "Fundacao" },
-  { href: "#playground-botoes", label: "Acoes" },
-  { href: "#playground-badges-cards", label: "Conteudo" },
-  { href: "#quero-ajudar", label: "Contato" },
+  { href: "#fundacao", label: "Início" },
+  { href: "#atuacao", label: "Atuação" },
+  { href: "#preciso-de-apoio", label: "Preciso de apoio" },
+  { href: "#transparencia", label: "Transparência" },
+  { href: "#como-ajudar", label: "Quero ajudar" },
 ] as const satisfies NavItem[];
 
 const defaultCtas = [
-  { href: "#preciso-apoio", label: "Preciso de apoio", variant: "primary" },
-  { href: "#quero-ajudar", label: "Quero ajudar", variant: "secondary" },
+  { href: "#preciso-de-apoio", label: "Preciso de apoio", variant: "primary" },
+  { href: "#como-ajudar", label: "Quero ajudar", variant: "secondary" },
 ] as const satisfies HeaderNavCta[];
 
 export type HeaderNavProps = {

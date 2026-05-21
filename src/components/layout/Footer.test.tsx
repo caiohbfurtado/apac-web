@@ -18,13 +18,25 @@ describe("Footer", () => {
     const institutionalNav = screen.getByRole("navigation", { name: "Links institucionais" });
     const contactNav = screen.getByRole("navigation", { name: "Canais de contato" });
 
-    expect(within(institutionalNav).getByRole("link", { name: "Fundacao" })).toHaveAttribute(
+    expect(within(institutionalNav).getByRole("link", { name: "Início" })).toHaveAttribute(
       "href",
       "#fundacao",
     );
+    expect(within(institutionalNav).getByRole("link", { name: "Atuação" })).toHaveAttribute(
+      "href",
+      "#atuacao",
+    );
     expect(
       within(institutionalNav).getByRole("link", { name: "Preciso de apoio" }),
-    ).toHaveAttribute("href", "#preciso-apoio");
+    ).toHaveAttribute("href", "#preciso-de-apoio");
+    expect(within(institutionalNav).getByRole("link", { name: "Transparência" })).toHaveAttribute(
+      "href",
+      "#transparencia",
+    );
+    expect(within(institutionalNav).getByRole("link", { name: "Quero ajudar" })).toHaveAttribute(
+      "href",
+      "#como-ajudar",
+    );
 
     expect(within(contactNav).getByRole("link", { name: "(11) 3456-0000" })).toHaveAttribute(
       "href",

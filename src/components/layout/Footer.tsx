@@ -18,10 +18,11 @@ const defaultPrimaryLinks: FooterLinkGroup = {
   title: "Institucional",
   ariaLabel: "Links institucionais",
   links: [
-    { href: "#fundacao", label: "Fundacao" },
-    { href: "#preciso-apoio", label: "Preciso de apoio" },
-    { href: "#quero-ajudar", label: "Quero ajudar" },
-    { href: "#playground-badges-cards", label: "Transparencia" },
+    { href: "#fundacao", label: "Início" },
+    { href: "#atuacao", label: "Atuação" },
+    { href: "#preciso-de-apoio", label: "Preciso de apoio" },
+    { href: "#transparencia", label: "Transparência" },
+    { href: "#como-ajudar", label: "Quero ajudar" },
   ],
 };
 

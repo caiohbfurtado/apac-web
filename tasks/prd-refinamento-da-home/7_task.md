@@ -26,10 +26,10 @@ Ajustar os componentes institucionais de navegação e rodapé para refletirem a
 
 ## Subtarefas
 
-- [ ] 7.1 Revisar e atualizar a arquitetura de links do header desktop e do menu mobile.
-- [ ] 7.2 Garantir que a CTA principal do topo reflita a prioridade editorial da nova home.
-- [ ] 7.3 Ajustar o rodapé para espelhar os caminhos institucionais e reforçar confiança.
-- [ ] 7.4 Validar consistência entre âncoras, foco, ordem de tabulação e leitura.
+- [x] 7.1 Revisar e atualizar a arquitetura de links do header desktop e do menu mobile.
+- [x] 7.2 Garantir que a CTA principal do topo reflita a prioridade editorial da nova home.
+- [x] 7.3 Ajustar o rodapé para espelhar os caminhos institucionais e reforçar confiança.
+- [x] 7.4 Validar consistência entre âncoras, foco, ordem de tabulação e leitura.
 
 ## Detalhes de Implementação
 
@@ -46,10 +46,10 @@ Referenciar no `techspec.md` as seções:
 
 ## Testes da Tarefa
 
-- [ ] Validação com `npm run lint`
-- [ ] Validação com `npm run build`
-- [ ] Testes de componente ou composição, se aplicável
-- [ ] Testes E2E (se aplicável)
+- [x] Validação com `npm run lint`
+- [x] Validação com `npm run build`
+- [x] Testes de componente ou composição, se aplicável
+- [x] Testes E2E (se aplicável)
 
 <critical>SEMPRE CRIE E EXECUTE OS TESTES DA TAREFA ANTES DE CONSIDERÁ-LA FINALIZADA</critical>
 

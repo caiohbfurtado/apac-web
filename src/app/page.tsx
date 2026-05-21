@@ -12,23 +12,24 @@ import { homeContent } from "@/lib/home-content";
 import { hasCampaigns, hasSponsors, homeEditorialContent } from "@/lib/home-editorial-content";
 
 const headerItems = [
-  { href: `#${homeContent.institution.id}`, label: "Atuacao" },
-  { href: `#${homeContent.support.id}`, label: "Apoio" },
+  { href: `#${homeContent.hero.id}`, label: "Início" },
+  { href: `#${homeContent.institution.id}`, label: "Atuação" },
+  { href: `#${homeContent.support.id}`, label: "Preciso de apoio" },
   ...(hasCampaigns
     ? [{ href: `#${homeEditorialContent.campaigns.section.id}`, label: "Campanhas" }]
     : []),
   ...(hasSponsors
     ? [{ href: `#${homeEditorialContent.sponsors.section.id}`, label: "Patrocinadores" }]
     : []),
-  { href: `#${homeContent.trust.id}`, label: "Transparencia" },
+  { href: `#${homeContent.trust.id}`, label: "Transparência" },
 ] as const;
 
 const footerPrimaryLinks = {
   title: "Institucional",
   ariaLabel: "Links institucionais",
   links: [
-    { href: `#${homeContent.hero.id}`, label: "Inicio" },
-    { href: `#${homeContent.institution.id}`, label: "Atuacao" },
+    { href: `#${homeContent.hero.id}`, label: "Início" },
+    { href: `#${homeContent.institution.id}`, label: "Atuação" },
     { href: `#${homeContent.support.id}`, label: "Preciso de apoio" },
     { href: `#${homeContent.closing.id}`, label: "Quero ajudar" },
   ],
