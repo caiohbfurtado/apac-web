@@ -21,7 +21,7 @@ Guia enxuto para agentes de IA trabalhando neste repositório.
 ## Regras Universais
 
 - Sempre verifique as skills relevantes antes de implementar
-- Para trabalho de frontend, comece por `brainstorming` e depois use apenas as skills que realmente se aplicam
+- Para trabalho de frontend, comece por `brainstorming` e depois use apenas as skills que realmente se aplicam; quando houver decisão ou refinamento visual, inclua `frontend-design` como skill principal de execução
 - Quando a tarefa envolver regras de negócio, linguagem de domínio ou decisões difíceis de reverter, use `grill-with-docs` para tensionar o plano e registrar termos e decisões
 - Trate `DESIGN.md` como fonte de verdade de design do projeto
 - Sempre que criar, alterar ou promover um padrão visual reutilizável, atualize `DESIGN.md` na mesma tarefa

@@ -14,6 +14,7 @@ Este documento registra os padrões visuais, princípios de interface e regras d
 ## Como usar
 
 - Consulte este arquivo antes de criar ou alterar UI relevante.
+- Para qualquer nova direção visual, refinamento de interface ou composição de seções, comece com `brainstorming` e use `frontend-design` como skill principal de execução visual, mantendo este arquivo como referência de design.
 - Atualize este arquivo quando uma decisão de design mudar ou quando um novo padrão reutilizável for introduzido.
 - Não trate implementações isoladas como padrão só porque já existem no código.
 - Se um novo componente exigir uma exceção, documente a exceção aqui junto com a justificativa.

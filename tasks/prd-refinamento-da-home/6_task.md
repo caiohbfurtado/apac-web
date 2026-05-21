@@ -10,6 +10,7 @@ Criar o bloco de patrocinadores e apoiadores da home como prova social instituci
 ### Conformidade com Skills Padrões
 
 - `brainstorming`
+- `frontend-design`
 - `ui-craft`
 - `tailwindcss`
 - `web-design-guidelines`

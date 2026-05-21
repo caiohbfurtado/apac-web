@@ -19,6 +19,12 @@
       "skillPath": "skills/exa-web-search-free/SKILL.md",
       "computedHash": "4e2bce6b4826fa8bbc7a409caf9e861b5f47f59a298c1431819a5fc58ab81862"
     },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "computedHash": "063a0e6448123cd359ad0044cc46b0e490cc7964d45ef4bb9fd842bd2ffbca67"
+    },
     "grill-with-docs": {
       "source": "mattpocock/skills",
       "sourceType": "github",

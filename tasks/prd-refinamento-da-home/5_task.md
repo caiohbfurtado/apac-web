@@ -10,6 +10,7 @@ Adicionar à home um bloco editorial de campanhas em destaque que possa aparecer
 ### Conformidade com Skills Padrões
 
 - `brainstorming`
+- `frontend-design`
 - `ui-craft`
 - `tailwindcss`
 - `next-best-practices`

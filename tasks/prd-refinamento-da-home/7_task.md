@@ -10,6 +10,7 @@ Ajustar os componentes institucionais de navegação e rodapé para refletirem a
 ### Conformidade com Skills Padrões
 
 - `brainstorming`
+- `frontend-design`
 - `ui-craft`
 - `web-design-guidelines`
 - `next-best-practices`

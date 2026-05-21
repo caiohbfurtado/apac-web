@@ -10,6 +10,7 @@ Consolidar a entrega do refinamento da home atualizando a cobertura de testes da
 ### Conformidade com Skills Padrões
 
 - `brainstorming`
+- `frontend-design`
 - `next-best-practices`
 - `vercel-react-best-practices`
 - `web-design-guidelines`
