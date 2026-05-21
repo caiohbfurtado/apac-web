@@ -86,6 +86,17 @@ Regras:
 - CTA principal pode ocupar largura total em mobile.
 - Containers e seções futuras devem preservar leitura confortável e respiro consistente.
 
+#### Primitives de layout
+
+- `Container` (`components/layout/Container.tsx`): padroniza largura máxima e gutters responsivos.
+  - Use `size="content"` como default (leitura confortável) e `gutter="md"` para padding responsivo.
+  - Use `as="main"` / `as="section"` quando a semântica pedir.
+- `Stack` (`components/layout/Stack.tsx`): pilha flex com espaçamento previsível via `gap`.
+  - Use `direction="vertical"` como default e aplique responsividade via `className` (`sm:flex-row`, etc.).
+- `Section` (`components/layout/Section.tsx`): wrapper semântico para blocos da landing e páginas.
+  - Use `surface` (`default`/`muted`) para variação de superfície e `spacing` (`tight`/`normal`/`loose`) para densidade.
+  - Prefira usar `heading`, `description` e `actions` como slots em vez de replicar estrutura manualmente.
+
 ### Componentes
 
 - Preferir composição a APIs infladas por booleans.

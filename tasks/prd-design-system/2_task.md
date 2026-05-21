@@ -25,10 +25,10 @@ Construir as primitives de layout que sustentam a composição do design system:
 
 ## Subtarefas
 
-- [ ] 2.1 Implementar `Container` com API simples e previsível.
-- [ ] 2.2 Implementar `Stack` para fluxos verticais e horizontais recorrentes.
-- [ ] 2.3 Implementar `Section` como wrapper semântico reutilizável para blocos da landing.
-- [ ] 2.4 Escrever testes cobrindo semântica, variantes e composição básica dessas primitives.
+- [x] 2.1 Implementar `Container` com API simples e previsível.
+- [x] 2.2 Implementar `Stack` para fluxos verticais e horizontais recorrentes.
+- [x] 2.3 Implementar `Section` como wrapper semântico reutilizável para blocos da landing.
+- [x] 2.4 Escrever testes cobrindo semântica, variantes e composição básica dessas primitives.
 
 ## Detalhes de Implementação
 
@@ -46,9 +46,9 @@ Referenciar no `techspec.md` as seções:
 
 ## Testes da Tarefa
 
-- [ ] Validação com `npm run lint`
-- [ ] Validação com `npm run build`
-- [ ] Testes de componente ou composição, se aplicável
+- [x] Validação com `npm run lint`
+- [x] Validação com `npm run build`
+- [x] Testes de componente ou composição, se aplicável
 - [ ] Testes E2E (se aplicável)
 
 <critical>SEMPRE CRIE E EXECUTE OS TESTES DA TAREFA ANTES DE CONSIDERÁ-LA FINALIZADA</critical>
