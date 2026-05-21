@@ -24,10 +24,10 @@ Preparar a base editorial da home separando o conteúdo institucional fixo das l
 
 ## Subtarefas
 
-- [ ] 1.1 Revisar o conteúdo atual da home e separar o que é fixo do que é editorial e opcional.
-- [ ] 1.2 Definir a estrutura local de `campaigns` e `sponsors` com tipagem e campos coerentes com a tech spec.
-- [ ] 1.3 Ajustar `home-content.ts` e o novo arquivo de dados para reduzir acoplamento com `page.tsx`.
-- [ ] 1.4 Validar que arrays vazios podem ser consumidos sem gerar fallback visual artificial.
+- [x] 1.1 Revisar o conteúdo atual da home e separar o que é fixo do que é editorial e opcional.
+- [x] 1.2 Definir a estrutura local de `campaigns` e `sponsors` com tipagem e campos coerentes com a tech spec.
+- [x] 1.3 Ajustar `home-content.ts` e o novo arquivo de dados para reduzir acoplamento com `page.tsx`.
+- [x] 1.4 Validar que arrays vazios podem ser consumidos sem gerar fallback visual artificial.
 
 ## Detalhes de Implementação
 

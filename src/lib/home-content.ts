@@ -48,22 +48,6 @@ export const homeContent = {
     description:
       "Conte brevemente sua situacao para que nossa equipe direcione o melhor canal de atendimento.",
   },
-  campaigns: {
-    id: "campanhas",
-    heading: "Campanhas em andamento",
-    cards: [
-      {
-        badge: "Doacao",
-        title: "Cesta de cuidado",
-        description: "Monte kits com itens essenciais para familias em tratamento prolongado.",
-      },
-      {
-        badge: "Mobilizacao",
-        title: "Voluntariado de escuta",
-        description: "Participe de turnos de acolhimento e apoio remoto supervisionado.",
-      },
-    ],
-  },
   trust: {
     id: "transparencia",
     heading: "Confianca e transparencia",

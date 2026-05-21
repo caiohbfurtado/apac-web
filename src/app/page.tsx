@@ -12,22 +12,24 @@ import {
   WhatsAppButton,
 } from "@/components/ui";
 import { homeContent } from "@/lib/home-content";
+import { hasCampaigns, homeEditorialContent } from "@/lib/home-editorial-content";
+
+const headerItems = [
+  { href: `#${homeContent.institution.id}`, label: "Atuacao" },
+  { href: `#${homeContent.support.id}`, label: "Apoio" },
+  ...(hasCampaigns
+    ? [{ href: `#${homeEditorialContent.campaigns.section.id}`, label: "Campanhas" }]
+    : []),
+  { href: `#${homeContent.trust.id}`, label: "Transparencia" },
+] as const;
 
 export default function Home() {
   return (
     <main>
-      <HeaderNav
-        items={[
-          { href: `#${homeContent.institution.id}`, label: "Atuacao" },
-          { href: `#${homeContent.support.id}`, label: "Apoio" },
-          { href: `#${homeContent.campaigns.id}`, label: "Campanhas" },
-          { href: `#${homeContent.trust.id}`, label: "Transparencia" },
-        ]}
-        ctas={[
-          { href: homeContent.hero.ctas.support.href, label: homeContent.hero.ctas.support.label, variant: "primary" },
-          { href: homeContent.hero.ctas.help.href, label: homeContent.hero.ctas.help.label, variant: "secondary" },
-        ]}
-      />
+      <HeaderNav items={[...headerItems]} ctas={[
+        { href: homeContent.hero.ctas.support.href, label: homeContent.hero.ctas.support.label, variant: "primary" },
+        { href: homeContent.hero.ctas.help.href, label: homeContent.hero.ctas.help.label, variant: "secondary" },
+      ]} />
 
       <Container className="py-16" size="content" gutter="md">
         <Stack gap="lg">
@@ -100,21 +102,23 @@ export default function Home() {
             </Stack>
           </Section>
 
-          <Section
-            id={homeContent.campaigns.id}
-            heading={<Heading as="h2" size="lg">{homeContent.campaigns.heading}</Heading>}
-          >
-            <div className="grid gap-6 md:grid-cols-2">
-              {homeContent.campaigns.cards.map((card) => (
-                <Card
-                  key={card.title}
-                  title={card.title}
-                  description={card.description}
-                  action={<Badge tone="info">{card.badge}</Badge>}
-                />
-              ))}
-            </div>
-          </Section>
+          {hasCampaigns ? (
+            <Section
+              id={homeEditorialContent.campaigns.section.id}
+              heading={<Heading as="h2" size="lg">{homeEditorialContent.campaigns.section.heading}</Heading>}
+            >
+              <div className="grid gap-6 md:grid-cols-2">
+                {homeEditorialContent.campaigns.items.map((card) => (
+                  <Card
+                    key={card.slug}
+                    title={card.title}
+                    description={card.description}
+                    action={<Badge tone="info">{card.badge}</Badge>}
+                  />
+                ))}
+              </div>
+            </Section>
+          ) : null}
 
           <Section
             id={homeContent.trust.id}

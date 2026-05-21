@@ -2,7 +2,7 @@
 
 ## Tarefas
 
-- [ ] 1.0 Modelar a camada de conteúdo da home
+- [x] 1.0 Modelar a camada de conteúdo da home
 - [ ] 2.0 Reestruturar a home em seções compostas
 - [ ] 3.0 Implementar o hero e a hierarquia principal de CTAs
 - [ ] 4.0 Implementar os blocos institucionais centrais
