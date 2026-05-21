@@ -26,10 +26,10 @@ Consolidar a entrega do refinamento da home atualizando a cobertura de testes da
 
 ## Subtarefas
 
-- [ ] 8.1 Atualizar ou criar testes da home e dos componentes alterados com foco em composição e acessibilidade básica.
-- [ ] 8.2 Cobrir cenários com e sem campanhas e patrocinadores.
-- [ ] 8.3 Validar CTAs principais, landmarks, headings e links internos mais importantes.
-- [ ] 8.4 Executar `npm run lint` e `npm run build` como fechamento da entrega.
+- [x] 8.1 Atualizar ou criar testes da home e dos componentes alterados com foco em composição e acessibilidade básica.
+- [x] 8.2 Cobrir cenários com e sem campanhas e patrocinadores.
+- [x] 8.3 Validar CTAs principais, landmarks, headings e links internos mais importantes.
+- [x] 8.4 Executar `npm run lint` e `npm run build` como fechamento da entrega.
 
 ## Detalhes de Implementação
 
@@ -46,9 +46,9 @@ Referenciar no `techspec.md` as seções:
 
 ## Testes da Tarefa
 
-- [ ] Validação com `npm run lint`
-- [ ] Validação com `npm run build`
-- [ ] Testes de componente ou composição, se aplicável
+- [x] Validação com `npm run lint`
+- [x] Validação com `npm run build`
+- [x] Testes de componente ou composição, se aplicável
 - [ ] Testes E2E (se aplicável)
 
 <critical>SEMPRE CRIE E EXECUTE OS TESTES DA TAREFA ANTES DE CONSIDERÁ-LA FINALIZADA</critical>

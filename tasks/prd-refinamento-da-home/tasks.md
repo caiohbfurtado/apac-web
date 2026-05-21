@@ -9,6 +9,6 @@
 - [x] 5.0 Implementar campanhas em destaque com exibição opcional
 - [x] 6.0 Implementar patrocinadores e apoiadores com exibição opcional
 - [x] 7.0 Ajustar navegação e rodapé para a nova arquitetura
-- [ ] 8.0 Atualizar testes e executar validação final
+- [x] 8.0 Atualizar testes e executar validação final
 
 > A partir da tarefa 5.0, `frontend-design` passa a fazer parte do fluxo padrão de refinamento visual das tasks desta PRD.
