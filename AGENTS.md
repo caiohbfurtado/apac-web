@@ -25,6 +25,7 @@ Guia enxuto para agentes de IA trabalhando neste repositório.
 - Quando a tarefa envolver regras de negócio, linguagem de domínio ou decisões difíceis de reverter, use `grill-with-docs` para tensionar o plano e registrar termos e decisões
 - Trate `DESIGN.md` como fonte de verdade de design do projeto
 - Sempre que criar, alterar ou promover um padrão visual reutilizável, atualize `DESIGN.md` na mesma tarefa
+- Sempre que surgirem recomendações, melhorias ou ideias explicitamente fora do escopo atual, registre em `todo.md` na mesma tarefa
 - Prefira correções de causa raiz; não use workarounds
 - Para dependências, use `npm install <pacote>` em vez de editar versões manualmente
 - Antes de concluir, rode pelo menos `npm run lint` e `npm run build`
