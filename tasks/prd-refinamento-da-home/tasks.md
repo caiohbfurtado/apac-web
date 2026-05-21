@@ -4,7 +4,7 @@
 
 - [x] 1.0 Modelar a camada de conteúdo da home
 - [x] 2.0 Reestruturar a home em seções compostas
-- [ ] 3.0 Implementar o hero e a hierarquia principal de CTAs
+- [x] 3.0 Implementar o hero e a hierarquia principal de CTAs
 - [ ] 4.0 Implementar os blocos institucionais centrais
 - [ ] 5.0 Implementar campanhas em destaque com exibição opcional
 - [ ] 6.0 Implementar patrocinadores e apoiadores com exibição opcional

@@ -10,7 +10,7 @@ describe("Home", () => {
 
     expect(
       getByRole("heading", {
-        name: /apoio humano para familias em tratamento oncol/i,
+        name: /acolhimento, apoio e esperança para pessoas em tratamento contra o câncer/i,
       })
     ).toBeInTheDocument();
     expect(getByRole("heading", { name: "Como atuamos" })).toBeInTheDocument();

@@ -2,9 +2,31 @@ export const homeContent = {
   hero: {
     id: "fundacao",
     badge: "Acolhimento e orientacao",
-    title: "Apoio humano para familias em tratamento oncológico.",
+    title: "Acolhimento, apoio e esperança para pessoas em tratamento contra o câncer.",
     description:
-      "A APAC conecta familias, profissionais e rede de suporte com informacao clara, escuta ativa e caminhos de cuidado em cada etapa.",
+      "A APAC oferece suporte social, emocional e comunitário com orientação clara desde o primeiro contato.",
+    contact: {
+      title: "Contato institucional",
+      description: "Sem formulário, sem espera longa e sem ruído desnecessário.",
+      items: [
+        {
+          label: "Telefone",
+          value: "(11) 3456-0000",
+          note: "Segunda a sexta, das 8h às 18h.",
+          href: "tel:+551134560000",
+        },
+        {
+          label: "Endereço",
+          value: "Rua Exemplo, 123 - Sao Paulo/SP",
+          note: "Atendimento presencial mediante agendamento.",
+        },
+        {
+          label: "Primeiro contato",
+          value: "Canal humano para orientar a demanda",
+          note: "Use o WhatsApp se precisar de resposta rápida.",
+        },
+      ],
+    },
     ctas: {
       support: {
         href: "#preciso-de-apoio",

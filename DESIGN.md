@@ -179,6 +179,10 @@ Regras:
 - Seções opcionais, como campanhas e patrocinadores, só devem aparecer quando houver conteúdo local para elas; quando vazias, a narrativa deve continuar equilibrada sem blocos órfãos.
 - Os links de navegação do header e do footer precisam apontar para IDs existentes na mesma página.
 - O bloco de apoio da home deve usar canais reais ou placeholders sem formulário falso; CTAs devem ser links ou botões com ação explícita.
+- O hero da home deve ser editorial, mobile-first e mais aberto: a largura precisa chegar até a mesma linha visual do header, sem uma moldura externa grande ao redor de todo o bloco.
+- No hero, a hierarquia dos CTAs é fixa: `Preciso de apoio` como primário, `Quero ajudar` como secundário e `Falar no WhatsApp` como ação funcional de contato.
+- O bloco institucional do hero deve incluir um resumo de contato com telefone, endereço e horário, usando links simples quando aplicável e sem depender de formulário ou integração.
+- O suporte visual do hero deve viver como composição livre, sem um grande card externo envolvendo todo o conteúdo.
 
 ### Acessibilidade
 

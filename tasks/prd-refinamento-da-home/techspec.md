@@ -2,7 +2,7 @@
 
 ## Resumo Executivo
 
-O refinamento da home será implementado na rota raiz existente (`src/app/page.tsx`) como uma landing one-page com navegação por âncoras, preservando a abordagem mobile-first e o uso predominante de Server Components. A solução vai evoluir a estrutura atual da página para uma composição mais editorial, com hero mais rico, blocos institucionais mais distintos, placeholders visuais bem definidos e CTAs priorizados para apoio, colaboração e contato via WhatsApp.
+O refinamento da home será implementado na rota raiz existente (`src/app/page.tsx`) como uma landing one-page com navegação por âncoras, preservando a abordagem mobile-first e o uso predominante de Server Components. A solução vai evoluir a estrutura atual da página para uma composição mais editorial, com hero mais aberto visualmente, blocos institucionais mais distintos, placeholders visuais bem definidos e CTAs priorizados para apoio, colaboração e contato via WhatsApp.
 
 O conteúdo continuará local ao repositório, mas deixará de viver inteiramente em um objeto monolítico: campanhas e patrocinadores passarão a ser alimentados por estruturas serializáveis locais, preferencialmente em JSON ou módulo de dados equivalente, com renderização condicional. Se os arrays vierem vazios, as seções não serão exibidas. Isso reduz atrito editorial sem introduzir CMS, automação ou integrações novas nesta fase.
 
@@ -10,7 +10,7 @@ O conteúdo continuará local ao repositório, mas deixará de viver inteirament
 
 ### Visão Geral dos Componentes
 
-- `src/app/page.tsx`: continuará como entrypoint da home e será reorganizado para compor a nova narrativa one-page.
+- `src/app/page.tsx`: continuará como entrypoint da home e será reorganizado para compor a nova narrativa one-page, separando o hero em uma faixa mais ampla do restante do conteúdo.
 - `src/lib/home-content.ts`: será refinado para guardar conteúdo institucional estático da home e CTAs principais.
 - `src/lib/home-sections-data.json` ou módulo equivalente: novo arquivo serializável para campanhas e patrocinadores, com arrays independentes e opcionais.
 - `HeaderNav` e `HeaderNavMobileMenu`: serão ajustados para refletir a nova IA da home, mantendo navegação por âncoras e CTA principal no topo.
@@ -44,7 +44,7 @@ O fluxo será simples: a página carrega conteúdo local, decide em tempo de ren
 - A navegação do topo continuará rolando para IDs da própria página.
 - A home será organizada em seções com responsabilidades claras:
   - hero com mensagem principal, CTAs e card de contato resumido
-  - faixa de destaques institucionais
+  - composição visual livre no hero para apoiar a narrativa sem moldura externa pesada
   - bloco “como a APAC ajuda”
   - bloco “preciso de apoio”
   - campanhas em destaque, se houver conteúdo
@@ -67,7 +67,7 @@ Se o projeto optar por JSON puro, a leitura deve permanecer síncrona e local, s
 
 ### Estratégia de Conteúdo e UX
 
-A hierarquia da página deve espelhar o mock `tasks/design-v2.png`: acolhimento imediato no hero, prova de utilidade logo em seguida, caminhos práticos de ação no meio da página e reforço institucional no fechamento. O objetivo não é copiar a arte literalmente, mas reproduzir sua lógica de ritmo visual, densidade e calor humano dentro do design system existente.
+A hierarquia da página deve espelhar o mock `tasks/design-v2.png`: acolhimento imediato no hero, prova de utilidade logo em seguida, caminhos práticos de ação no meio da página e reforço institucional no fechamento. O objetivo não é copiar a arte literalmente, mas reproduzir sua lógica de ritmo visual, densidade e calor humano dentro do design system existente. O hero não deve ser encerrado por uma grande moldura: ele precisa respirar na mesma largura visual do header, com a narrativa principal à esquerda e a composição de apoio à direita.
 
 Os CTAs principais serão:
 
@@ -75,7 +75,7 @@ Os CTAs principais serão:
 - `Quero ajudar` como ação secundária institucional
 - `Falar no WhatsApp` como atalho funcional de contato
 
-O bloco de contato do hero e a seção de apoio usarão links simples e placeholders para endereço, telefone e “como chegar”, sem formulário funcional nem integração externa. Acessibilidade continua mandatória: landmarks claros, ordem correta de headings, foco visível, contraste adequado e imagens/placeholders com texto alternativo coerente quando aplicável.
+O bloco de contato do hero e a seção de apoio usarão links simples e placeholders para endereço, telefone e “como chegar”, sem formulário funcional nem integração externa. Acessibilidade continua mandatória: landmarks claros, ordem correta de headings, foco visível, contraste adequado e imagens/placeholders com texto alternativo coerente quando aplicável. Para evitar ruído visual, o hero deve priorizar uma composição limpa, com menos blocos e sem caixas aninhadas desnecessárias.
 
 ## Pontos de Integração
 
@@ -136,7 +136,7 @@ Em qualidade visual, a implementação precisa seguir `DESIGN.md` e as referênc
 ### Riscos Conhecidos
 
 - O mock v2 é mais rico que a estrutura atual, então há risco de a home crescer demais sem boa modularização.
-  Mitigação: quebrar a página em composições pequenas por seção, sem inflar APIs de componentes base.
+  Mitigação: quebrar a página em composições pequenas por seção, sem inflar APIs de componentes base, e manter o hero com hierarquia visual aberta.
 - JSON puro pode perder ergonomia de tipagem se crescer sem disciplina.
   Mitigação: adicionar tipos locais ou wrapper TypeScript caso a estrutura comece a expandir.
 - Seções opcionais podem criar desalinhamento visual quando ausentes.

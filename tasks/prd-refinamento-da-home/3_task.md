@@ -19,16 +19,16 @@ Construir o hero da nova home com acolhimento imediato, maior credibilidade visu
 - Implementar o hero com mensagem principal forte, suporte visual narrativo e escaneabilidade alta em mobile.
 - Destacar `Preciso de apoio`, `Quero ajudar` e `Falar no WhatsApp` com hierarquia visual clara e baixa competição entre ações.
 - Incluir card ou bloco resumido de contato institucional no hero, sem depender de formulário ou integração.
-- Reservar espaço estável para imagem, ilustração ou placeholder equivalente, evitando layout shift perceptível.
+- Reservar espaço estável para imagem, ilustração ou placeholder equivalente, evitando layout shift perceptível, sem enquadrar todo o hero em uma moldura grande.
 - Seguir a direção visual do mock v2 e do `DESIGN.md` sem copiar literalmente a arte de referência.
 </requirements>
 
 ## Subtarefas
 
-- [ ] 3.1 Implementar a composição principal do hero com headline, supporting copy e CTAs.
-- [ ] 3.2 Criar ou ajustar o bloco resumido de contato com links simples como `wa.me`, `tel:` ou endereço.
-- [ ] 3.3 Definir placeholders visuais e estados responsivos estáveis para o bloco de destaque.
-- [ ] 3.4 Revisar contraste, foco visível e clareza da hierarquia de ações.
+- [x] 3.1 Implementar a composição principal do hero com headline, supporting copy e CTAs.
+- [x] 3.2 Criar ou ajustar o bloco resumido de contato com links simples como `wa.me`, `tel:` ou endereço.
+- [x] 3.3 Definir placeholders visuais e estados responsivos estáveis para o bloco de destaque, sem caixa externa pesada.
+- [x] 3.4 Revisar contraste, foco visível e clareza da hierarquia de ações.
 
 ## Detalhes de Implementação
 
@@ -45,9 +45,9 @@ Referenciar no `techspec.md` as seções:
 
 ## Testes da Tarefa
 
-- [ ] Validação com `npm run lint`
-- [ ] Validação com `npm run build`
-- [ ] Testes de componente ou composição, se aplicável
+- [x] Validação com `npm run lint`
+- [x] Validação com `npm run build`
+- [x] Testes de componente ou composição, se aplicável
 - [ ] Testes E2E (se aplicável)
 
 <critical>SEMPRE CRIE E EXECUTE OS TESTES DA TAREFA ANTES DE CONSIDERÁ-LA FINALIZADA</critical>
