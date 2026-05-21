@@ -173,6 +173,13 @@ Regras:
 - CTAs devem competir o mínimo possível entre si.
 - O texto precisa soar institucional, claro e humano.
 
+### Home one-page
+
+- A home da rota raiz deve seguir a sequência `fundacao` -> `atuacao` -> `preciso-de-apoio` -> `campanhas` -> `patrocinadores` -> `transparencia` -> `como-ajudar`.
+- Seções opcionais, como campanhas e patrocinadores, só devem aparecer quando houver conteúdo local para elas; quando vazias, a narrativa deve continuar equilibrada sem blocos órfãos.
+- Os links de navegação do header e do footer precisam apontar para IDs existentes na mesma página.
+- O bloco de apoio da home deve usar canais reais ou placeholders sem formulário falso; CTAs devem ser links ou botões com ação explícita.
+
 ### Acessibilidade
 
 - Meta de WCAG AA.

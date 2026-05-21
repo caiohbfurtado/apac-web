@@ -1,7 +1,8 @@
 export const homeContent = {
   hero: {
+    id: "fundacao",
     badge: "Acolhimento e orientacao",
-    title: "Apoio humano para familias em tratamento oncologico infantil.",
+    title: "Apoio humano para familias em tratamento oncológico.",
     description:
       "A APAC conecta familias, profissionais e rede de suporte com informacao clara, escuta ativa e caminhos de cuidado em cada etapa.",
     ctas: {
@@ -46,7 +47,26 @@ export const homeContent = {
     id: "preciso-de-apoio",
     heading: "Precisa de apoio agora?",
     description:
-      "Conte brevemente sua situacao para que nossa equipe direcione o melhor canal de atendimento.",
+      "Fale com a equipe pelos canais abaixo. Se a demanda for urgente, priorizamos o primeiro contato e direcionamos o melhor caminho.",
+    channels: [
+      {
+        label: "WhatsApp",
+        value: "Falar com a equipe",
+        note: "Resposta inicial e orientacao direta.",
+        href: "https://wa.me/5511999999999",
+      },
+      {
+        label: "Telefone",
+        value: "(11) 3456-0000",
+        note: "Segunda a sexta, das 8h as 18h.",
+        href: "tel:+551134560000",
+      },
+      {
+        label: "Endereco",
+        value: "Rua Exemplo, 123 - Sao Paulo/SP",
+        note: "Atendimento presencial mediante agendamento.",
+      },
+    ],
   },
   trust: {
     id: "transparencia",

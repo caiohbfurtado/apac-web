@@ -26,10 +26,10 @@ Reorganizar a home da rota raiz em seções compostas menores e com responsabili
 
 ## Subtarefas
 
-- [ ] 2.1 Definir a ordem final das seções e sua responsabilidade narrativa na rota raiz.
-- [ ] 2.2 Extrair ou compor blocos específicos da home a partir de `page.tsx`, mantendo coesão e baixo acoplamento.
-- [ ] 2.3 Garantir IDs de âncora, landmarks e hierarquia de headings sem saltos problemáticos.
-- [ ] 2.4 Validar que a página continua funcional mesmo antes da entrada de campanhas e patrocinadores.
+- [x] 2.1 Definir a ordem final das seções e sua responsabilidade narrativa na rota raiz.
+- [x] 2.2 Extrair ou compor blocos específicos da home a partir de `page.tsx`, mantendo coesão e baixo acoplamento.
+- [x] 2.3 Garantir IDs de âncora, landmarks e hierarquia de headings sem saltos problemáticos.
+- [x] 2.4 Validar que a página continua funcional mesmo antes da entrada de campanhas e patrocinadores.
 
 ## Detalhes de Implementação
 
@@ -47,10 +47,10 @@ Referenciar no `techspec.md` as seções:
 
 ## Testes da Tarefa
 
-- [ ] Validação com `npm run lint`
-- [ ] Validação com `npm run build`
-- [ ] Testes de componente ou composição, se aplicável
-- [ ] Testes E2E (se aplicável)
+- [x] Validação com `npm run lint`
+- [x] Validação com `npm run build`
+- [x] Testes de componente ou composição, aplicável via `npm test`
+- [ ] Testes E2E (não aplicável nesta task)
 
 <critical>SEMPRE CRIE E EXECUTE OS TESTES DA TAREFA ANTES DE CONSIDERÁ-LA FINALIZADA</critical>
 
