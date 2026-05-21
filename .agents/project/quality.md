@@ -7,6 +7,11 @@ Rode estes checks antes de concluir uma tarefa que altere código:
 - `npm run lint`
 - `npm run build`
 
+Observação operacional:
+
+- Neste ambiente, `npm run build` pode exigir execução com permissão ampliada quando rodado por agentes, porque o build padrão do Next.js 16 com Turbopack pode falhar no sandbox por limitação do ambiente
+- Se isso acontecer, rerode o mesmo comando com escalonamento antes de concluir que há um bug real no app
+
 ## TypeScript
 
 Hoje o projeto não expõe um script `typecheck` no `package.json`.

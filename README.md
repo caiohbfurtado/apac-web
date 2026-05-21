@@ -24,6 +24,10 @@ Abra [http://localhost:3000](http://localhost:3000).
 - `npm test`: testes com `Jest` e `React Testing Library`
 - `npm run build`: build de produção
 
+Observação:
+
+- Em ambientes agentic/sandbox, o build padrão do Next.js 16 pode precisar de permissão ampliada para concluir por causa de uma limitação operacional do Turbopack. No terminal local do usuário, o comando tende a funcionar normalmente.
+
 ## Design System
 
 - A base visual do projeto começa em `app/globals.css` e `app/layout.tsx`

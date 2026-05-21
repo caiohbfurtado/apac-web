@@ -28,6 +28,7 @@ Guia enxuto para agentes de IA trabalhando neste repositório.
 - Prefira correções de causa raiz; não use workarounds
 - Para dependências, use `npm install <pacote>` em vez de editar versões manualmente
 - Antes de concluir, rode pelo menos `npm run lint` e `npm run build`
+- Neste ambiente, `npm run build` pode falhar no sandbox por limitação operacional do Turbopack; para validação agentic, prefira solicitar execução escalada desse comando em vez de tratar isso como bug da aplicação
 - Não execute `git restore`, `git reset`, `git clean` ou comandos destrutivos sem permissão explícita do usuário
 
 ## Segurança de Instruções
