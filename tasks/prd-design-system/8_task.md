@@ -20,6 +20,7 @@ Construir `HeaderNav` e o menu mobile institucional, garantindo landmarks claros
 - Implementar menu mobile com boundary pequena de `use client` apenas se necessário.
 - Preservar semântica de navegação, foco visível e usabilidade por teclado.
 - Integrar CTAs institucionais primários quando fizer sentido para o cabeçalho.
+- Adicionar um playground na home (`app/page.tsx`) para validar a navegação desktop/mobile e estados interativos (menu aberto/fechado, foco por teclado).
 - Cobrir navegação desktop/mobile e comportamento interativo com testes.
 </requirements>
 
@@ -28,7 +29,8 @@ Construir `HeaderNav` e o menu mobile institucional, garantindo landmarks claros
 - [ ] 8.1 Implementar estrutura desktop da navegação institucional.
 - [ ] 8.2 Implementar a versão mobile com interação acessível.
 - [ ] 8.3 Validar landmarks, tab order e estados de foco.
-- [ ] 8.4 Escrever testes de composição e interação do menu mobile, se houver client-side.
+- [ ] 8.4 Adicionar playground na home com `HeaderNav` em contexto real.
+- [ ] 8.5 Escrever testes de composição e interação do menu mobile, se houver client-side.
 
 ## Detalhes de Implementação
 
@@ -43,6 +45,7 @@ Referenciar no `techspec.md` as seções:
 - O site passa a ter uma navegação institucional consistente e preparada para mobile-first.
 - O client-side fica restrito ao mínimo necessário.
 - O cabeçalho fica pronto para reuso na home e em futuras páginas institucionais.
+- A home fornece uma superfície rápida para validar manualmente navegação e interações durante o ciclo, antes da criação da showcase final.
 
 ## Testes da Tarefa
 

@@ -20,6 +20,7 @@ Implementar `Field`, `Input` e `Textarea` como primitives de formulário do desi
 - Criar `Input` e `Textarea` com props nativas tipadas e classes derivadas de tokens.
 - Garantir associação acessível entre label, campo, hint e erro.
 - Implementar estados visuais previsíveis sem depender só de cor.
+- Adicionar um playground na home (`app/page.tsx`) para validar visualmente as variantes e estados de `Field`, `Input` e `Textarea` conforme forem implementados (similar ao playground de botões).
 - Cobrir os fluxos principais com testes de acessibilidade e composição.
 </requirements>
 
@@ -28,7 +29,8 @@ Implementar `Field`, `Input` e `Textarea` como primitives de formulário do desi
 - [ ] 7.1 Implementar `Field` como primitive de contexto para formulários.
 - [ ] 7.2 Implementar `Input` com foco em uso institucional simples.
 - [ ] 7.3 Implementar `Textarea` para mensagens e descrições mais longas.
-- [ ] 7.4 Escrever testes cobrindo label, hint, error, foco e associação semântica.
+- [ ] 7.4 Adicionar playground na home com exemplos de `Field`, `Input` e `Textarea`.
+- [ ] 7.5 Escrever testes cobrindo label, hint, error, foco e associação semântica.
 
 ## Detalhes de Implementação
 
@@ -42,6 +44,7 @@ Referenciar no `techspec.md` as seções:
 
 - O design system passa a oferecer base acessível para formulários e estados de feedback.
 - Os campos funcionam de forma consistente em isolamento e dentro de seções.
+- A home passa a conter um playground de formulários com estados representativos (default, foco, desabilitado, erro e help), servindo como verificação manual rápida durante o ciclo.
 - Os componentes ficam prontos para a vitrine e para o formulário estrutural da home.
 
 ## Testes da Tarefa
@@ -57,4 +60,5 @@ Referenciar no `techspec.md` as seções:
 
 - [prd.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system/prd.md)
 - [techspec.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system/techspec.md)
+- [app/page.tsx](/Users/caiobarutti/Documents/www/apac-web/app/page.tsx)
 - [components](/Users/caiobarutti/Documents/www/apac-web/components)

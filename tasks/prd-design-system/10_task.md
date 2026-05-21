@@ -20,6 +20,7 @@ Criar a rota `/design-system` como vitrine viva do sistema, agregando tema, prim
 - Agregar todos os componentes já implementados com seus estados e combinações aprovadas.
 - Organizar a vitrine por grupos claros para facilitar validação por humanos e agentes.
 - Reutilizar fixtures ou dados locais serializáveis para evitar duplicação.
+- Preparar a showcase para ser a superfície canônica do “playground” de componentes (a home pode conter playgrounds temporários até a task 11, quando devem ser migrados).
 - Cobrir renderização da página e presença dos grupos esperados com testes de composição.
 </requirements>
 

@@ -20,6 +20,7 @@ Refazer `app/page.tsx` para que a home institucional passe a consumir apenas a c
 - Compor hero, blocos institucionais, apoio, campanhas, confiança e fechamento usando apenas components e primitives do sistema.
 - Manter conteúdo em estrutura serializável local quando fizer sentido.
 - Garantir landmarks, headings, CTAs principais e boa experiência mobile-first.
+- Remover os playgrounds temporários da home (ex.: playground de botões e os playgrounds adicionados nas tasks 7–9) e migrar toda a validação detalhada de variantes/estados para a rota `/design-system`.
 - Cobrir a composição da home com testes de presença das regiões e CTAs principais.
 </requirements>
 
@@ -28,7 +29,8 @@ Refazer `app/page.tsx` para que a home institucional passe a consumir apenas a c
 - [ ] 11.1 Estruturar o conteúdo da home em formato reutilizável e local.
 - [ ] 11.2 Compor a landing com `HeaderNav`, `Section`, `Card`, `Badge`, botões, campos e `Footer`.
 - [ ] 11.3 Validar semântica, hierarquia e experiência mobile-first da página.
-- [ ] 11.4 Escrever testes cobrindo headings, CTAs e landmarks principais da home.
+- [ ] 11.4 Migrar playgrounds da home para `/design-system` e remover da home.
+- [ ] 11.5 Escrever testes cobrindo headings, CTAs e landmarks principais da home.
 
 ## Detalhes de Implementação
 
@@ -43,6 +45,7 @@ Referenciar no `techspec.md` as seções:
 - A home passa a ser a primeira consumidora real e completa do design system.
 - O estado inicial do app é substituído por uma landing institucional coerente.
 - Os componentes ganham validação prática em cenário de uso real.
+- A home deixa de ser vitrine técnica de variantes; `/design-system` passa a ser a superfície central do playground.
 
 ## Testes da Tarefa
 

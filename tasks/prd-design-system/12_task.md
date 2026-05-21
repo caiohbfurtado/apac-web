@@ -21,6 +21,7 @@ Consolidar a entrega do primeiro ciclo do design system com validação final de
 - Executar a suíte de testes criada ao longo das tasks anteriores.
 - Revisar a página `/design-system` como superfície de validação visual final.
 - Confirmar que home e componentes atendem mobile-first, acessibilidade estrutural e consumo consistente do tema.
+- Confirmar que todos os playgrounds detalhados de componentes estão centralizados em `/design-system` (e não dispersos pela home).
 </requirements>
 
 ## Subtarefas
