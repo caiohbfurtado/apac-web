@@ -1,4 +1,4 @@
-import { Container, HeaderNav, Section, Stack } from "@/components/layout";
+import { Container, Footer, HeaderNav, Section, Stack } from "@/components/layout";
 import {
   Badge,
   Card,
@@ -366,6 +366,7 @@ export default function Home() {
         </Section>
         </Stack>
       </Container>
+      <Footer />
     </main>
   );
 }

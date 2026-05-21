@@ -26,11 +26,11 @@ Construir o `Footer` institucional com contato, redes, mensagem de confiança e 
 
 ## Subtarefas
 
-- [ ] 9.1 Implementar a estrutura do `Footer` usando as primitives do sistema.
-- [ ] 9.2 Integrar conteúdo institucional e links principais.
-- [ ] 9.3 Validar legibilidade e organização em breakpoints móveis e amplos.
-- [ ] 9.4 Adicionar playground na home com `Footer` integrado ao final da página.
-- [ ] 9.5 Escrever testes de composição, links e semântica estrutural.
+- [x] 9.1 Implementar a estrutura do `Footer` usando as primitives do sistema.
+- [x] 9.2 Integrar conteúdo institucional e links principais.
+- [x] 9.3 Validar legibilidade e organização em breakpoints móveis e amplos.
+- [x] 9.4 Adicionar playground na home com `Footer` integrado ao final da página.
+- [x] 9.5 Escrever testes de composição, links e semântica estrutural.
 
 ## Detalhes de Implementação
 
@@ -49,9 +49,9 @@ Referenciar no `techspec.md` as seções:
 
 ## Testes da Tarefa
 
-- [ ] Validação com `npm run lint`
-- [ ] Validação com `npm run build`
-- [ ] Testes de componente ou composição, se aplicável
+- [x] Validação com `npm run lint`
+- [x] Validação com `npm run build`
+- [x] Testes de componente ou composição, se aplicável
 - [ ] Testes E2E (se aplicável)
 
 <critical>SEMPRE CRIE E EXECUTE OS TESTES DA TAREFA ANTES DE CONSIDERÁ-LA FINALIZADA</critical>

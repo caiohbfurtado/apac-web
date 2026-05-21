@@ -10,7 +10,7 @@
 - [x] 6.0 Criar componentes de apoio visual
 - [x] 7.0 Criar componentes de formulário
 - [x] 8.0 Criar componentes de navegação institucional
-- [ ] 9.0 Criar rodapé institucional
+- [x] 9.0 Criar rodapé institucional
 - [ ] 10.0 Montar a página de showcase do design system
 - [ ] 11.0 Reescrever a home usando o design system
 - [ ] 12.0 Executar validação final de qualidade

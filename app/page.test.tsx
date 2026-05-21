@@ -26,6 +26,11 @@ describe("Home", () => {
         name: "Playground de formularios",
       })
     ).toBeInTheDocument();
+    expect(
+      getByRole("navigation", {
+        name: "Links institucionais",
+      })
+    ).toBeInTheDocument();
     expect(getByLabelText(/Nome completo/i)).toBeInTheDocument();
     expect(getByText("Erro: Informe um e-mail valido para retorno.")).toBeInTheDocument();
   });
