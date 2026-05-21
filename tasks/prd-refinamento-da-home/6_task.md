@@ -26,10 +26,10 @@ Criar o bloco de patrocinadores e apoiadores da home como prova social instituci
 
 ## Subtarefas
 
-- [ ] 6.1 Construir a seção de patrocinadores com base na estrutura de dados editorial definida.
-- [ ] 6.2 Implementar estados com poucos itens, muitos itens e lista vazia.
-- [ ] 6.3 Reservar espaço coerente para logos ou placeholders sem prejudicar legibilidade.
-- [ ] 6.4 Revisar o papel da seção dentro da narrativa de confiança institucional da home.
+- [x] 6.1 Construir a seção de patrocinadores com base na estrutura de dados editorial definida.
+- [x] 6.2 Implementar estados com poucos itens, muitos itens e lista vazia.
+- [x] 6.3 Reservar espaço coerente para logos ou placeholders sem prejudicar legibilidade.
+- [x] 6.4 Revisar o papel da seção dentro da narrativa de confiança institucional da home.
 
 ## Detalhes de Implementação
 
@@ -47,10 +47,10 @@ Referenciar no `techspec.md` as seções:
 
 ## Testes da Tarefa
 
-- [ ] Validação com `npm run lint`
-- [ ] Validação com `npm run build`
-- [ ] Testes de componente ou composição, se aplicável
-- [ ] Testes E2E (se aplicável)
+- [x] Validação com `npm run lint`
+- [x] Validação com `npm run build`
+- [x] Testes de componente ou composição, se aplicável
+- [x] Testes E2E (não aplicável nesta task)
 
 <critical>SEMPRE CRIE E EXECUTE OS TESTES DA TAREFA ANTES DE CONSIDERÁ-LA FINALIZADA</critical>
 

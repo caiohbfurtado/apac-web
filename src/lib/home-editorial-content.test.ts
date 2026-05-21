@@ -1,4 +1,8 @@
-import { shouldRenderCampaigns, shouldRenderSponsors } from "@/lib/home-editorial-content";
+import {
+  homeEditorialContent,
+  shouldRenderCampaigns,
+  shouldRenderSponsors,
+} from "@/lib/home-editorial-content";
 
 describe("home editorial content", () => {
   it("permite listas vazias sem forcar seções artificiais", () => {
@@ -29,5 +33,7 @@ describe("home editorial content", () => {
         },
       ])
     ).toBe(true);
+
+    expect(shouldRenderSponsors(homeEditorialContent.sponsors.items)).toBe(true);
   });
 });

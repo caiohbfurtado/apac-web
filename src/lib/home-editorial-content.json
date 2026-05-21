@@ -25,8 +25,34 @@
   "sponsors": {
     "section": {
       "id": "patrocinadores",
-      "heading": "Patrocinadores e apoiadores"
+      "heading": "Patrocinadores e apoiadores",
+      "description": "Marcas parceiras aparecem em tiles leves, com espaço reservado para logos enquanto os assets finais ainda não existem."
     },
-    "items": []
+    "items": [
+      {
+        "name": "Marca parceira",
+        "description": "Espaço reservado para logo e presença institucional no bloco de apoio.",
+        "href": "mailto:contato@apac.org.br?subject=Tenho%20interesse%20em%20patrocinar%20a%20APAC",
+        "logoLabel": "MP"
+      },
+      {
+        "name": "Apoiador local",
+        "description": "Tile leve para marca com apoio recorrente e leitura rápida no mobile.",
+        "href": "mailto:contato@apac.org.br?subject=Quero%20apoiar%20a%20APAC",
+        "logoLabel": "AL"
+      },
+      {
+        "name": "Rede solidária",
+        "description": "Placeholder editorial para uma parceira que reforça alcance e confiança.",
+        "href": "mailto:contato@apac.org.br?subject=Quero%20conhecer%20as%20parcerias%20da%20APAC",
+        "logoLabel": "RS"
+      },
+      {
+        "name": "Patrocínio institucional",
+        "description": "Espaço para marca com presença mais forte e apoio consistente à causa.",
+        "href": "mailto:contato@apac.org.br?subject=Patroc%C3%ADnio%20institucional%20APAC",
+        "logoLabel": "PI"
+      }
+    ]
   }
 }

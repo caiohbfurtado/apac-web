@@ -190,6 +190,7 @@ Regras:
 - A seção `Como a APAC ajuda` deve ocupar a largura útil da página sem texto lateral solto, para que a leitura siga um único fluxo visual.
 - A seção `Campanhas em destaque` deve ser opcional, editorial e leve: use conteúdo local serializável, uma breve introdução e cards com CTA explícita para cada campanha.
 - Quando não houver campanhas, a home deve seguir o fluxo sem reservar espaço, sem headings órfãos e sem sugerir um calendário ou sistema de eventos.
+- A seção `Patrocinadores e apoiadores` pode usar uma malha responsiva de tiles para logos quando o objetivo principal for reconhecimento de marca. Os boxes devem ser leves, com placeholder de logo, nome curto, descrição compacta e link discreto; o entorno da seção continua editorial e sem excesso de ornamento.
 - A seção `Preciso de apoio` deve priorizar baixa fricção com layout aberto em rail, etapas numeradas enxutas e canais diretos.
 - A seção `Preciso de apoio` não deve usar um box grande envolvendo todo o conteúdo; a hierarquia deve nascer de espaçamento, divisores leves e uma única superfície visual por bloco.
 - Em `Preciso de apoio`, evite repetir a mesma orientação em vários blocos; concentre a explicação na frase principal, no rail de início e na lista de canais.

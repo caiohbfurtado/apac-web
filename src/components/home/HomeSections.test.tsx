@@ -4,6 +4,7 @@ import {
   HomeClosingSection,
   HomeHeroSection,
   HomeInstitutionSection,
+  HomeSponsorsSection,
   HomeSupportSection,
   HomeTrustSection,
 } from "./HomeSections";
@@ -139,6 +140,49 @@ describe("HomeCampaignsSection", () => {
           section: {
             id: "campanhas",
             heading: "Campanhas em destaque",
+          },
+          items: [],
+        }}
+      />,
+    );
+
+    expect(container).toBeEmptyDOMElement();
+  });
+});
+
+describe("HomeSponsorsSection", () => {
+  it("renders sponsors as a compact grid of logo tiles with contextual copy", () => {
+    render(<HomeSponsorsSection content={homeEditorialContent.sponsors} />);
+
+    expect(
+      screen.getByRole("heading", {
+        name: "Patrocinadores e apoiadores",
+      }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/tiles leves, com espaço reservado para logos/i),
+    ).toBeInTheDocument();
+    expect(screen.getByText("Marca parceira")).toBeInTheDocument();
+    expect(screen.getByText("Apoiador local")).toBeInTheDocument();
+    expect(screen.getByText("Rede solidária")).toBeInTheDocument();
+    expect(screen.getByText("Patrocínio institucional")).toBeInTheDocument();
+
+    const sponsorLinks = screen.getAllByRole("link", { name: /ver apoio/i });
+    expect(sponsorLinks).toHaveLength(homeEditorialContent.sponsors.items.length);
+    expect(screen.getByText("MP")).toBeInTheDocument();
+    expect(screen.getByText("AL")).toBeInTheDocument();
+    expect(screen.getByText("RS")).toBeInTheDocument();
+    expect(screen.getByText("PI")).toBeInTheDocument();
+  });
+
+  it("returns null when there are no sponsor items", () => {
+    const { container } = render(
+      <HomeSponsorsSection
+        content={{
+          section: {
+            id: "patrocinadores",
+            heading: "Patrocinadores e apoiadores",
+            description: "Lista vazia para validar a renderizacao condicional.",
           },
           items: [],
         }}

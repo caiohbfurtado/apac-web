@@ -28,6 +28,7 @@ export type HomeEditorialContent = {
     section: {
       id: string;
       heading: string;
+      description?: string;
     };
     items: HomeSponsor[];
   };

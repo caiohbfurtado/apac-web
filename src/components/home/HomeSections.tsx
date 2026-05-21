@@ -55,6 +55,20 @@ type HomeSponsorsSectionProps = {
   content: HomeSponsorsContent;
 };
 
+function SponsorMarkIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 20 20" fill="none" className="h-4 w-4">
+      <path
+        d="M4 10h12M10 4l6 6-6 6"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 function HeroIcon({ name }: { name: "phone" | "map" | "spark" }) {
   const commonProps = {
     "aria-hidden": true,
@@ -107,6 +121,45 @@ function SupportStepRow({ step, index }: { step: HomeSupportStep; index: number 
         </Text>
       </div>
     </li>
+  );
+}
+
+function SponsorTile({ sponsor }: { sponsor: HomeSponsorsContent["items"][number] }) {
+  return (
+    <a
+      href={sponsor.href}
+      className="group flex h-full flex-col justify-between rounded-card border border-line bg-surface p-5 shadow-soft transition duration-200 ease-[var(--ease-standard)] hover:-translate-y-0.5 hover:border-brand/30 hover:shadow-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/30 focus-visible:ring-offset-2 focus-visible:ring-offset-background motion-reduce:transform-none"
+    >
+      <div className="space-y-5">
+        <div className="flex items-start justify-between gap-4">
+          <span className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-brand/20 bg-brand-soft/35 text-xs font-semibold tracking-[0.18em] text-brand-strong">
+            {sponsor.logoLabel}
+          </span>
+          <Badge tone="default" className="shrink-0">
+            Apoio
+          </Badge>
+        </div>
+
+        <div className="space-y-2">
+          <Heading as="h3" size="sm" className="max-w-[14rem]">
+            {sponsor.name}
+          </Heading>
+          <Text size="sm" tone="muted" className="max-w-[18rem]">
+            {sponsor.description}
+          </Text>
+        </div>
+      </div>
+
+      <Text
+        as="span"
+        size="sm"
+        tone="brand"
+        className="mt-4 inline-flex items-center gap-2 font-semibold text-brand-strong"
+      >
+        Ver apoio
+        <SponsorMarkIcon />
+      </Text>
+    </a>
   );
 }
 
@@ -352,17 +405,23 @@ export function HomeSponsorsSection({ content }: HomeSponsorsSectionProps) {
     <Section
       id={content.section.id}
       surface="muted"
-      heading={<Heading as="h2" size="lg">{content.section.heading}</Heading>}
+      spacing="tight"
+      heading={
+        <Heading as="h2" size="lg">
+          {content.section.heading}
+        </Heading>
+      }
+      description={
+        content.section.description ? (
+          <Text tone="muted" className="max-w-2xl">
+            {content.section.description}
+          </Text>
+        ) : undefined
+      }
     >
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {content.items.map((sponsor) => (
-          <Card
-            key={sponsor.name}
-            surface="muted"
-            title={sponsor.name}
-            description={sponsor.description}
-            action={<Badge tone="brand">{sponsor.logoLabel}</Badge>}
-          />
+          <SponsorTile key={sponsor.name} sponsor={sponsor} />
         ))}
       </div>
     </Section>

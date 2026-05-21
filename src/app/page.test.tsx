@@ -35,7 +35,8 @@ describe("Home", () => {
     expect(queryByRole("heading", { name: "Playground de botoes" })).not.toBeInTheDocument();
     expect(queryByRole("heading", { name: "Playground de badges e cards" })).not.toBeInTheDocument();
     expect(queryByRole("heading", { name: "Playground de formularios" })).not.toBeInTheDocument();
-    expect(queryByRole("heading", { name: "Patrocinadores e apoiadores" })).not.toBeInTheDocument();
+    expect(getByRole("heading", { name: "Patrocinadores e apoiadores" })).toBeInTheDocument();
+    expect(getByRole("heading", { name: "Marca parceira" })).toBeInTheDocument();
     expect(queryByText(/Nome completo/i)).not.toBeInTheDocument();
   });
 });
