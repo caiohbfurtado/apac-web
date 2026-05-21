@@ -25,10 +25,10 @@ Criar `Heading` e `Text` como primitives tipográficas do sistema, consolidando 
 
 ## Subtarefas
 
-- [ ] 3.1 Implementar `Heading` com níveis e variações necessárias para a landing e showcase.
-- [ ] 3.2 Implementar `Text` para suportar conteúdo institucional, descrições e microcopy.
-- [ ] 3.3 Validar coerência visual e semântica entre os componentes tipográficos.
-- [ ] 3.4 Escrever testes de hierarquia, variantes e acessibilidade básica.
+- [x] 3.1 Implementar `Heading` com níveis e variações necessárias para a landing e showcase.
+- [x] 3.2 Implementar `Text` para suportar conteúdo institucional, descrições e microcopy.
+- [x] 3.3 Validar coerência visual e semântica entre os componentes tipográficos.
+- [x] 3.4 Escrever testes de hierarquia, variantes e acessibilidade básica.
 
 ## Detalhes de Implementação
 
@@ -46,9 +46,9 @@ Referenciar no `techspec.md` as seções:
 
 ## Testes da Tarefa
 
-- [ ] Validação com `npm run lint`
-- [ ] Validação com `npm run build`
-- [ ] Testes de componente ou composição, se aplicável
+- [x] Validação com `npm run lint`
+- [x] Validação com `npm run build`
+- [x] Testes de componente ou composição, se aplicável
 - [ ] Testes E2E (se aplicável)
 
 <critical>SEMPRE CRIE E EXECUTE OS TESTES DA TAREFA ANTES DE CONSIDERÁ-LA FINALIZADA</critical>

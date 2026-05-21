@@ -1,4 +1,5 @@
 import { Container, Section, Stack } from "@/components/layout";
+import { Heading, Text } from "@/components/ui";
 
 export default function Home() {
   return (
@@ -16,25 +17,27 @@ export default function Home() {
             <span className="inline-flex w-fit rounded-full border border-brand/20 bg-brand-soft px-4 py-2 text-sm font-semibold tracking-[0.12em] text-brand-strong uppercase">
               Design system em fundacao
             </span>
-            <h1 className="max-w-2xl text-4xl leading-tight font-bold text-ink sm:text-5xl">
+            <Heading as="h1" size="xl" className="max-w-2xl">
               A base institucional da APAC agora comeca por um tema unico e consistente.
-            </h1>
+            </Heading>
           </Stack>
         }
         description={
           <Stack gap="md">
-            <p className="max-w-2xl text-lg text-ink/80 sm:text-xl">
+            <Text size="lg" className="max-w-2xl">
               Esta pagina temporaria remove os residuos do template padrao e prepara o terreno
               para as proximas etapas do design system, priorizando mobile-first, acessibilidade
               e uma presenca visual mais confiavel.
-            </p>
-            <p
+            </Text>
+            <Text
               id="proximos-passos"
-              className="max-w-2xl text-sm font-medium tracking-[0.08em] text-ink/60 uppercase"
+              size="sm"
+              tone="muted"
+              className="max-w-2xl font-medium tracking-[0.08em] uppercase"
             >
               Proximas entregas: primitives, componentes base, vitrine interna e reescrita
               institucional da home.
-            </p>
+            </Text>
           </Stack>
         }
         actions={

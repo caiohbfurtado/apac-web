@@ -4,7 +4,7 @@
 
 - [x] 1.0 Fundar o tema e a infraestrutura base
 - [x] 2.0 Criar primitives de layout
-- [ ] 3.0 Criar primitives tipográficas
+- [x] 3.0 Criar primitives tipográficas
 - [ ] 4.0 Criar componente de ação
 - [ ] 5.0 Criar componentes de apoio visual
 - [ ] 6.0 Criar componentes de formulário
