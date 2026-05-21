@@ -1,10 +1,10 @@
-# Tarefa 10.0: Reescrever a home usando o design system
+# Tarefa 10.0: Montar a página de showcase do design system
 
 <critical>Ler os arquivos de prd.md e techspec.md desta pasta, se você não ler esses arquivos sua tarefa será invalidada</critical>
 
 ## Visão Geral
 
-Refazer `app/page.tsx` para que a home institucional passe a consumir apenas a camada do design system, validando na prática a cobertura funcional dos componentes criados.
+Criar a rota `/design-system` como vitrine viva do sistema, agregando tema, primitives e componentes em estados representativos para validação visual, manual e automatizada.
 
 <skills>
 ### Conformidade com Skills Padrões
@@ -12,37 +12,37 @@ Refazer `app/page.tsx` para que a home institucional passe a consumir apenas a c
 - `brainstorming`
 - `ui-craft`
 - `next-best-practices`
-- `vercel-composition-patterns`
+- `vercel-react-best-practices`
 </skills>
 
 <requirements>
-- Reescrever a home removendo o conteúdo padrão do template do Next.
-- Compor hero, blocos institucionais, apoio, campanhas, confiança e fechamento usando apenas components e primitives do sistema.
-- Manter conteúdo em estrutura serializável local quando fizer sentido.
-- Garantir landmarks, headings, CTAs principais e boa experiência mobile-first.
-- Cobrir a composição da home com testes de presença das regiões e CTAs principais.
+- Criar `app/design-system/page.tsx` como página interna de showcase.
+- Agregar todos os componentes já implementados com seus estados e combinações aprovadas.
+- Organizar a vitrine por grupos claros para facilitar validação por humanos e agentes.
+- Reutilizar fixtures ou dados locais serializáveis para evitar duplicação.
+- Cobrir renderização da página e presença dos grupos esperados com testes de composição.
 </requirements>
 
 ## Subtarefas
 
-- [ ] 10.1 Estruturar o conteúdo da home em formato reutilizável e local.
-- [ ] 10.2 Compor a landing com `HeaderNav`, `Section`, `Card`, `Badge`, botões, campos e `Footer`.
-- [ ] 10.3 Validar semântica, hierarquia e experiência mobile-first da página.
-- [ ] 10.4 Escrever testes cobrindo headings, CTAs e landmarks principais da home.
+- [ ] 10.1 Criar a estrutura da rota `/design-system`.
+- [ ] 10.2 Adicionar seções para primitives, ações, superfícies, formulários e navegação.
+- [ ] 10.3 Centralizar fixtures de showcase e testes quando necessário.
+- [ ] 10.4 Escrever testes que garantam a presença dos grupos e estados principais.
 
 ## Detalhes de Implementação
 
 Referenciar no `techspec.md` as seções:
 - `Design de Implementação`
 - `Estrutura de Rotas e Seções`
-- `Estratégia de Conteúdo e UX`
 - `Abordagem de Testes`
+- `Riscos Conhecidos`
 
 ## Critérios de Sucesso
 
-- A home passa a ser a primeira consumidora real e completa do design system.
-- O estado inicial do app é substituído por uma landing institucional coerente.
-- Os componentes ganham validação prática em cenário de uso real.
+- O projeto passa a ter uma superfície dedicada para validar visual e comportamento do design system.
+- Todos os componentes implementados até aqui ficam agregados em uma única página de referência.
+- A showcase se torna critério concreto para revisão nas tasks seguintes.
 
 ## Testes da Tarefa
 
@@ -55,8 +55,7 @@ Referenciar no `techspec.md` as seções:
 
 ## Arquivos relevantes
 
-- [prd.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system-do-site-apac/prd.md)
-- [techspec.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system-do-site-apac/techspec.md)
-- [app/page.tsx](/Users/caiobarutti/Documents/www/apac-web/app/page.tsx)
-- [components](/Users/caiobarutti/Documents/www/apac-web/components)
+- [prd.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system/prd.md)
+- [techspec.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system/techspec.md)
+- [app/design-system](/Users/caiobarutti/Documents/www/apac-web/app/design-system)
 - [lib](/Users/caiobarutti/Documents/www/apac-web/lib)

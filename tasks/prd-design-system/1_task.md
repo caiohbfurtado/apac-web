@@ -57,8 +57,8 @@ Referenciar no `techspec.md` as seções:
 
 ## Arquivos relevantes
 
-- [prd.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system-do-site-apac/prd.md)
-- [techspec.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system-do-site-apac/techspec.md)
+- [prd.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system/prd.md)
+- [techspec.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system/techspec.md)
 - [app/layout.tsx](/Users/caiobarutti/Documents/www/apac-web/app/layout.tsx)
 - [app/globals.css](/Users/caiobarutti/Documents/www/apac-web/app/globals.css)
 - [DESIGN.md](/Users/caiobarutti/Documents/www/apac-web/DESIGN.md)

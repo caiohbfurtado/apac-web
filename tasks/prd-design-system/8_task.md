@@ -1,48 +1,48 @@
-# Tarefa 8.0: Criar rodapé institucional
+# Tarefa 8.0: Criar componentes de navegação institucional
 
 <critical>Ler os arquivos de prd.md e techspec.md desta pasta, se você não ler esses arquivos sua tarefa será invalidada</critical>
 
 ## Visão Geral
 
-Construir o `Footer` institucional com contato, redes, mensagem de confiança e estrutura coerente com o restante do design system.
+Construir `HeaderNav` e o menu mobile institucional, garantindo landmarks claros, navegação responsiva e isolamento de client-side apenas onde houver interação real.
 
 <skills>
 ### Conformidade com Skills Padrões
 
 - `brainstorming`
-- `tailwindcss`
-- `ui-craft`
+- `next-best-practices`
+- `vercel-react-best-practices`
 - `web-design-guidelines`
 </skills>
 
 <requirements>
-- Criar `Footer` com conteúdo institucional, contato e links relevantes.
-- Garantir composição com `Container`, `Stack`, `Heading` e `Text`.
-- Preservar legibilidade, contraste e boa organização em mobile-first.
-- Cobrir estrutura, links principais e landmark semântica com testes.
-- Deixar o componente pronto para uso imediato na home e em páginas futuras.
+- Criar `HeaderNav` com experiência desktop e mobile coerente.
+- Implementar menu mobile com boundary pequena de `use client` apenas se necessário.
+- Preservar semântica de navegação, foco visível e usabilidade por teclado.
+- Integrar CTAs institucionais primários quando fizer sentido para o cabeçalho.
+- Cobrir navegação desktop/mobile e comportamento interativo com testes.
 </requirements>
 
 ## Subtarefas
 
-- [ ] 8.1 Implementar a estrutura do `Footer` usando as primitives do sistema.
-- [ ] 8.2 Integrar conteúdo institucional e links principais.
-- [ ] 8.3 Validar legibilidade e organização em breakpoints móveis e amplos.
-- [ ] 8.4 Escrever testes de composição, links e semântica estrutural.
+- [ ] 8.1 Implementar estrutura desktop da navegação institucional.
+- [ ] 8.2 Implementar a versão mobile com interação acessível.
+- [ ] 8.3 Validar landmarks, tab order e estados de foco.
+- [ ] 8.4 Escrever testes de composição e interação do menu mobile, se houver client-side.
 
 ## Detalhes de Implementação
 
 Referenciar no `techspec.md` as seções:
 - `Arquitetura do Sistema`
 - `Estrutura de Rotas e Seções`
-- `Estratégia de Conteúdo e UX`
 - `Abordagem de Testes`
+- `Considerações Técnicas`
 
 ## Critérios de Sucesso
 
-- O site passa a ter um rodapé institucional padronizado e reutilizável.
-- O componente fecha a composição base da navegação institucional.
-- O rodapé fica pronto para showcase e para a home.
+- O site passa a ter uma navegação institucional consistente e preparada para mobile-first.
+- O client-side fica restrito ao mínimo necessário.
+- O cabeçalho fica pronto para reuso na home e em futuras páginas institucionais.
 
 ## Testes da Tarefa
 
@@ -55,6 +55,7 @@ Referenciar no `techspec.md` as seções:
 
 ## Arquivos relevantes
 
-- [prd.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system-do-site-apac/prd.md)
-- [techspec.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system-do-site-apac/techspec.md)
+- [prd.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system/prd.md)
+- [techspec.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system/techspec.md)
+- [app/page.tsx](/Users/caiobarutti/Documents/www/apac-web/app/page.tsx)
 - [components](/Users/caiobarutti/Documents/www/apac-web/components)

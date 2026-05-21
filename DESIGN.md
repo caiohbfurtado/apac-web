@@ -27,6 +27,63 @@ Este documento registra os padrões visuais, princípios de interface e regras d
 - Acessibilidade estrutural: contraste, foco visível, semântica e navegação por teclado não são opcionais.
 - Motion discreto: animações devem apoiar compreensão e percepção de qualidade, nunca competir com o conteúdo.
 
+## Referência visual oficial
+
+- A referência visual deste ciclo está em [tasks/design-system-reference.png](/Users/caiobarutti/Documents/www/apac-web/tasks/design-system-reference.png).
+- Este board é a fonte principal para cor, tipografia, espaçamento, cantos, sombras e composição do sistema.
+- O padrão visual deve parecer um sistema institucional refinado, não uma landing genérica nem um dashboard pesado.
+
+### Paleta canônica
+
+- Rosa principal: `#E6007E`
+- Rosa escuro: `#B80063`
+- Rosa claro: `#FCE7F3`
+- Rosa muito claro: `#FFF1F7`
+- Preto suave: `#1F1F1F`
+- Cinza texto: `#5F5F66`
+- Cinza borda: `#E7E7EA`
+- Fundo principal: `#FFFCFD`
+- Verde esperança: `#2E7D5B`
+- Verde claro: `#E8F5EF`
+- Azul confiança: `#2563A8`
+- Amarelo suave: `#FFF4CC`
+
+Regras:
+
+- O rosa/magenta é o acento principal do sistema.
+- O verde é reservado para CTAs e estados de apoio/acolhimento.
+- Azul e amarelo entram como cores de suporte sem competir com o acento principal.
+- Neutros devem permanecer muito claros e limpos para sustentar a leitura.
+
+### Tipografia e escala
+
+- Fonte de interface: Inter.
+- H1: 36px / Bold.
+- H2: 28px / Bold.
+- H3: 22px / Semi Bold.
+- H4: 18px / Semi Bold.
+- H5: 16px / Bold.
+- Body: 16px / Regular.
+- Small: 14px / Regular.
+
+Regras:
+
+- Títulos devem ter presença, mas sem exagero de tracking ou peso visual.
+- O corpo deve permanecer legível e compacto, com bom contraste em superfícies claras.
+- Labels curtos e badges podem usar caixa alta quando isso ajudar a leitura estrutural, mas o conteúdo editorial principal não deve depender desse estilo.
+
+### Espaçamento, raio e sombra
+
+- Escala de espaçamento: 4, 8, 12, 16, 24, 32, 40, 46, 96.
+- Raio de canto: 4, 8, 12, 16, 24, 32 e pílulas de 100px.
+- Sombras: leve, média, forte e foco, sempre discretas.
+
+Regras:
+
+- Cards e superfícies devem usar bordas suaves e elevação mínima.
+- Pílulas e botões arredondados devem ficar restritos a CTAs e badges, não a toda a interface.
+- O foco precisa ser visível sem virar glow chamativo.
+
 ## Fundação visual atual
 
 ### Tipografia

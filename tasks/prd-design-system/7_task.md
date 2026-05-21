@@ -1,48 +1,48 @@
-# Tarefa 7.0: Criar componentes de navegação institucional
+# Tarefa 7.0: Criar componentes de formulário
 
 <critical>Ler os arquivos de prd.md e techspec.md desta pasta, se você não ler esses arquivos sua tarefa será invalidada</critical>
 
 ## Visão Geral
 
-Construir `HeaderNav` e o menu mobile institucional, garantindo landmarks claros, navegação responsiva e isolamento de client-side apenas onde houver interação real.
+Implementar `Field`, `Input` e `Textarea` como primitives de formulário do design system, cobrindo estados de foco, ajuda e erro de forma acessível e consistente.
 
 <skills>
 ### Conformidade com Skills Padrões
 
 - `brainstorming`
-- `next-best-practices`
+- `tailwindcss`
 - `vercel-react-best-practices`
 - `web-design-guidelines`
 </skills>
 
 <requirements>
-- Criar `HeaderNav` com experiência desktop e mobile coerente.
-- Implementar menu mobile com boundary pequena de `use client` apenas se necessário.
-- Preservar semântica de navegação, foco visível e usabilidade por teclado.
-- Integrar CTAs institucionais primários quando fizer sentido para o cabeçalho.
-- Cobrir navegação desktop/mobile e comportamento interativo com testes.
+- Criar `Field` para encapsular label, hint, error e obrigatoriedade.
+- Criar `Input` e `Textarea` com props nativas tipadas e classes derivadas de tokens.
+- Garantir associação acessível entre label, campo, hint e erro.
+- Implementar estados visuais previsíveis sem depender só de cor.
+- Cobrir os fluxos principais com testes de acessibilidade e composição.
 </requirements>
 
 ## Subtarefas
 
-- [ ] 7.1 Implementar estrutura desktop da navegação institucional.
-- [ ] 7.2 Implementar a versão mobile com interação acessível.
-- [ ] 7.3 Validar landmarks, tab order e estados de foco.
-- [ ] 7.4 Escrever testes de composição e interação do menu mobile, se houver client-side.
+- [ ] 7.1 Implementar `Field` como primitive de contexto para formulários.
+- [ ] 7.2 Implementar `Input` com foco em uso institucional simples.
+- [ ] 7.3 Implementar `Textarea` para mensagens e descrições mais longas.
+- [ ] 7.4 Escrever testes cobrindo label, hint, error, foco e associação semântica.
 
 ## Detalhes de Implementação
 
 Referenciar no `techspec.md` as seções:
 - `Arquitetura do Sistema`
-- `Estrutura de Rotas e Seções`
+- `Interfaces Principais`
+- `Estratégia de Conteúdo e UX`
 - `Abordagem de Testes`
-- `Considerações Técnicas`
 
 ## Critérios de Sucesso
 
-- O site passa a ter uma navegação institucional consistente e preparada para mobile-first.
-- O client-side fica restrito ao mínimo necessário.
-- O cabeçalho fica pronto para reuso na home e em futuras páginas institucionais.
+- O design system passa a oferecer base acessível para formulários e estados de feedback.
+- Os campos funcionam de forma consistente em isolamento e dentro de seções.
+- Os componentes ficam prontos para a vitrine e para o formulário estrutural da home.
 
 ## Testes da Tarefa
 
@@ -55,7 +55,6 @@ Referenciar no `techspec.md` as seções:
 
 ## Arquivos relevantes
 
-- [prd.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system-do-site-apac/prd.md)
-- [techspec.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system-do-site-apac/techspec.md)
-- [app/page.tsx](/Users/caiobarutti/Documents/www/apac-web/app/page.tsx)
+- [prd.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system/prd.md)
+- [techspec.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system/techspec.md)
 - [components](/Users/caiobarutti/Documents/www/apac-web/components)

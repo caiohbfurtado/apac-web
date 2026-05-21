@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-O Design System do site APAC tem como objetivo resolver inconsistências visuais, baixa reutilização de interface, lentidão na criação de novas páginas e ausência de uma base padronizada de acessibilidade. Hoje, a evolução da interface depende mais de decisões isoladas do que de um sistema claro de componentes, tokens e padrões reutilizáveis.
+O Design System do site APAC tem como objetivo resolver inconsistências visuais, baixa reutilização de interface, lentidão na criação de novas páginas e ausência de uma base padronizada de acessibilidade. Hoje, a evolução da interface depende mais de decisões isoladas do que de um sistema claro de componentes, tokens e padrões reutilizáveis. A referência visual oficial para este ciclo passa a ser `tasks/design-system-reference.png`, que define a direção de cores, tipografia, espaçamento, raio, sombras e composição que as próximas tasks devem seguir.
 
 Este PRD define os requisitos de produto para a criação de um design system interno, inicialmente voltado exclusivamente para este repositório e para as necessidades do próprio site. O foco é dar ao time de frontend, designers, mantenedores do site e agentes de IA uma base consistente para construir páginas, seções e fluxos com mais velocidade, previsibilidade e qualidade. O valor para a organização está em reduzir retrabalho, melhorar consistência institucional e elevar a experiência de navegação para o público final.
 
@@ -13,6 +13,7 @@ Este PRD define os requisitos de produto para a criação de um design system in
 - Padronizar acessibilidade em nível WCAG AA como requisito de entrada para os componentes e suas variações.
 - Melhorar a consistência visual, comportamental e de conteúdo entre diferentes áreas do site.
 - Estabelecer um tema claro e estruturado que sirva como fonte única de decisão para estilização da interface.
+- Realinhar o que já foi criado ao novo padrão visual aprovado antes de avançar para novas superfícies e fluxos.
 
 O sucesso será caracterizado por:
 
@@ -105,6 +106,7 @@ Diretrizes de experiência:
 - Componentes e padrões precisam atender responsividade, acessibilidade WCAG AA e boa experiência em dispositivos móveis.
 - Qualidade mínima inclui cobertura de testes unitários para componentes e tema.
 - O sistema deve apoiar consistência entre telas e facilitar evolução futura, mesmo sem separar agora o design system em produto independente.
+- O eixo visual aprovado agora é o do `tasks/design-system-reference.png`; tarefas futuras devem tratá-lo como a fonte principal para cores, escalas e hierarquia.
 
 Detalhes de implementação, arquitetura de componentes, decisões de pasta, estratégia de testes e definição técnica do tema serão tratados na Especificação Técnica.
 

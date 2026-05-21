@@ -1,48 +1,48 @@
-# Tarefa 9.0: Montar a página de showcase do design system
+# Tarefa 9.0: Criar rodapé institucional
 
 <critical>Ler os arquivos de prd.md e techspec.md desta pasta, se você não ler esses arquivos sua tarefa será invalidada</critical>
 
 ## Visão Geral
 
-Criar a rota `/design-system` como vitrine viva do sistema, agregando tema, primitives e componentes em estados representativos para validação visual, manual e automatizada.
+Construir o `Footer` institucional com contato, redes, mensagem de confiança e estrutura coerente com o restante do design system.
 
 <skills>
 ### Conformidade com Skills Padrões
 
 - `brainstorming`
+- `tailwindcss`
 - `ui-craft`
-- `next-best-practices`
-- `vercel-react-best-practices`
+- `web-design-guidelines`
 </skills>
 
 <requirements>
-- Criar `app/design-system/page.tsx` como página interna de showcase.
-- Agregar todos os componentes já implementados com seus estados e combinações aprovadas.
-- Organizar a vitrine por grupos claros para facilitar validação por humanos e agentes.
-- Reutilizar fixtures ou dados locais serializáveis para evitar duplicação.
-- Cobrir renderização da página e presença dos grupos esperados com testes de composição.
+- Criar `Footer` com conteúdo institucional, contato e links relevantes.
+- Garantir composição com `Container`, `Stack`, `Heading` e `Text`.
+- Preservar legibilidade, contraste e boa organização em mobile-first.
+- Cobrir estrutura, links principais e landmark semântica com testes.
+- Deixar o componente pronto para uso imediato na home e em páginas futuras.
 </requirements>
 
 ## Subtarefas
 
-- [ ] 9.1 Criar a estrutura da rota `/design-system`.
-- [ ] 9.2 Adicionar seções para primitives, ações, superfícies, formulários e navegação.
-- [ ] 9.3 Centralizar fixtures de showcase e testes quando necessário.
-- [ ] 9.4 Escrever testes que garantam a presença dos grupos e estados principais.
+- [ ] 9.1 Implementar a estrutura do `Footer` usando as primitives do sistema.
+- [ ] 9.2 Integrar conteúdo institucional e links principais.
+- [ ] 9.3 Validar legibilidade e organização em breakpoints móveis e amplos.
+- [ ] 9.4 Escrever testes de composição, links e semântica estrutural.
 
 ## Detalhes de Implementação
 
 Referenciar no `techspec.md` as seções:
-- `Design de Implementação`
+- `Arquitetura do Sistema`
 - `Estrutura de Rotas e Seções`
+- `Estratégia de Conteúdo e UX`
 - `Abordagem de Testes`
-- `Riscos Conhecidos`
 
 ## Critérios de Sucesso
 
-- O projeto passa a ter uma superfície dedicada para validar visual e comportamento do design system.
-- Todos os componentes implementados até aqui ficam agregados em uma única página de referência.
-- A showcase se torna critério concreto para revisão nas tasks seguintes.
+- O site passa a ter um rodapé institucional padronizado e reutilizável.
+- O componente fecha a composição base da navegação institucional.
+- O rodapé fica pronto para showcase e para a home.
 
 ## Testes da Tarefa
 
@@ -55,7 +55,6 @@ Referenciar no `techspec.md` as seções:
 
 ## Arquivos relevantes
 
-- [prd.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system-do-site-apac/prd.md)
-- [techspec.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system-do-site-apac/techspec.md)
-- [app/design-system](/Users/caiobarutti/Documents/www/apac-web/app/design-system)
-- [lib](/Users/caiobarutti/Documents/www/apac-web/lib)
+- [prd.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system/prd.md)
+- [techspec.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system/techspec.md)
+- [components](/Users/caiobarutti/Documents/www/apac-web/components)

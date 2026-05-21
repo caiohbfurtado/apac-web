@@ -1,48 +1,48 @@
-# Tarefa 6.0: Criar componentes de formulário
+# Tarefa 6.0: Criar componentes de apoio visual
 
 <critical>Ler os arquivos de prd.md e techspec.md desta pasta, se você não ler esses arquivos sua tarefa será invalidada</critical>
 
 ## Visão Geral
 
-Implementar `Field`, `Input` e `Textarea` como primitives de formulário do design system, cobrindo estados de foco, ajuda e erro de forma acessível e consistente.
+Criar `Badge` e `Card` como componentes de apoio visual e composição de conteúdo, atendendo categorias, blocos institucionais, destaques editoriais e agrupamentos recorrentes da interface.
 
 <skills>
 ### Conformidade com Skills Padrões
 
 - `brainstorming`
 - `tailwindcss`
-- `vercel-react-best-practices`
-- `web-design-guidelines`
+- `ui-craft`
+- `vercel-composition-patterns`
 </skills>
 
 <requirements>
-- Criar `Field` para encapsular label, hint, error e obrigatoriedade.
-- Criar `Input` e `Textarea` com props nativas tipadas e classes derivadas de tokens.
-- Garantir associação acessível entre label, campo, hint e erro.
-- Implementar estados visuais previsíveis sem depender só de cor.
-- Cobrir os fluxos principais com testes de acessibilidade e composição.
+- Criar `Badge` para selos curtos, categorias e estados editoriais.
+- Criar `Card` com slots simples para ícone, título, descrição e ação.
+- Garantir variações de superfície, padding e modo interativo quando aplicável.
+- Fazer os componentes consumirem tokens e funcionarem bem em grids mobile-first.
+- Cobrir variantes e composição com testes unitários.
 </requirements>
 
 ## Subtarefas
 
-- [ ] 6.1 Implementar `Field` como primitive de contexto para formulários.
-- [ ] 6.2 Implementar `Input` com foco em uso institucional simples.
-- [ ] 6.3 Implementar `Textarea` para mensagens e descrições mais longas.
-- [ ] 6.4 Escrever testes cobrindo label, hint, error, foco e associação semântica.
+- [ ] 6.1 Implementar `Badge` com tons adequados ao sistema institucional.
+- [ ] 6.2 Implementar `Card` como base de superfície reutilizável para blocos de conteúdo.
+- [ ] 6.3 Validar composição com tipografia, botões e seções.
+- [ ] 6.4 Escrever testes de variantes, estrutura e estados interativos.
 
 ## Detalhes de Implementação
 
 Referenciar no `techspec.md` as seções:
 - `Arquitetura do Sistema`
 - `Interfaces Principais`
-- `Estratégia de Conteúdo e UX`
+- `Estrutura de Rotas e Seções`
 - `Abordagem de Testes`
 
 ## Critérios de Sucesso
 
-- O design system passa a oferecer base acessível para formulários e estados de feedback.
-- Os campos funcionam de forma consistente em isolamento e dentro de seções.
-- Os componentes ficam prontos para a vitrine e para o formulário estrutural da home.
+- O sistema passa a suportar blocos de conteúdo reutilizáveis sem layout ad hoc.
+- `Badge` e `Card` funcionam juntos e com as primitives já implementadas.
+- A base fica pronta para uso em showcase, home e futuras seções de campanha.
 
 ## Testes da Tarefa
 
@@ -55,6 +55,6 @@ Referenciar no `techspec.md` as seções:
 
 ## Arquivos relevantes
 
-- [prd.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system-do-site-apac/prd.md)
-- [techspec.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system-do-site-apac/techspec.md)
+- [prd.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system/prd.md)
+- [techspec.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system/techspec.md)
 - [components](/Users/caiobarutti/Documents/www/apac-web/components)

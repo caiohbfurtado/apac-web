@@ -1,48 +1,48 @@
-# Tarefa 11.0: Executar validação final de qualidade
+# Tarefa 11.0: Reescrever a home usando o design system
 
 <critical>Ler os arquivos de prd.md e techspec.md desta pasta, se você não ler esses arquivos sua tarefa será invalidada</critical>
 
 ## Visão Geral
 
-Consolidar a entrega do primeiro ciclo do design system com validação final de qualidade, cobrindo lint, build, suíte de testes, revisão da showcase e checagem final de aderência ao PRD e ao tech spec.
+Refazer `app/page.tsx` para que a home institucional passe a consumir apenas a camada do design system, validando na prática a cobertura funcional dos componentes criados.
 
 <skills>
 ### Conformidade com Skills Padrões
 
 - `brainstorming`
+- `ui-craft`
 - `next-best-practices`
-- `vercel-react-best-practices`
-- `web-design-guidelines`
+- `vercel-composition-patterns`
 </skills>
 
 <requirements>
-- Executar e estabilizar `npm run lint`.
-- Executar e estabilizar `npm run build`.
-- Executar a suíte de testes criada ao longo das tasks anteriores.
-- Revisar a página `/design-system` como superfície de validação visual final.
-- Confirmar que home e componentes atendem mobile-first, acessibilidade estrutural e consumo consistente do tema.
+- Reescrever a home removendo o conteúdo padrão do template do Next.
+- Compor hero, blocos institucionais, apoio, campanhas, confiança e fechamento usando apenas components e primitives do sistema.
+- Manter conteúdo em estrutura serializável local quando fizer sentido.
+- Garantir landmarks, headings, CTAs principais e boa experiência mobile-first.
+- Cobrir a composição da home com testes de presença das regiões e CTAs principais.
 </requirements>
 
 ## Subtarefas
 
-- [ ] 11.1 Rodar `npm run lint` e corrigir pendências.
-- [ ] 11.2 Rodar `npm run build` e corrigir pendências.
-- [ ] 11.3 Rodar a suíte de testes de componentes, composição e páginas.
-- [ ] 11.4 Revisar a showcase e a home como checagem final do ciclo.
+- [ ] 11.1 Estruturar o conteúdo da home em formato reutilizável e local.
+- [ ] 11.2 Compor a landing com `HeaderNav`, `Section`, `Card`, `Badge`, botões, campos e `Footer`.
+- [ ] 11.3 Validar semântica, hierarquia e experiência mobile-first da página.
+- [ ] 11.4 Escrever testes cobrindo headings, CTAs e landmarks principais da home.
 
 ## Detalhes de Implementação
 
 Referenciar no `techspec.md` as seções:
+- `Design de Implementação`
+- `Estrutura de Rotas e Seções`
+- `Estratégia de Conteúdo e UX`
 - `Abordagem de Testes`
-- `Sequenciamento de Desenvolvimento`
-- `SEO, Performance e Qualidade`
-- `Riscos Conhecidos`
 
 ## Critérios de Sucesso
 
-- O ciclo inicial do design system fecha com gates objetivos de qualidade.
-- Há evidência concreta de que o sistema funciona na showcase e na home.
-- O time fica com uma base segura para continuar evoluindo componentes e páginas.
+- A home passa a ser a primeira consumidora real e completa do design system.
+- O estado inicial do app é substituído por uma landing institucional coerente.
+- Os componentes ganham validação prática em cenário de uso real.
 
 ## Testes da Tarefa
 
@@ -55,8 +55,8 @@ Referenciar no `techspec.md` as seções:
 
 ## Arquivos relevantes
 
-- [prd.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system-do-site-apac/prd.md)
-- [techspec.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system-do-site-apac/techspec.md)
-- [tasks.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system-do-site-apac/tasks.md)
+- [prd.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system/prd.md)
+- [techspec.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system/techspec.md)
 - [app/page.tsx](/Users/caiobarutti/Documents/www/apac-web/app/page.tsx)
-- [app/design-system/page.tsx](/Users/caiobarutti/Documents/www/apac-web/app/design-system/page.tsx)
+- [components](/Users/caiobarutti/Documents/www/apac-web/components)
+- [lib](/Users/caiobarutti/Documents/www/apac-web/lib)
