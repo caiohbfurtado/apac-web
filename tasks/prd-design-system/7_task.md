@@ -26,11 +26,11 @@ Implementar `Field`, `Input` e `Textarea` como primitives de formulário do desi
 
 ## Subtarefas
 
-- [ ] 7.1 Implementar `Field` como primitive de contexto para formulários.
-- [ ] 7.2 Implementar `Input` com foco em uso institucional simples.
-- [ ] 7.3 Implementar `Textarea` para mensagens e descrições mais longas.
-- [ ] 7.4 Adicionar playground na home com exemplos de `Field`, `Input` e `Textarea`.
-- [ ] 7.5 Escrever testes cobrindo label, hint, error, foco e associação semântica.
+- [x] 7.1 Implementar `Field` como primitive de contexto para formulários.
+- [x] 7.2 Implementar `Input` com foco em uso institucional simples.
+- [x] 7.3 Implementar `Textarea` para mensagens e descrições mais longas.
+- [x] 7.4 Adicionar playground na home com exemplos de `Field`, `Input` e `Textarea`.
+- [x] 7.5 Escrever testes cobrindo label, hint, error, foco e associação semântica.
 
 ## Detalhes de Implementação
 
@@ -49,9 +49,9 @@ Referenciar no `techspec.md` as seções:
 
 ## Testes da Tarefa
 
-- [ ] Validação com `npm run lint`
-- [ ] Validação com `npm run build`
-- [ ] Testes de componente ou composição, se aplicável
+- [x] Validação com `npm run lint`
+- [x] Validação com `npm run build`
+- [x] Testes de componente ou composição, se aplicável
 - [ ] Testes E2E (se aplicável)
 
 <critical>SEMPRE CRIE E EXECUTE OS TESTES DA TAREFA ANTES DE CONSIDERÁ-LA FINALIZADA</critical>

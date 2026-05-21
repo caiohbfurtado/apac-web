@@ -1,5 +1,16 @@
 import { Container, Section, Stack } from "@/components/layout";
-import { Badge, Card, Heading, PrimaryButton, SecondaryButton, Text, WhatsAppButton } from "@/components/ui";
+import {
+  Badge,
+  Card,
+  Field,
+  Heading,
+  Input,
+  PrimaryButton,
+  SecondaryButton,
+  Text,
+  Textarea,
+  WhatsAppButton,
+} from "@/components/ui";
 
 export default function Home() {
   return (
@@ -299,6 +310,56 @@ export default function Home() {
                 action={<Badge tone="info">Ancora</Badge>}
               />
             </div>
+          </Stack>
+        </Section>
+        <Section
+          id="playground-formularios"
+          heading={
+            <Stack gap="sm">
+              <Heading as="h2" size="lg">
+                Playground de formularios
+              </Heading>
+              <Text tone="muted">
+                Estados essenciais de field, input e textarea com associacao semantica e foco visivel.
+              </Text>
+            </Stack>
+          }
+        >
+          <Stack gap="lg">
+            <div className="grid gap-6 sm:grid-cols-2">
+              <Field
+                label="Nome completo"
+                hint="Use o mesmo nome do documento para agilizar o atendimento."
+                required
+              >
+                <Input placeholder="Digite seu nome" />
+              </Field>
+              <Field label="Telefone" hint="Ex.: (11) 99999-9999">
+                <Input type="tel" placeholder="(11) 99999-9999" />
+              </Field>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2">
+              <Field
+                label="E-mail"
+                error="Informe um e-mail valido para retorno."
+                required
+              >
+                <Input
+                  type="email"
+                  placeholder="nome@exemplo.org"
+                  defaultValue="contato@"
+                />
+              </Field>
+              <Field label="Campo desabilitado" hint="Exemplo de estado neutro sem hover.">
+                <Input disabled defaultValue="Sem permissao de edicao" />
+              </Field>
+            </div>
+            <Field
+              label="Mensagem"
+              hint="Compartilhe o contexto principal para receber apoio adequado."
+            >
+              <Textarea placeholder="Descreva sua necessidade..." />
+            </Field>
           </Stack>
         </Section>
       </Stack>

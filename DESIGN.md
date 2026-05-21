@@ -152,6 +152,11 @@ Regras:
   - Use `surface` (`default`/`muted`/`brand`) e `padding` (`sm`/`md`/`lg`) para variar densidade sem criar novas classes locais.
   - Prefira `icon`, `title`, `description` e `action` como slots simples; use `children` para o corpo livre do card.
   - Quando `interactive` estiver ativo, o card pode ganhar hover e leve elevação, mas sem virar um botão disfarçado.
+- Primitives de formulário (`components/ui/Field.tsx`, `components/ui/Input.tsx`, `components/ui/Textarea.tsx`):
+  - Use `Field` como wrapper padrão para garantir associação entre `label`, `hint`, `error` e controle.
+  - Prefira `Input` para textos curtos e `Textarea` para descrições longas, sempre consumindo tokens de borda, foco e superfície.
+  - Erro deve combinar sinal textual (`Erro:` + mensagem) com mudança visual de campo; nunca depender só de cor.
+  - Campos desabilitados devem manter legibilidade e remover sinais de ação (sem hover e com cursor bloqueado).
 
 ### Conteúdo e hierarquia
 

@@ -8,7 +8,7 @@
 - [x] 4.0 Criar componente de ação
 - [x] 5.0 Realinhar base visual e tokens ao novo padrão
 - [x] 6.0 Criar componentes de apoio visual
-- [ ] 7.0 Criar componentes de formulário
+- [x] 7.0 Criar componentes de formulário
 - [ ] 8.0 Criar componentes de navegação institucional
 - [ ] 9.0 Criar rodapé institucional
 - [ ] 10.0 Montar a página de showcase do design system
