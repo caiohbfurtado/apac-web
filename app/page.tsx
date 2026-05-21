@@ -39,13 +39,13 @@ export default function Home() {
           actions={
             <Stack direction="vertical" gap="sm" className="sm:flex-row">
               <a
-                className="inline-flex min-h-12 items-center justify-center rounded-md bg-brand px-6 py-3 text-base font-semibold text-white transition hover:bg-brand-strong"
+                className="inline-flex min-h-12 items-center justify-center rounded-button bg-brand px-6 py-3 text-base font-semibold text-surface transition hover:bg-brand-strong"
                 href="#fundacao"
               >
                 Ver base atual
               </a>
               <a
-                className="inline-flex min-h-12 items-center justify-center rounded-md border border-line bg-white px-6 py-3 text-base font-semibold text-ink transition hover:border-brand/40 hover:bg-brand-soft/40"
+                className="inline-flex min-h-12 items-center justify-center rounded-button border border-line bg-surface px-6 py-3 text-base font-semibold text-ink transition hover:border-brand/40 hover:bg-brand-soft/40"
                 href="#proximos-passos"
               >
                 Ver proximas entregas

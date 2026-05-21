@@ -13,10 +13,10 @@ export type TextProps<TAs extends ElementType = "p"> = {
 } & Omit<ComponentPropsWithoutRef<TAs>, "as" | "className" | "children">;
 
 const sizeClasses: Record<TextSize, string> = {
-  lg: "text-lg leading-relaxed sm:text-xl",
-  md: "text-base leading-7",
-  sm: "text-sm leading-6",
-  xs: "text-xs leading-5",
+  lg: "text-lead leading-lead",
+  md: "text-body leading-body",
+  sm: "text-small leading-small",
+  xs: "text-caption leading-caption",
 };
 
 const toneClasses: Record<TextTone, string> = {

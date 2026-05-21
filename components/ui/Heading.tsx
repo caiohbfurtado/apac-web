@@ -15,11 +15,11 @@ export type HeadingProps = {
 } & Omit<ComponentPropsWithoutRef<HeadingAs>, "as" | "className" | "children">;
 
 const sizeClasses: Record<HeadingSize, string> = {
-  xl: "text-4xl leading-tight font-bold sm:text-5xl",
-  lg: "text-3xl leading-tight font-bold sm:text-4xl",
-  md: "text-2xl leading-snug font-semibold sm:text-3xl",
-  sm: "text-xl leading-snug font-semibold sm:text-2xl",
-  xs: "text-lg leading-snug font-semibold",
+  xl: "text-h1 leading-h1 font-bold",
+  lg: "text-h2 leading-h2 font-bold",
+  md: "text-h3 leading-h3 font-semibold",
+  sm: "text-h4 leading-h4 font-semibold",
+  xs: "text-h5 leading-h5 font-bold",
 };
 
 const toneClasses: Record<HeadingTone, string> = {

@@ -320,7 +320,7 @@ Alternativas rejeitadas:
 
 - [tasks/prd-design-system/prd.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system/prd.md)
 - [docs/design-system/prompt-design-system.md](/Users/caiobarutti/Documents/www/apac-web/docs/design-system/prompt-design-system.md)
-- [tasks/design-spec.png](/Users/caiobarutti/Documents/www/apac-web/tasks/design-spec.png)
+- [tasks/design-system-reference.png](/Users/caiobarutti/Documents/www/apac-web/tasks/design-system-reference.png)
 - [app/layout.tsx](/Users/caiobarutti/Documents/www/apac-web/app/layout.tsx)
 - [app/page.tsx](/Users/caiobarutti/Documents/www/apac-web/app/page.tsx)
 - [app/globals.css](/Users/caiobarutti/Documents/www/apac-web/app/globals.css)

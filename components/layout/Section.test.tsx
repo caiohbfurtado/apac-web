@@ -14,6 +14,7 @@ describe("Section", () => {
 
     expect(screen.getByTestId("section")).toHaveClass("bg-surface-muted");
     expect(screen.getByTestId("section")).toHaveClass("p-6");
+    expect(screen.getByTestId("section")).toHaveClass("rounded-card");
   });
 
   it("renders heading, description, actions, and children with predictable structure", () => {

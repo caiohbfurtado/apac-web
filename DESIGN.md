@@ -33,31 +33,9 @@ Este documento registra os padrões visuais, princípios de interface e regras d
 - Este board é a fonte principal para cor, tipografia, espaçamento, cantos, sombras e composição do sistema.
 - O padrão visual deve parecer um sistema institucional refinado, não uma landing genérica nem um dashboard pesado.
 
-### Paleta canônica
-
-- Rosa principal: `#E6007E`
-- Rosa escuro: `#B80063`
-- Rosa claro: `#FCE7F3`
-- Rosa muito claro: `#FFF1F7`
-- Preto suave: `#1F1F1F`
-- Cinza texto: `#5F5F66`
-- Cinza borda: `#E7E7EA`
-- Fundo principal: `#FFFCFD`
-- Verde esperança: `#2E7D5B`
-- Verde claro: `#E8F5EF`
-- Azul confiança: `#2563A8`
-- Amarelo suave: `#FFF4CC`
-
-Regras:
-
-- O rosa/magenta é o acento principal do sistema.
-- O verde é reservado para CTAs e estados de apoio/acolhimento.
-- Azul e amarelo entram como cores de suporte sem competir com o acento principal.
-- Neutros devem permanecer muito claros e limpos para sustentar a leitura.
-
 ### Tipografia e escala
 
-- Fonte de interface: Inter.
+- Fonte de interface: Inter, carregada via `next/font/google` e calibrada para o board de referência.
 - H1: 36px / Bold.
 - H2: 28px / Bold.
 - H3: 22px / Semi Bold.
@@ -80,8 +58,8 @@ Regras:
 
 Regras:
 
-- Cards e superfícies devem usar bordas suaves e elevação mínima.
-- Pílulas e botões arredondados devem ficar restritos a CTAs e badges, não a toda a interface.
+- Cards e superfícies devem usar bordas suaves, raio de 16px e elevação mínima.
+- Pílulas e botões arredondados ficam para CTAs e badges; superfícies estruturais usam raio consistente menor.
 - O foco precisa ser visível sem virar glow chamativo.
 
 ## Fundação visual atual
@@ -90,9 +68,9 @@ Regras:
 
 - Fonte base de interface: `--font-body`
 - Fonte de destaque e headings: `--font-display`
-- Fonte monoespaçada: `--font-geist-mono` via token `--font-mono`
-- As fontes são carregadas via `next/font/local` no layout raiz.
-- Headings devem carregar mais presença visual do que texto corrido, sem depender de hacks locais por página.
+- Fonte monoespaçada: `--font-mono`
+- As fontes são carregadas via `next/font/google` no layout raiz.
+- Headings usam a mesma família sans do sistema, com pesos e tamanhos distintos para criar hierarquia limpa.
 
 ### Cor
 
@@ -105,17 +83,21 @@ Regras:
 - Estado de destaque forte: `--accent-strong`
 - Variação suave de destaque: `--accent-soft`
 - Cor auxiliar positiva: `--success`
+- Cor auxiliar informativa: `--color-info`
+- Cor auxiliar de atenção suave: `--color-warning`
 
 Regras:
 
-- O acento cromático principal deve permanecer controlado e reconhecível.
+- O rosa/magenta é o acento cromático principal e deve permanecer controlado e reconhecível.
+- O verde é reservado para ações de contato, apoio e sucesso funcional.
+- Azul e amarelo existem como cores de suporte para informação e atenção, sem competir com o acento principal.
 - Não introduzir novas cores de marca por conveniência local.
 - Estados não podem depender só de cor para comunicar significado.
 
 ### Espaçamento, raio e sombra
 
 - Escala base de spacing: `--spacing`
-- Raios padrão: `--radius-xs`, `--radius-sm`, `--radius-md`, `--radius-lg`
+- Raios padrão: `--radius-xs`, `--radius-sm`, `--radius-md`, `--radius-lg`, `--radius-button`, `--radius-card`, `--radius-surface`, `--radius-pill`
 - Sombras padrão: `--shadow-soft`, `--shadow-card`
 
 Regras:
@@ -160,6 +142,8 @@ Regras:
 - Variantes importantes devem ser explícitas e previsíveis.
 - Componentes base devem consumir tokens, não valores arbitrários espalhados.
 - Estados interativos precisam ter hover, focus e disabled coerentes quando aplicável.
+- Controles desabilitados não devem reagir ao hover; o estado precisa parecer neutro e não convidar interação.
+- Controles acionáveis devem sinalizar interatividade com cursor pointer; estados desabilitados usam cursor not-allowed e não aceitam hover.
 
 ### Conteúdo e hierarquia
 

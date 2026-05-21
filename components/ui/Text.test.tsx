@@ -6,7 +6,7 @@ describe("Text", () => {
     const { container } = render(<Text data-testid="text">Conteudo</Text>);
 
     expect(container.firstElementChild?.tagName).toBe("P");
-    expect(screen.getByTestId("text")).toHaveClass("text-base");
+    expect(screen.getByTestId("text")).toHaveClass("text-body");
     expect(screen.getByTestId("text")).toHaveClass("text-ink/80");
   });
 
@@ -18,7 +18,7 @@ describe("Text", () => {
     );
 
     expect(container.firstElementChild?.tagName).toBe("SPAN");
-    expect(screen.getByText("Microcopy")).toHaveClass("text-sm");
+    expect(screen.getByText("Microcopy")).toHaveClass("text-small");
     expect(screen.getByText("Microcopy")).toHaveClass("text-ink/60");
   });
 });

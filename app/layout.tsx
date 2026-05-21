@@ -1,26 +1,26 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 
-const brandSans = localFont({
-  src: "./fonts/geist-sans.woff2",
+const brandSans = Inter({
+  subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
-  weight: "100 900",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const brandDisplay = localFont({
-  src: "./fonts/geist-sans.woff2",
+const brandDisplay = Inter({
+  subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
-  weight: "100 900",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const brandMono = localFont({
-  src: "./fonts/geist-mono.woff2",
-  variable: "--font-geist-mono",
+const brandMono = Roboto_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
   display: "swap",
-  weight: "100 900",
+  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {

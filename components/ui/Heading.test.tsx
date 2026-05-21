@@ -6,7 +6,7 @@ describe("Heading", () => {
     const { container } = render(<Heading data-testid="heading">Titulo</Heading>);
 
     expect(container.firstElementChild?.tagName).toBe("H2");
-    expect(screen.getByTestId("heading")).toHaveClass("text-2xl");
+    expect(screen.getByTestId("heading")).toHaveClass("text-h3");
     expect(screen.getByTestId("heading")).toHaveClass("text-ink");
   });
 
@@ -18,7 +18,7 @@ describe("Heading", () => {
     );
 
     expect(container.firstElementChild?.tagName).toBe("H1");
-    expect(screen.getByText("Titulo principal")).toHaveClass("text-4xl");
+    expect(screen.getByText("Titulo principal")).toHaveClass("text-h1");
     expect(screen.getByText("Titulo principal")).toHaveClass("text-brand-strong");
   });
 });

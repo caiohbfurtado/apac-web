@@ -8,6 +8,8 @@ describe("Button", () => {
     const button = screen.getByRole("button", { name: "Acao" });
     expect(button).toHaveAttribute("type", "button");
     expect(button).toHaveClass("inline-flex");
+    expect(button).toHaveClass("cursor-pointer");
+    expect(button).toHaveClass("rounded-button");
   });
 
   it("renders as a link when href is provided", () => {
@@ -35,15 +37,22 @@ describe("Button", () => {
     expect(screen.getByRole("button", { name: "Whats" })).toHaveClass("bg-success");
   });
 
-  it("handles disabled links with aria-disabled and tabIndex", () => {
+  it("renders disabled links as non-navigable content", () => {
     render(
       <Button href="/apoio" disabled>
         Apoio
       </Button>,
     );
 
-    const link = screen.getByRole("link", { name: "Apoio" });
-    expect(link).toHaveAttribute("aria-disabled", "true");
-    expect(link).toHaveAttribute("tabindex", "-1");
+    expect(screen.getByText("Apoio")).toHaveAttribute("aria-disabled", "true");
+    expect(screen.queryByRole("link", { name: "Apoio" })).not.toBeInTheDocument();
+  });
+
+  it("keeps disabled buttons non-interactive", () => {
+    render(<Button disabled>Bloqueado</Button>);
+
+    expect(screen.getByRole("button", { name: "Bloqueado" })).toHaveClass(
+      "disabled:pointer-events-none",
+    );
   });
 });

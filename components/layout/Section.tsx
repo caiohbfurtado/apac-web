@@ -46,7 +46,7 @@ export function Section<TAs extends ElementType = "section">({
     <Component
       id={id}
       className={cn(
-        "w-full rounded-lg border",
+        "w-full rounded-card border",
         surfaceClasses[surface],
         spacingClasses[spacing],
         className,
@@ -54,14 +54,12 @@ export function Section<TAs extends ElementType = "section">({
       {...props}
     >
       {hasHeader ? (
-        <div className="max-w-3xl">
-          <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
-            <div className="flex-1">
-              {heading ? <div className="max-w-3xl">{heading}</div> : null}
-              {description ? <div className="mt-3 max-w-2xl">{description}</div> : null}
-            </div>
-            {actions ? <div className="shrink-0">{actions}</div> : null}
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+          <div className="flex-1 max-w-3xl">
+            {heading ? <div>{heading}</div> : null}
+            {description ? <div className="mt-3 max-w-2xl">{description}</div> : null}
           </div>
+          {actions ? <div className="shrink-0">{actions}</div> : null}
         </div>
       ) : null}
       {children ? <div className={cn(hasHeader ? "mt-10" : undefined)}>{children}</div> : null}

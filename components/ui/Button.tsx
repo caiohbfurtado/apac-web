@@ -21,7 +21,7 @@ type ButtonActionProps = {
 export type ButtonProps = SharedButtonProps & (ButtonLinkProps | ButtonActionProps);
 
 const baseClasses =
-  "inline-flex items-center justify-center gap-2 rounded-md border text-sm font-semibold transition duration-200 ease-[var(--ease-standard)]";
+  "inline-flex cursor-pointer items-center justify-center gap-2 rounded-button border text-sm font-semibold transition duration-200 ease-[var(--ease-standard)] disabled:cursor-not-allowed disabled:pointer-events-none";
 
 const sizeClasses: Record<ButtonSize, string> = {
   sm: "px-4 py-2",
@@ -49,12 +49,23 @@ export function Button({ size = "md", className, children, ...props }: ButtonPro
   if ("href" in props && props.href) {
     const { href, disabled, tabIndex, ...rest } = props;
 
+    if (disabled) {
+      return (
+        <span
+          aria-disabled="true"
+          className={cn(getButtonClasses(size, className), "pointer-events-none")}
+          {...rest}
+        >
+          {children}
+        </span>
+      );
+    }
+
     return (
       <a
         href={href}
-        aria-disabled={disabled || undefined}
-        tabIndex={disabled ? -1 : tabIndex}
         className={getButtonClasses(size, className)}
+        tabIndex={tabIndex}
         {...rest}
       >
         {children}

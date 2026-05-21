@@ -26,10 +26,10 @@ Revisar o que já foi construído até aqui e alinhar tema, tokens, documentos e
 
 ## Subtarefas
 
-- [ ] 5.1 Auditar tokens, cores, tipografia, raio e sombras contra o board novo.
-- [ ] 5.2 Atualizar documentação de design e referências do sistema visual.
-- [ ] 5.3 Revisar componentes e primitives já entregues para remover desvios visuais.
-- [ ] 5.4 Escrever testes ou checks de composição para confirmar o realinhamento.
+- [x] 5.1 Auditar tokens, cores, tipografia, raio e sombras contra o board novo.
+- [x] 5.2 Atualizar documentação de design e referências do sistema visual.
+- [x] 5.3 Revisar componentes e primitives já entregues para remover desvios visuais.
+- [x] 5.4 Escrever testes ou checks de composição para confirmar o realinhamento.
 
 ## Detalhes de Implementação
 
@@ -49,9 +49,9 @@ Referenciar no `techspec.md` as seções:
 
 ## Testes da Tarefa
 
-- [ ] Validação com `npm run lint`
-- [ ] Validação com `npm run build`
-- [ ] Testes de componente ou composição, se aplicável
+- [x] Validação com `npm run lint`
+- [x] Validação com `npm run build`
+- [x] Testes de componente ou composição, se aplicável
 - [ ] Testes E2E (se aplicável)
 
 <critical>SEMPRE CRIE E EXECUTE OS TESTES DA TAREFA ANTES DE CONSIDERÁ-LA FINALIZADA</critical>
