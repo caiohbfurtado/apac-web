@@ -26,10 +26,10 @@ Consolidar a entrega do primeiro ciclo do design system com validação final de
 
 ## Subtarefas
 
-- [ ] 12.1 Rodar `npm run lint` e corrigir pendências.
-- [ ] 12.2 Rodar `npm run build` e corrigir pendências.
-- [ ] 12.3 Rodar a suíte de testes de componentes, composição e páginas.
-- [ ] 12.4 Revisar a showcase e a home como checagem final do ciclo.
+- [x] 12.1 Rodar `npm run lint` e corrigir pendências.
+- [x] 12.2 Rodar `npm run build` e corrigir pendências.
+- [x] 12.3 Rodar a suíte de testes de componentes, composição e páginas.
+- [x] 12.4 Revisar a showcase e a home como checagem final do ciclo.
 
 ## Detalhes de Implementação
 
@@ -47,10 +47,20 @@ Referenciar no `techspec.md` as seções:
 
 ## Testes da Tarefa
 
-- [ ] Validação com `npm run lint`
-- [ ] Validação com `npm run build`
-- [ ] Testes de componente ou composição, se aplicável
-- [ ] Testes E2E (se aplicável)
+- [x] Validação com `npm run lint`
+- [x] Validação com `npm run build`
+- [x] Testes de componente ou composição, se aplicável
+- [x] Testes E2E (se aplicável)
+
+## Evidências de Execução
+
+- `npm test`: 14 suites aprovadas, 40 testes aprovados, 0 falhas.
+- `npm run lint`: concluído sem erros.
+- `npm run build`: concluído com sucesso (rotas estáticas `/` e `/design-system` geradas).
+- Revisão final de estrutura:
+  - Home (`app/page.tsx`) usa componentes do design system e mantém composição mobile-first.
+  - Showcase (`app/design-system/page.tsx`) centraliza playground detalhado de primitives, ações, superfícies, formulários e navegação.
+  - Não há playground detalhado disperso na home; a home referencia a rota central `/design-system`.
 
 <critical>SEMPRE CRIE E EXECUTE OS TESTES DA TAREFA ANTES DE CONSIDERÁ-LA FINALIZADA</critical>
 
