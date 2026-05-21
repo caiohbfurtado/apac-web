@@ -261,94 +261,46 @@ export function HomeInstitutionSection({ content }: HomeInstitutionSectionProps)
 
 export function HomeSupportSection({ content }: HomeSupportSectionProps) {
   return (
-    <Section
-      id={content.id}
-      heading={<Heading as="h2" size="lg">{content.heading}</Heading>}
-      description={<Text tone="muted">{content.description}</Text>}
-    >
-      <div className="grid gap-10 xl:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
-        <Stack gap="md">
-          <Badge tone="brand" className="w-fit">
-            Acesso sem fricção
-          </Badge>
-          <Heading as="h3" size="sm" className="max-w-xl">
-            Sem formulário longo nem espera desnecessária
-          </Heading>
-          <Text size="sm" tone="muted" className="max-w-xl">
-            Conte o que estiver conseguindo agora e a equipe ajuda a organizar o próximo passo.
+    <section id={content.id} className="space-y-10 pb-12 sm:pb-14 lg:pb-16">
+      <div className="max-w-3xl space-y-4">
+        <Badge tone="brand" className="w-fit">
+          Acesso direto
+        </Badge>
+        <Heading as="h2" size="lg" className="max-w-none">
+          {content.heading}
+        </Heading>
+        <Text tone="muted" className="max-w-2xl">
+          {content.description}
+        </Text>
+      </div>
+
+      <div className="grid gap-10 xl:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] xl:items-start">
+        <div className="space-y-6 border-l border-line/70 pl-5 sm:pl-6">
+          <Text size="sm" tone="strong" className="font-semibold tracking-[0.08em] uppercase">
+            Comece por aqui
           </Text>
 
-          <ol className="mt-2 space-y-4 border-l border-line/70 pl-5">
+          <ol className="space-y-5">
             {content.steps.map((step, index) => (
               <SupportStepRow key={step.title} step={step} index={index} />
             ))}
           </ol>
 
-          <Stack direction="vertical" gap="sm" className="pt-2 sm:flex-row">
-            <PrimaryButton href={homeContent.hero.ctas.support.href}>
-              {homeContent.hero.ctas.support.label}
-            </PrimaryButton>
-            <WhatsAppButton href={homeContent.hero.ctas.whatsapp.href}>
-              {homeContent.hero.ctas.whatsapp.label}
-            </WhatsAppButton>
-          </Stack>
-        </Stack>
-
-        <div className="space-y-4">
-          <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-            <Heading as="h3" size="sm">
-              Canais diretos
-            </Heading>
-            <Text size="sm" tone="muted">
-              Escolha o canal mais simples para começar.
-            </Text>
-          </div>
-
-          <ul className="divide-y divide-line/70 border-y border-line/70">
-            {content.channels.map((channel) => {
-              const interactive = "href" in channel && typeof channel.href === "string";
-
-              return (
-                <li key={channel.label} className="py-4 first:pt-0 last:pb-0">
-                  {interactive ? (
-                    <a
-                      href={channel.href}
-                      className="group flex items-start justify-between gap-4 rounded-sm transition hover:text-brand-strong"
-                    >
-                      <span className="min-w-0">
-                        <Text size="sm" className="font-semibold text-ink group-hover:text-brand-strong">
-                          {channel.label}
-                        </Text>
-                        <Text size="sm" tone="muted" className="mt-1">
-                          {channel.note}
-                        </Text>
-                      </span>
-                      <Text size="sm" className="shrink-0 font-semibold text-ink">
-                        {channel.value}
-                      </Text>
-                    </a>
-                  ) : (
-                    <div className="flex items-start justify-between gap-4">
-                      <span className="min-w-0">
-                        <Text size="sm" className="font-semibold text-ink">
-                          {channel.label}
-                        </Text>
-                        <Text size="sm" tone="muted" className="mt-1">
-                          {channel.note}
-                        </Text>
-                      </span>
-                      <Text size="sm" className="shrink-0 font-semibold text-ink">
-                        {channel.value}
-                      </Text>
-                    </div>
-                  )}
-                </li>
-              );
-            })}
-          </ul>
+          <Text size="sm" tone="muted" className="max-w-xl">
+            Depois do primeiro contato, a equipe orienta o caminho mais simples para seguir.
+          </Text>
         </div>
       </div>
-    </Section>
+
+      <div className="flex flex-col gap-3 pt-2 sm:flex-row">
+        <WhatsAppButton href={homeContent.hero.ctas.whatsapp.href}>
+          {homeContent.hero.ctas.whatsapp.label}
+        </WhatsAppButton>
+        <SecondaryButton href="tel:+551134560000">
+          Ligar agora
+        </SecondaryButton>
+      </div>
+    </section>
   );
 }
 
@@ -361,15 +313,30 @@ export function HomeCampaignsSection({ content }: HomeCampaignsSectionProps) {
     <Section
       id={content.section.id}
       heading={<Heading as="h2" size="lg">{content.section.heading}</Heading>}
+      description={
+        content.section.description ? (
+          <Text tone="muted">{content.section.description}</Text>
+        ) : undefined
+      }
     >
       <div className="grid gap-6 md:grid-cols-2">
         {content.items.map((card) => (
-          <Card
-            key={card.slug}
-            title={card.title}
-            description={card.description}
-            action={<Badge tone="info">{card.badge}</Badge>}
-          />
+          <Card key={card.slug} className="h-full">
+            <Stack gap="sm">
+              <Badge tone="info" className="w-fit">
+                {card.badge}
+              </Badge>
+              <Heading as="h3" size="sm" className="max-w-sm">
+                {card.title}
+              </Heading>
+              <Text size="sm" tone="muted" className="max-w-sm">
+                {card.description}
+              </Text>
+              <SecondaryButton href={card.href} size="sm" className="w-fit">
+                Saiba mais
+              </SecondaryButton>
+            </Stack>
+          </Card>
         ))}
       </div>
     </Section>

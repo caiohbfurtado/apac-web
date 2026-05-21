@@ -2,7 +2,8 @@
   "campaigns": {
     "section": {
       "id": "campanhas",
-      "heading": "Campanhas em andamento"
+      "heading": "Campanhas em destaque",
+      "description": "Ações sazonais e mobilizações que aparecem na home apenas quando há conteúdo real para destacar."
     },
     "items": [
       {
@@ -10,14 +11,14 @@
         "badge": "Doacao",
         "title": "Cesta de cuidado",
         "description": "Monte kits com itens essenciais para familias em tratamento prolongado.",
-        "href": "#"
+        "href": "mailto:contato@apac.org.br?subject=Quero%20apoiar%20a%20campanha%20Cesta%20de%20cuidado"
       },
       {
         "slug": "voluntariado-de-escuta",
         "badge": "Mobilizacao",
         "title": "Voluntariado de escuta",
         "description": "Participe de turnos de acolhimento e apoio remoto supervisionado.",
-        "href": "#"
+        "href": "mailto:contato@apac.org.br?subject=Quero%20participar%20do%20voluntariado%20de%20escuta"
       }
     ]
   },

@@ -1,5 +1,6 @@
 import { render, screen, within } from "@testing-library/react";
 import {
+  HomeCampaignsSection,
   HomeClosingSection,
   HomeHeroSection,
   HomeInstitutionSection,
@@ -7,6 +8,7 @@ import {
   HomeTrustSection,
 } from "./HomeSections";
 import { homeContent } from "@/lib/home-content";
+import { homeEditorialContent } from "@/lib/home-editorial-content";
 
 describe("HomeHeroSection", () => {
   it("renders the hero narrative and the prioritized CTAs", () => {
@@ -66,7 +68,7 @@ describe("HomeInstitutionSection", () => {
 });
 
 describe("HomeSupportSection", () => {
-  it("renders a low-friction support path with explicit steps and contact channels", () => {
+  it("renders a low-friction support path with a rail layout and clear CTAs", () => {
     render(<HomeSupportSection content={homeContent.support} />);
 
     expect(
@@ -74,20 +76,17 @@ describe("HomeSupportSection", () => {
         name: "Preciso de apoio",
       }),
     ).toBeInTheDocument();
-    expect(screen.getByText("Sem formulário longo nem espera desnecessária")).toBeInTheDocument();
+    expect(screen.getByText("Acesso direto")).toBeInTheDocument();
+    expect(screen.getByText("Comece por aqui")).toBeInTheDocument();
     expect(screen.getByText("Escolha o canal")).toBeInTheDocument();
     expect(screen.getByText("Conte o contexto")).toBeInTheDocument();
-    expect(screen.getByText("Receba orientação")).toBeInTheDocument();
-    expect(
-      screen.getByRole("link", { name: homeContent.hero.ctas.support.label }),
-    ).toHaveAttribute("href", homeContent.hero.ctas.support.href);
+    expect(screen.getByText(/Depois do primeiro contato/i)).toBeInTheDocument();
     expect(
       screen.getByRole("link", { name: homeContent.hero.ctas.whatsapp.label }),
     ).toHaveAttribute("href", homeContent.hero.ctas.whatsapp.href);
-    expect(screen.getByRole("link", { name: /\(11\) 3456-0000/i })).toHaveAttribute(
-      "href",
-      "tel:+551134560000",
-    );
+    expect(
+      screen.getByRole("link", { name: "Ligar agora" }),
+    ).toHaveAttribute("href", "tel:+551134560000");
   });
 });
 
@@ -103,6 +102,50 @@ describe("HomeTrustSection", () => {
     expect(screen.getByText("Prestacao de contas")).toBeInTheDocument();
     expect(screen.getByText("Rede parceira")).toBeInTheDocument();
     expect(screen.getByText("Governança clara")).toBeInTheDocument();
+  });
+});
+
+describe("HomeCampaignsSection", () => {
+  it("renders highlighted campaigns with an explicit CTA for each card", () => {
+    render(<HomeCampaignsSection content={homeEditorialContent.campaigns} />);
+
+    expect(
+      screen.getByRole("heading", {
+        name: "Campanhas em destaque",
+      }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/ações sazonais e mobilizações que aparecem na home/i),
+    ).toBeInTheDocument();
+    expect(screen.getByText("Cesta de cuidado")).toBeInTheDocument();
+    expect(screen.getByText("Voluntariado de escuta")).toBeInTheDocument();
+
+    const campaignLinks = screen.getAllByRole("link", { name: "Saiba mais" });
+    expect(campaignLinks).toHaveLength(homeEditorialContent.campaigns.items.length);
+    expect(campaignLinks[0]).toHaveAttribute(
+      "href",
+      homeEditorialContent.campaigns.items[0].href,
+    );
+    expect(campaignLinks[1]).toHaveAttribute(
+      "href",
+      homeEditorialContent.campaigns.items[1].href,
+    );
+  });
+
+  it("returns null when there are no campaign items", () => {
+    const { container } = render(
+      <HomeCampaignsSection
+        content={{
+          section: {
+            id: "campanhas",
+            heading: "Campanhas em destaque",
+          },
+          items: [],
+        }}
+      />,
+    );
+
+    expect(container).toBeEmptyDOMElement();
   });
 });
 

@@ -26,10 +26,10 @@ Adicionar à home um bloco editorial de campanhas em destaque que possa aparecer
 
 ## Subtarefas
 
-- [ ] 5.1 Construir a seção de campanhas usando a estrutura de dados definida na task 1.0.
-- [ ] 5.2 Implementar renderização condicional para cenários com e sem campanhas.
-- [ ] 5.3 Garantir que os cards ou blocos de campanha tenham CTA e hierarquia de leitura claros.
-- [ ] 5.4 Revisar espaçamento e transição visual da página quando a seção estiver ausente.
+- [x] 5.1 Construir a seção de campanhas usando a estrutura de dados definida na task 1.0.
+- [x] 5.2 Implementar renderização condicional para cenários com e sem campanhas.
+- [x] 5.3 Garantir que os cards ou blocos de campanha tenham CTA e hierarquia de leitura claros.
+- [x] 5.4 Revisar espaçamento e transição visual da página quando a seção estiver ausente.
 
 ## Detalhes de Implementação
 

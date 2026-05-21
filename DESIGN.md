@@ -188,7 +188,13 @@ Regras:
 - A seção `Como a APAC ajuda` deve combinar uma faixa de highlights com um trio de cards de apoio, evitando grids idênticos demais e mantendo o conteúdo escaneável.
 - A seção `Como a APAC ajuda` deve preferir uma narrativa vertical única, com poucos pontos bem separados e linguagem complementar em vez de duas colunas competindo por atenção.
 - A seção `Como a APAC ajuda` deve ocupar a largura útil da página sem texto lateral solto, para que a leitura siga um único fluxo visual.
-- A seção `Preciso de apoio` deve priorizar baixa fricção com um card de orientação, etapas numeradas e canais diretos.
+- A seção `Campanhas em destaque` deve ser opcional, editorial e leve: use conteúdo local serializável, uma breve introdução e cards com CTA explícita para cada campanha.
+- Quando não houver campanhas, a home deve seguir o fluxo sem reservar espaço, sem headings órfãos e sem sugerir um calendário ou sistema de eventos.
+- A seção `Preciso de apoio` deve priorizar baixa fricção com layout aberto em rail, etapas numeradas enxutas e canais diretos.
+- A seção `Preciso de apoio` não deve usar um box grande envolvendo todo o conteúdo; a hierarquia deve nascer de espaçamento, divisores leves e uma única superfície visual por bloco.
+- Em `Preciso de apoio`, evite repetir a mesma orientação em vários blocos; concentre a explicação na frase principal, no rail de início e na lista de canais.
+- Em `Preciso de apoio`, não usar uma tabela ou lista comparativa de canais; a composição deve terminar com CTAs diretas e uma frase de orientação final.
+- Em `Preciso de apoio`, os CTAs finais devem ser apenas dois: `Falar no WhatsApp` e `Ligar agora`.
 - A seção de transparência deve usar três pontos de confiança bem definidos, com surfaces alternadas para diferenciar o bloco sem exagero cromático.
 - O fechamento da home deve reforçar a CTA final em uma surface de destaque e manter a hierarquia de `Quero ajudar` e `Preciso de apoio` sem competir com o hero.
 - Evitar “boxes dentro de boxes” como padrão visual: prefira uma única superfície por seção e use listas abertas, divisores, alinhamentos e badges quando a informação precisar respirar.

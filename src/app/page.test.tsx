@@ -15,7 +15,7 @@ describe("Home", () => {
     ).toBeInTheDocument();
     expect(getByRole("heading", { name: "Como a APAC ajuda" })).toBeInTheDocument();
     expect(getByRole("heading", { name: "Preciso de apoio" })).toBeInTheDocument();
-    expect(getByRole("heading", { name: "Campanhas em andamento" })).toBeInTheDocument();
+    expect(getByRole("heading", { name: "Campanhas em destaque" })).toBeInTheDocument();
     expect(getByRole("heading", { name: "Transparência e confiança" })).toBeInTheDocument();
     expect(
       getByRole("heading", {
@@ -25,6 +25,7 @@ describe("Home", () => {
 
     expect(getAllByRole("link", { name: "Preciso de apoio" }).length).toBeGreaterThan(0);
     expect(getAllByRole("link", { name: "Quero ajudar" }).length).toBeGreaterThan(0);
+    expect(getAllByRole("link", { name: "Saiba mais" }).length).toBeGreaterThan(0);
     const whatsappLinks = getAllByRole("link", { name: "Falar no WhatsApp" });
     expect(whatsappLinks.length).toBeGreaterThan(0);
     whatsappLinks.forEach((link) => {

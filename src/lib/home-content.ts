@@ -83,7 +83,7 @@ export const homeContent = {
     id: "preciso-de-apoio",
     heading: "Preciso de apoio",
     description:
-      "Sem formulários longos ou etapas desnecessárias: escolha o canal mais simples e fale com uma pessoa da equipe.",
+      "Escolha o canal mais simples e fale com uma pessoa da equipe.",
     steps: [
       {
         title: "Escolha o canal",
@@ -92,29 +92,6 @@ export const homeContent = {
       {
         title: "Conte o contexto",
         description: "Escreva ou fale apenas o que conseguir. A equipe completa o restante com você.",
-      },
-      {
-        title: "Receba orientação",
-        description: "Depois do primeiro contato, indicamos o melhor próximo passo sem criar ruído desnecessário.",
-      },
-    ],
-    channels: [
-      {
-        label: "WhatsApp",
-        value: "Falar com a equipe",
-        note: "Resposta inicial e orientacao direta.",
-        href: "https://wa.me/5511999999999",
-      },
-      {
-        label: "Telefone",
-        value: "(11) 3456-0000",
-        note: "Segunda a sexta, das 8h as 18h.",
-        href: "tel:+551134560000",
-      },
-      {
-        label: "Endereco",
-        value: "Rua Exemplo, 123 - Sao Paulo/SP",
-        note: "Atendimento presencial mediante agendamento.",
       },
     ],
   },
