@@ -9,7 +9,7 @@
 - [x] 5.0 Realinhar base visual e tokens ao novo padrão
 - [x] 6.0 Criar componentes de apoio visual
 - [x] 7.0 Criar componentes de formulário
-- [ ] 8.0 Criar componentes de navegação institucional
+- [x] 8.0 Criar componentes de navegação institucional
 - [ ] 9.0 Criar rodapé institucional
 - [ ] 10.0 Montar a página de showcase do design system
 - [ ] 11.0 Reescrever a home usando o design system

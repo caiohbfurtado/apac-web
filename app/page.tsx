@@ -1,4 +1,4 @@
-import { Container, Section, Stack } from "@/components/layout";
+import { Container, HeaderNav, Section, Stack } from "@/components/layout";
 import {
   Badge,
   Card,
@@ -14,8 +14,10 @@ import {
 
 export default function Home() {
   return (
-    <Container as="main" className="py-16" size="content" gutter="md">
-      <Stack gap="lg">
+    <main>
+      <HeaderNav />
+      <Container className="py-16" size="content" gutter="md">
+        <Stack gap="lg">
         <Section
           id="fundacao"
           className="animate-fade-in-up"
@@ -313,7 +315,7 @@ export default function Home() {
           </Stack>
         </Section>
         <Section
-          id="playground-formularios"
+          id="quero-ajudar"
           heading={
             <Stack gap="sm">
               <Heading as="h2" size="lg">
@@ -326,7 +328,7 @@ export default function Home() {
           }
         >
           <Stack gap="lg">
-            <div className="grid gap-6 sm:grid-cols-2">
+            <div id="preciso-apoio" className="grid gap-6 sm:grid-cols-2">
               <Field
                 label="Nome completo"
                 hint="Use o mesmo nome do documento para agilizar o atendimento."
@@ -362,7 +364,8 @@ export default function Home() {
             </Field>
           </Stack>
         </Section>
-      </Stack>
-    </Container>
+        </Stack>
+      </Container>
+    </main>
   );
 }

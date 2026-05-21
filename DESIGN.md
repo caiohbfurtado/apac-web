@@ -152,6 +152,10 @@ Regras:
   - Use `surface` (`default`/`muted`/`brand`) e `padding` (`sm`/`md`/`lg`) para variar densidade sem criar novas classes locais.
   - Prefira `icon`, `title`, `description` e `action` como slots simples; use `children` para o corpo livre do card.
   - Quando `interactive` estiver ativo, o card pode ganhar hover e leve elevação, mas sem virar um botão disfarçado.
+- `HeaderNav` (`components/layout/HeaderNav.tsx` + `components/layout/HeaderNavMobileMenu.tsx`): navegação institucional reutilizável com desktop e menu mobile acessível.
+  - Preserve `header` + `nav` com `aria-label="Principal"` e links de seção previsíveis para escaneabilidade.
+  - Em mobile, limite o `use client` ao controle de abertura/fechamento (`aria-expanded`, `aria-controls`, fechamento com `Escape`).
+  - CTAs institucionais no topo devem manter semântica de link e foco visível em todos os breakpoints.
 - Primitives de formulário (`components/ui/Field.tsx`, `components/ui/Input.tsx`, `components/ui/Textarea.tsx`):
   - Use `Field` como wrapper padrão para garantir associação entre `label`, `hint`, `error` e controle.
   - Prefira `Input` para textos curtos e `Textarea` para descrições longas, sempre consumindo tokens de borda, foco e superfície.

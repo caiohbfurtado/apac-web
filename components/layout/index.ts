@@ -1,4 +1,5 @@
 export { Container } from "./Container";
+export { HeaderNav } from "./HeaderNav";
 export type { ContainerProps } from "./Container";
 export { Section } from "./Section";
 export type { SectionProps } from "./Section";

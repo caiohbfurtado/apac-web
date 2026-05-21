@@ -53,7 +53,7 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${brandSans.variable} ${brandDisplay.variable} ${brandMono.variable} h-full bg-canvas text-ink antialiased`}
     >
-      <body className="min-h-full font-sans text-base leading-7">
+      <body suppressHydrationWarning className="min-h-full font-sans text-base leading-7">
         <div className="flex min-h-full flex-col">{children}</div>
       </body>
     </html>

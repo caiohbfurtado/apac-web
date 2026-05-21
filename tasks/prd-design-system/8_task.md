@@ -26,11 +26,11 @@ Construir `HeaderNav` e o menu mobile institucional, garantindo landmarks claros
 
 ## Subtarefas
 
-- [ ] 8.1 Implementar estrutura desktop da navegação institucional.
-- [ ] 8.2 Implementar a versão mobile com interação acessível.
-- [ ] 8.3 Validar landmarks, tab order e estados de foco.
-- [ ] 8.4 Adicionar playground na home com `HeaderNav` em contexto real.
-- [ ] 8.5 Escrever testes de composição e interação do menu mobile, se houver client-side.
+- [x] 8.1 Implementar estrutura desktop da navegação institucional.
+- [x] 8.2 Implementar a versão mobile com interação acessível.
+- [x] 8.3 Validar landmarks, tab order e estados de foco.
+- [x] 8.4 Adicionar playground na home com `HeaderNav` em contexto real.
+- [x] 8.5 Escrever testes de composição e interação do menu mobile, se houver client-side.
 
 ## Detalhes de Implementação
 
@@ -49,9 +49,9 @@ Referenciar no `techspec.md` as seções:
 
 ## Testes da Tarefa
 
-- [ ] Validação com `npm run lint`
-- [ ] Validação com `npm run build`
-- [ ] Testes de componente ou composição, se aplicável
+- [x] Validação com `npm run lint`
+- [x] Validação com `npm run build`
+- [x] Testes de componente ou composição, se aplicável
 - [ ] Testes E2E (se aplicável)
 
 <critical>SEMPRE CRIE E EXECUTE OS TESTES DA TAREFA ANTES DE CONSIDERÁ-LA FINALIZADA</critical>
