@@ -1,0 +1,33 @@
+import type { ReactElement, ReactNode } from "react";
+import RootLayout, { metadata } from "@/app/layout";
+
+describe("RootLayout", () => {
+  it("aplica idioma institucional e estrutura base do sistema", () => {
+    const layout = RootLayout({
+      children: <main>Conteudo institucional</main>,
+    }) as ReactElement<{
+      children: ReactElement<{ children: ReactNode; className: string }>;
+      className: string;
+      lang: string;
+    }>;
+
+    expect(layout.props.lang).toBe("pt-BR");
+    expect(layout.props.className).toContain("bg-canvas");
+
+    const body = layout.props.children;
+    expect(body.props.className).toContain("font-sans");
+    expect(body.props.className).toContain("leading-7");
+  });
+
+  it("expõe metadata institucional base", () => {
+    expect(metadata.applicationName).toBe("APAC");
+    expect(metadata.description).toContain("Base institucional da APAC");
+
+    if (typeof metadata.title === "object" && metadata.title) {
+      expect(metadata.title.default).toBe("APAC | Presenca institucional digital");
+      expect(metadata.title.template).toBe("%s | APAC");
+    } else {
+      throw new Error("Metadata title deveria usar objeto com default e template");
+    }
+  });
+});

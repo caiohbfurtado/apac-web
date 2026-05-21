@@ -16,7 +16,7 @@ Hoje o projeto não expõe um script `typecheck` no `package.json`.
 
 ## Testes
 
-No estado atual, o repositório não expõe script de testes automatizados.
+- O projeto agora expõe `npm test` para rodar a suíte com `Jest` e `React Testing Library`
 
 - Não invente comandos de teste inexistentes
 - Se a tarefa incluir criar infraestrutura de testes, documente os comandos adicionados no `AGENTS.md` e neste arquivo

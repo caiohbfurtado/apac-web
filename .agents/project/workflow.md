@@ -9,6 +9,7 @@
 ## Atualização de Instruções
 
 - Se a stack, scripts ou estrutura do projeto mudarem, atualize `AGENTS.md` e os arquivos em `.agents/project/`
+- Se padrões visuais, tokens, direções de interface ou regras reutilizáveis de UI mudarem, atualize `DESIGN.md` na mesma tarefa
 - Não mantenha referências herdadas de outras bases, cursos ou templates se elas não refletirem o repositório atual
 
 ## Documentação de Domínio

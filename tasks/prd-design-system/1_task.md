@@ -25,10 +25,10 @@ Instalar a fundação do design system dentro do app atual, criando o eixo de to
 
 ## Subtarefas
 
-- [ ] 1.1 Definir os tokens globais e convenções de tema em `app/globals.css`.
-- [ ] 1.2 Atualizar `app/layout.tsx` com metadata, idioma, fontes e base institucional.
-- [ ] 1.3 Configurar arquivos e utilitários iniciais da suíte de testes.
-- [ ] 1.4 Validar se a fundação permite evolução incremental sem dependência de biblioteca externa de UI.
+- [x] 1.1 Definir os tokens globais e convenções de tema em `app/globals.css`.
+- [x] 1.2 Atualizar `app/layout.tsx` com metadata, idioma, fontes e base institucional.
+- [x] 1.3 Configurar arquivos e utilitários iniciais da suíte de testes.
+- [x] 1.4 Validar se a fundação permite evolução incremental sem dependência de biblioteca externa de UI.
 
 ## Detalhes de Implementação
 
@@ -44,12 +44,13 @@ Referenciar no `techspec.md` as seções:
 - O projeto passa a ter um tema centralizado e institucionalizado como fonte única de decisão visual.
 - O layout raiz deixa de refletir o estado inicial do template e passa a servir o design system.
 - A suíte de testes fica pronta para receber testes de primitives, componentes e páginas nas próximas tasks.
+- O projeto passa a ter `DESIGN.md` como fonte de verdade de design para evolução futura do sistema.
 
 ## Testes da Tarefa
 
-- [ ] Validação com `npm run lint`
-- [ ] Validação com `npm run build`
-- [ ] Testes de componente ou composição, se aplicável
+- [x] Validação com `npm run lint`
+- [x] Validação com `npm run build`
+- [x] Testes de componente ou composição, se aplicável
 - [ ] Testes E2E (se aplicável)
 
 <critical>SEMPRE CRIE E EXECUTE OS TESTES DA TAREFA ANTES DE CONSIDERÁ-LA FINALIZADA</critical>
@@ -60,4 +61,5 @@ Referenciar no `techspec.md` as seções:
 - [techspec.md](/Users/caiobarutti/Documents/www/apac-web/tasks/prd-design-system-do-site-apac/techspec.md)
 - [app/layout.tsx](/Users/caiobarutti/Documents/www/apac-web/app/layout.tsx)
 - [app/globals.css](/Users/caiobarutti/Documents/www/apac-web/app/globals.css)
+- [DESIGN.md](/Users/caiobarutti/Documents/www/apac-web/DESIGN.md)
 - [package.json](/Users/caiobarutti/Documents/www/apac-web/package.json)

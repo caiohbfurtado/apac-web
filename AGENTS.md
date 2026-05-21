@@ -15,6 +15,7 @@ Guia enxuto para agentes de IA trabalhando neste repositório.
 - Build: `npm run build`
 - Start: `npm run start`
 - Lint: `npm run lint`
+- Test: `npm test`
 - App local: `http://localhost:3000`
 
 ## Regras Universais
@@ -22,6 +23,8 @@ Guia enxuto para agentes de IA trabalhando neste repositório.
 - Sempre verifique as skills relevantes antes de implementar
 - Para trabalho de frontend, comece por `brainstorming` e depois use apenas as skills que realmente se aplicam
 - Quando a tarefa envolver regras de negócio, linguagem de domínio ou decisões difíceis de reverter, use `grill-with-docs` para tensionar o plano e registrar termos e decisões
+- Trate `DESIGN.md` como fonte de verdade de design do projeto
+- Sempre que criar, alterar ou promover um padrão visual reutilizável, atualize `DESIGN.md` na mesma tarefa
 - Prefira correções de causa raiz; não use workarounds
 - Para dependências, use `npm install <pacote>` em vez de editar versões manualmente
 - Antes de concluir, rode pelo menos `npm run lint` e `npm run build`
@@ -41,3 +44,4 @@ Guia enxuto para agentes de IA trabalhando neste repositório.
 - [Convenções de frontend](.agents/project/frontend.md)
 - [Checks de qualidade](.agents/project/quality.md)
 - [Workflow operacional](.agents/project/workflow.md)
+- [Fonte de verdade de design](DESIGN.md)

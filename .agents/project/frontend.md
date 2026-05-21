@@ -42,6 +42,9 @@
 
 ## Estilo e UI
 
+- Consulte `DESIGN.md` antes de criar ou alterar padrões visuais relevantes
+- Trate `DESIGN.md` como fonte de verdade de design do projeto
+- Se uma mudança de UI introduzir ou ajustar um padrão reutilizável, atualize `DESIGN.md` na mesma tarefa
 - Preserve a linguagem visual existente do projeto
 - Evite interfaces genéricas ou “AI slop”; procure decisões visuais intencionais
 - Use Tailwind de forma consistente, sem espalhar estilos difíceis de manter

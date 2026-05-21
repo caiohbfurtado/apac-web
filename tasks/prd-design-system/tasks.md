@@ -2,7 +2,7 @@
 
 ## Tarefas
 
-- [ ] 1.0 Fundar o tema e a infraestrutura base
+- [x] 1.0 Fundar o tema e a infraestrutura base
 - [ ] 2.0 Criar primitives de layout
 - [ ] 3.0 Criar primitives tipográficas
 - [ ] 4.0 Criar componente de ação
