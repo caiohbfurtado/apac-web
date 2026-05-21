@@ -26,10 +26,10 @@ Criar a rota `/design-system` como vitrine viva do sistema, agregando tema, prim
 
 ## Subtarefas
 
-- [ ] 10.1 Criar a estrutura da rota `/design-system`.
-- [ ] 10.2 Adicionar seções para primitives, ações, superfícies, formulários e navegação.
-- [ ] 10.3 Centralizar fixtures de showcase e testes quando necessário.
-- [ ] 10.4 Escrever testes que garantam a presença dos grupos e estados principais.
+- [x] 10.1 Criar a estrutura da rota `/design-system`.
+- [x] 10.2 Adicionar seções para primitives, ações, superfícies, formulários e navegação.
+- [x] 10.3 Centralizar fixtures de showcase e testes quando necessário.
+- [x] 10.4 Escrever testes que garantam a presença dos grupos e estados principais.
 
 ## Detalhes de Implementação
 
@@ -47,12 +47,16 @@ Referenciar no `techspec.md` as seções:
 
 ## Testes da Tarefa
 
-- [ ] Validação com `npm run lint`
-- [ ] Validação com `npm run build`
-- [ ] Testes de componente ou composição, se aplicável
+- [x] Validação com `npm run lint`
+- [x] Validação com `npm run build`
+- [x] Testes de componente ou composição, se aplicável
 - [ ] Testes E2E (se aplicável)
 
 <critical>SEMPRE CRIE E EXECUTE OS TESTES DA TAREFA ANTES DE CONSIDERÁ-LA FINALIZADA</critical>
+
+## Observações de Execução
+
+- Revisão com agente `task-reviewer` concluída em 2026-05-21 com status **APROVADO**.
 
 ## Arquivos relevantes
 
