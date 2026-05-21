@@ -25,10 +25,10 @@ Implementar a família de botões do design system com variantes explícitas, pr
 
 ## Subtarefas
 
-- [ ] 4.1 Implementar a camada base da família de botões.
-- [ ] 4.2 Expor variantes explícitas alinhadas aos CTAs do PRD e da home.
-- [ ] 4.3 Validar estados interativos, foco visível e legibilidade em mobile.
-- [ ] 4.4 Escrever testes para semântica, variantes e comportamento principal.
+- [x] 4.1 Implementar a camada base da família de botões.
+- [x] 4.2 Expor variantes explícitas alinhadas aos CTAs do PRD e da home.
+- [x] 4.3 Validar estados interativos, foco visível e legibilidade em mobile.
+- [x] 4.4 Escrever testes para semântica, variantes e comportamento principal.
 
 ## Detalhes de Implementação
 
@@ -46,9 +46,9 @@ Referenciar no `techspec.md` as seções:
 
 ## Testes da Tarefa
 
-- [ ] Validação com `npm run lint`
-- [ ] Validação com `npm run build`
-- [ ] Testes de componente ou composição, se aplicável
+- [x] Validação com `npm run lint`
+- [x] Validação com `npm run build`
+- [x] Testes de componente ou composição, se aplicável
 - [ ] Testes E2E (se aplicável)
 
 <critical>SEMPRE CRIE E EXECUTE OS TESTES DA TAREFA ANTES DE CONSIDERÁ-LA FINALIZADA</critical>
