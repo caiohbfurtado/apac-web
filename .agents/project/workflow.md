@@ -30,4 +30,4 @@
 - Faça o mínimo de abstração necessária para o estágio atual do projeto
 - Prefira clareza e manutenção simples a estruturas “enterprise” prematuras
 - Registre limitações reais no fechamento em vez de fingir cobertura que não existe
-- Diferencie falhas do código de limitações do ambiente; no caso de `npm run build`, prefira rerodar com permissão ampliada antes de assumir regressão da aplicação
+- Diferencie falhas do código de limitações do ambiente; no caso de `npm run build`, o wrapper já evita travas longas e, se ele abortar por falta de saída, prefira rerodar com permissão ampliada antes de assumir regressão da aplicação

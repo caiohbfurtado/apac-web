@@ -9,8 +9,9 @@ Rode estes checks antes de concluir uma tarefa que altere código:
 
 Observação operacional:
 
-- Neste ambiente, `npm run build` pode exigir execução com permissão ampliada quando rodado por agentes, porque o build padrão do Next.js 16 com Turbopack pode falhar no sandbox por limitação do ambiente
+- `npm run build` usa um wrapper que encerra o processo se o build ficar mudo por tempo demais, evitando travas indefinidas no fluxo agentic
 - Se isso acontecer, rerode o mesmo comando com escalonamento antes de concluir que há um bug real no app
+- `npm run build:direct` fica disponível apenas para troubleshooting fora do fluxo agentic
 
 ## TypeScript
 

@@ -22,11 +22,12 @@ Abra [http://localhost:3000](http://localhost:3000).
 - `npm run dev`: desenvolvimento local
 - `npm run lint`: lint do projeto
 - `npm test`: testes com `Jest` e `React Testing Library`
-- `npm run build`: build de produção
+- `npm run build`: build de produção com proteção contra travas no fluxo agentic
+- `npm run build:direct`: build direto do Next.js para troubleshooting local
 
 Observação:
 
-- Em ambientes agentic/sandbox, o build padrão do Next.js 16 pode precisar de permissão ampliada para concluir por causa de uma limitação operacional do Turbopack. No terminal local do usuário, o comando tende a funcionar normalmente.
+- Em ambientes agentic/sandbox, se `npm run build` abortar por falta de saída, rerode o mesmo comando com permissão ampliada. No terminal local do usuário, `npm run build` e `npm run build:direct` tendem a funcionar normalmente.
 
 ## Design System
 
