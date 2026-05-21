@@ -44,32 +44,60 @@ export const homeContent = {
   },
   institution: {
     id: "atuacao",
-    heading: "Como atuamos",
+    heading: "Como a APAC ajuda",
     description:
-      "Transformamos necessidades urgentes em planos de apoio concretos, com acompanhamento continuo e orientacao acessivel.",
+      "Cada família encontra escuta, orientação e um caminho prático para seguir com mais segurança.",
+    highlights: [
+      {
+        title: "Acolhimento inicial",
+        description:
+          "A primeira conversa organiza urgência, contexto e a sensação de chegar sem ser avaliado.",
+      },
+      {
+        title: "Orientação prática",
+        description:
+          "A equipe aponta benefícios, serviços e próximos passos possíveis sem criar atrito.",
+      },
+      {
+        title: "Acompanhamento contínuo",
+        description:
+          "Seguimos próximos depois do primeiro contato para reduzir insegurança e reforçar o cuidado.",
+      },
+    ],
     cards: [
       {
-        title: "Escuta e triagem",
-        description:
-          "Recebemos cada familia com acolhimento e priorizacao rapida do contexto clinico e social.",
+        title: "Para pessoas em tratamento",
+        description: "Acolhemos a urgência e ajudamos a transformar demanda em próximo passo.",
       },
       {
-        title: "Rede de apoio",
-        description:
-          "Conectamos pessoas a beneficios, servicos locais e iniciativas parceiras em um fluxo unico.",
+        title: "Para famílias e cuidadores",
+        description: "Explicamos caminhos com linguagem simples e apoio contínuo.",
       },
       {
-        title: "Acompanhamento",
-        description:
-          "Mantemos contato ativo para orientar decisoes, reduzir insegurancas e fortalecer adesao ao cuidado.",
+        title: "Para quem apoia a rede",
+        description: "Mostramos impacto, continuidade e formas concretas de contribuir.",
       },
     ],
   },
   support: {
     id: "preciso-de-apoio",
-    heading: "Precisa de apoio agora?",
+    heading: "Preciso de apoio",
     description:
-      "Fale com a equipe pelos canais abaixo. Se a demanda for urgente, priorizamos o primeiro contato e direcionamos o melhor caminho.",
+      "Sem formulários longos ou etapas desnecessárias: escolha o canal mais simples e fale com uma pessoa da equipe.",
+    steps: [
+      {
+        title: "Escolha o canal",
+        description: "Use WhatsApp, telefone ou a visita agendada conforme o que estiver mais fácil agora.",
+      },
+      {
+        title: "Conte o contexto",
+        description: "Escreva ou fale apenas o que conseguir. A equipe completa o restante com você.",
+      },
+      {
+        title: "Receba orientação",
+        description: "Depois do primeiro contato, indicamos o melhor próximo passo sem criar ruído desnecessário.",
+      },
+    ],
     channels: [
       {
         label: "WhatsApp",
@@ -92,22 +120,29 @@ export const homeContent = {
   },
   trust: {
     id: "transparencia",
-    heading: "Confianca e transparencia",
+    heading: "Transparência e confiança",
+    description:
+      "A credibilidade da APAC vem de prestação de contas, parcerias consistentes e comunicação objetiva.",
     cards: [
       {
         title: "Prestacao de contas",
-        description: "Publicamos resultados e alocacao de recursos em ciclos regulares.",
+        description: "Publicamos resultados e alocação de recursos em ciclos regulares.",
       },
       {
         title: "Rede parceira",
-        description: "Atuamos com hospitais, equipes tecnicas e voluntariado qualificado.",
+        description: "Atuamos com hospitais, equipes técnicas e voluntariado qualificado.",
+      },
+      {
+        title: "Governança clara",
+        description:
+          "Fluxos objetivos ajudam a equipe a responder com responsabilidade e previsibilidade.",
       },
     ],
   },
   closing: {
     id: "como-ajudar",
-    heading: "Sua contribuicao amplia o cuidado.",
+    heading: "Sua contribuição amplia o cuidado.",
     description:
-      "Com doacao recorrente, voluntariado ou divulgacao, voce fortalece uma rede que acolhe quem mais precisa.",
+      "Com doação recorrente, voluntariado ou divulgação, você fortalece uma rede que acolhe quem mais precisa.",
   },
 } as const;

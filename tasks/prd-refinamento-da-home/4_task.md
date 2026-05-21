@@ -26,10 +26,10 @@ Construir os blocos centrais da narrativa institucional da home, reforçando val
 
 ## Subtarefas
 
-- [ ] 4.1 Implementar a faixa de highlights e o bloco “como a APAC ajuda”.
-- [ ] 4.2 Construir a seção “preciso de apoio” com orientação clara e baixa fricção.
-- [ ] 4.3 Implementar o bloco de confiança/transparência e o fechamento com CTA final.
-- [ ] 4.4 Revisar consistência visual, densidade de conteúdo e ritmo entre seções vizinhas.
+- [x] 4.1 Implementar a faixa de highlights e o bloco “como a APAC ajuda”.
+- [x] 4.2 Construir a seção “preciso de apoio” com orientação clara e baixa fricção.
+- [x] 4.3 Implementar o bloco de confiança/transparência e o fechamento com CTA final.
+- [x] 4.4 Revisar consistência visual, densidade de conteúdo e ritmo entre seções vizinhas.
 
 ## Detalhes de Implementação
 
@@ -46,9 +46,9 @@ Referenciar no `techspec.md` as seções:
 
 ## Testes da Tarefa
 
-- [ ] Validação com `npm run lint`
-- [ ] Validação com `npm run build`
-- [ ] Testes de componente ou composição, se aplicável
+- [x] Validação com `npm run lint`
+- [x] Validação com `npm run build`
+- [x] Testes de componente ou composição, se aplicável
 - [ ] Testes E2E (se aplicável)
 
 <critical>SEMPRE CRIE E EXECUTE OS TESTES DA TAREFA ANTES DE CONSIDERÁ-LA FINALIZADA</critical>

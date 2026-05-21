@@ -69,6 +69,8 @@ Se o projeto optar por JSON puro, a leitura deve permanecer síncrona e local, s
 
 A hierarquia da página deve espelhar o mock `tasks/design-v2.png`: acolhimento imediato no hero, prova de utilidade logo em seguida, caminhos práticos de ação no meio da página e reforço institucional no fechamento. O objetivo não é copiar a arte literalmente, mas reproduzir sua lógica de ritmo visual, densidade e calor humano dentro do design system existente. O hero não deve ser encerrado por uma grande moldura: ele precisa respirar na mesma largura visual do header, com a narrativa principal à esquerda e a composição de apoio à direita.
 
+Os blocos institucionais centrais devem preferir composição aberta e editorial. Superfícies com borda e fundo destacado só entram quando houver um ganho claro de ação ou suporte transacional; fora isso, listas, divisores e alinhamentos bastam para criar hierarquia sem empilhar caixas sobre caixas. Na seção `Como a APAC ajuda`, a direção mais limpa é uma narrativa vertical única, com três pontos principais e complementos curtos, ocupando a largura útil da página sem texto lateral solto e sem duas colunas competindo entre si.
+
 Os CTAs principais serão:
 
 - `Preciso de apoio` como ação primária orientada a beneficiários e familiares

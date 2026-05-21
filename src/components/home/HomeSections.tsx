@@ -25,6 +25,7 @@ type HomeTrustContent = typeof homeContent.trust;
 type HomeClosingContent = typeof homeContent.closing;
 type HomeCampaignsContent = typeof homeEditorialContent.campaigns;
 type HomeSponsorsContent = typeof homeEditorialContent.sponsors;
+type HomeSupportStep = HomeSupportContent["steps"][number];
 
 type HomeHeroSectionProps = {
   content: HomeHeroContent;
@@ -88,6 +89,24 @@ function HeroIcon({ name }: { name: "phone" | "map" | "spark" }) {
       <path d="M12 7v5l3 2" />
       <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
     </svg>
+  );
+}
+
+function SupportStepRow({ step, index }: { step: HomeSupportStep; index: number }) {
+  return (
+    <li className="flex gap-4">
+      <span className="mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-brand/20 bg-brand-soft text-xs font-semibold text-brand-strong">
+        {String(index + 1).padStart(2, "0")}
+      </span>
+      <div className="min-w-0">
+        <Text as="p" size="sm" className="font-semibold text-ink">
+          {step.title}
+        </Text>
+        <Text as="p" size="sm" tone="muted" className="mt-1">
+          {step.description}
+        </Text>
+      </div>
+    </li>
   );
 }
 
@@ -169,8 +188,8 @@ export function HomeHeroSection({ content }: HomeHeroSectionProps) {
           </Text>
         </Stack>
 
-        <div className="relative min-h-[26rem] lg:min-h-[34rem]">
-          <Card surface="default" padding="md" className="w-full max-w-sm sm:top-6">
+        <div className="relative min-h-[18rem] lg:min-h-[22rem]">
+          <Card surface="default" padding="md" className="w-full max-w-sm lg:ml-auto lg:mt-2">
             <Stack gap="sm">
               <Stack gap="xs">
                 <Badge tone="default" className="w-fit">
@@ -199,18 +218,44 @@ export function HomeHeroSection({ content }: HomeHeroSectionProps) {
 
 export function HomeInstitutionSection({ content }: HomeInstitutionSectionProps) {
   return (
-    <Section
-      id={content.id}
-      surface="muted"
-      heading={<Heading as="h2" size="lg">{content.heading}</Heading>}
-      description={<Text tone="muted">{content.description}</Text>}
-    >
-      <div className="grid gap-6 md:grid-cols-3">
-        {content.cards.map((card) => (
-          <Card key={card.title} title={card.title} description={card.description} />
-        ))}
+    <section id={content.id} className="space-y-8 pb-12 sm:pb-14 lg:pb-16">
+      <div className="space-y-3">
+        <Badge tone="brand" className="w-fit">
+          Visão institucional
+        </Badge>
+        <Heading as="h2" size="lg" className="max-w-none">
+          {content.heading}
+        </Heading>
+        <Text tone="muted" className="max-w-3xl">
+          {content.description}
+        </Text>
       </div>
-    </Section>
+
+      <ol className="space-y-8 pl-6">
+        {content.highlights.map((highlight, index) => {
+          const audienceText =
+            index === 0
+              ? "para pessoas em tratamento"
+              : index === 1
+                ? "para famílias e cuidadores"
+                : "para quem apoia a rede";
+
+          return (
+            <li key={highlight.title} className="space-y-3">
+              <Badge tone={index === 0 ? "brand" : index === 1 ? "info" : "default"} className="w-fit">
+                {String(index + 1).padStart(2, "0")}
+              </Badge>
+              <Heading as="h3" size="sm">
+                {highlight.title}
+              </Heading>
+              <Text size="sm" tone="muted" className="max-w-2xl">
+                {audienceText} - {highlight.description}
+              </Text>
+            </li>
+          );
+        })}
+      </ol>
+    </section>
   );
 }
 
@@ -221,60 +266,87 @@ export function HomeSupportSection({ content }: HomeSupportSectionProps) {
       heading={<Heading as="h2" size="lg">{content.heading}</Heading>}
       description={<Text tone="muted">{content.description}</Text>}
     >
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
-        <div className="grid gap-4 sm:grid-cols-3">
-          {content.channels.map((channel) => {
-            const interactive = "href" in channel && typeof channel.href === "string";
+      <div className="grid gap-10 xl:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
+        <Stack gap="md">
+          <Badge tone="brand" className="w-fit">
+            Acesso sem fricção
+          </Badge>
+          <Heading as="h3" size="sm" className="max-w-xl">
+            Sem formulário longo nem espera desnecessária
+          </Heading>
+          <Text size="sm" tone="muted" className="max-w-xl">
+            Conte o que estiver conseguindo agora e a equipe ajuda a organizar o próximo passo.
+          </Text>
 
-            return (
-              <Card
-                key={channel.label}
-                as={interactive ? "a" : "article"}
-                {...(interactive ? { href: channel.href, interactive: true } : {})}
-                title={channel.label}
-                description={channel.note}
-              >
-                <Text size="sm" className="font-semibold text-ink">
-                  {channel.value}
-                </Text>
-              </Card>
-            );
-          })}
-        </div>
+          <ol className="mt-2 space-y-4 border-l border-line/70 pl-5">
+            {content.steps.map((step, index) => (
+              <SupportStepRow key={step.title} step={step} index={index} />
+            ))}
+          </ol>
 
-        <Card
-          surface="brand"
-          padding="lg"
-          title="Apoio direto para orientar a primeira conversa"
-          description="Se a familia precisar de um caminho imediato, usamos WhatsApp e telefone para reduzir atrito e encaminhar rapido."
-        >
-          <Stack gap="sm">
-            <Stack direction="vertical" gap="xs">
-              <Text size="sm" className="font-semibold text-ink">
-                Resposta inicial
-              </Text>
-              <Text size="sm" tone="muted">
-                Primeiro contato humano para entender a urgencia e o contexto.
-              </Text>
-            </Stack>
-            <Stack direction="vertical" gap="xs">
-              <Text size="sm" className="font-semibold text-ink">
-                Atendimento presencial
-              </Text>
-              <Text size="sm" tone="muted">
-                Visitas sao combinadas antes para manter acolhimento e previsibilidade.
-              </Text>
-            </Stack>
-            <Stack direction="vertical" gap="sm" className="pt-2 sm:flex-row">
-              <PrimaryButton href={homeContent.hero.ctas.support.href}>
-                {homeContent.hero.ctas.support.label}
-              </PrimaryButton>
-              <WhatsAppButton href={homeContent.hero.ctas.whatsapp.href}>
-                {homeContent.hero.ctas.whatsapp.label}
-              </WhatsAppButton>
-            </Stack>
+          <Stack direction="vertical" gap="sm" className="pt-2 sm:flex-row">
+            <PrimaryButton href={homeContent.hero.ctas.support.href}>
+              {homeContent.hero.ctas.support.label}
+            </PrimaryButton>
+            <WhatsAppButton href={homeContent.hero.ctas.whatsapp.href}>
+              {homeContent.hero.ctas.whatsapp.label}
+            </WhatsAppButton>
           </Stack>
-        </Card>
+        </Stack>
+
+        <div className="space-y-4">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+            <Heading as="h3" size="sm">
+              Canais diretos
+            </Heading>
+            <Text size="sm" tone="muted">
+              Escolha o canal mais simples para começar.
+            </Text>
+          </div>
+
+          <ul className="divide-y divide-line/70 border-y border-line/70">
+            {content.channels.map((channel) => {
+              const interactive = "href" in channel && typeof channel.href === "string";
+
+              return (
+                <li key={channel.label} className="py-4 first:pt-0 last:pb-0">
+                  {interactive ? (
+                    <a
+                      href={channel.href}
+                      className="group flex items-start justify-between gap-4 rounded-sm transition hover:text-brand-strong"
+                    >
+                      <span className="min-w-0">
+                        <Text size="sm" className="font-semibold text-ink group-hover:text-brand-strong">
+                          {channel.label}
+                        </Text>
+                        <Text size="sm" tone="muted" className="mt-1">
+                          {channel.note}
+                        </Text>
+                      </span>
+                      <Text size="sm" className="shrink-0 font-semibold text-ink">
+                        {channel.value}
+                      </Text>
+                    </a>
+                  ) : (
+                    <div className="flex items-start justify-between gap-4">
+                      <span className="min-w-0">
+                        <Text size="sm" className="font-semibold text-ink">
+                          {channel.label}
+                        </Text>
+                        <Text size="sm" tone="muted" className="mt-1">
+                          {channel.note}
+                        </Text>
+                      </span>
+                      <Text size="sm" className="shrink-0 font-semibold text-ink">
+                        {channel.value}
+                      </Text>
+                    </div>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </Section>
   );
@@ -332,28 +404,55 @@ export function HomeSponsorsSection({ content }: HomeSponsorsSectionProps) {
 
 export function HomeTrustSection({ content }: HomeTrustSectionProps) {
   return (
-    <Section
-      id={content.id}
-      surface="muted"
-      heading={<Heading as="h2" size="lg">{content.heading}</Heading>}
-    >
-      <div className="grid gap-6 md:grid-cols-2">
-        {content.cards.map((card) => (
-          <Card key={card.title} title={card.title} description={card.description} />
+    <section id={content.id} className="space-y-6">
+      <div className="max-w-3xl space-y-3">
+        <Badge tone="default" className="w-fit">
+          Transparência
+        </Badge>
+        <Heading as="h2" size="lg">
+          {content.heading}
+        </Heading>
+        <Text tone="muted">{content.description}</Text>
+      </div>
+
+      <div className="grid gap-8 md:grid-cols-3">
+        {content.cards.map((card, index) => (
+          <article key={card.title} className="space-y-3 border-l border-line/70 pl-5">
+            <Badge tone={index === 0 ? "default" : index === 1 ? "info" : "brand"} className="w-fit">
+              {String(index + 1).padStart(2, "0")}
+            </Badge>
+            <Heading as="h3" size="sm">
+              {card.title}
+            </Heading>
+            <Text size="sm" tone="muted">
+              {card.description}
+            </Text>
+          </article>
         ))}
       </div>
-    </Section>
+    </section>
   );
 }
 
 export function HomeClosingSection({ content }: HomeClosingSectionProps) {
   return (
-    <Section
-      id={content.id}
-      heading={<Heading as="h2" size="lg">{content.heading}</Heading>}
-      description={<Text tone="muted">{content.description}</Text>}
-      actions={
-        <Stack direction="vertical" gap="sm" className="sm:flex-row">
+    <section id={content.id} className="space-y-6">
+      <div className="max-w-3xl space-y-3">
+        <Badge tone="brand" className="w-fit">
+          Ação final
+        </Badge>
+        <Heading as="h2" size="lg">
+          {content.heading}
+        </Heading>
+        <Text tone="muted">{content.description}</Text>
+      </div>
+
+      <div className="grid gap-8 lg:grid-cols-[minmax(0,1.15fr)_auto] lg:items-center">
+        <Text size="lg" tone="strong" className="max-w-xl font-semibold text-balance">
+          Escolha um caminho e siga com a gente.
+        </Text>
+
+        <Stack direction="vertical" gap="sm" className="sm:flex-row lg:flex-col">
           <PrimaryButton href={homeContent.hero.ctas.help.href}>
             {homeContent.hero.ctas.help.label}
           </PrimaryButton>
@@ -361,7 +460,7 @@ export function HomeClosingSection({ content }: HomeClosingSectionProps) {
             {homeContent.hero.ctas.support.label}
           </SecondaryButton>
         </Stack>
-      }
-    />
+      </div>
+    </section>
   );
 }

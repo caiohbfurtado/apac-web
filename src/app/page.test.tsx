@@ -13,13 +13,13 @@ describe("Home", () => {
         name: /acolhimento, apoio e esperança para pessoas em tratamento contra o câncer/i,
       })
     ).toBeInTheDocument();
-    expect(getByRole("heading", { name: "Como atuamos" })).toBeInTheDocument();
-    expect(getByRole("heading", { name: "Precisa de apoio agora?" })).toBeInTheDocument();
+    expect(getByRole("heading", { name: "Como a APAC ajuda" })).toBeInTheDocument();
+    expect(getByRole("heading", { name: "Preciso de apoio" })).toBeInTheDocument();
     expect(getByRole("heading", { name: "Campanhas em andamento" })).toBeInTheDocument();
-    expect(getByRole("heading", { name: "Confianca e transparencia" })).toBeInTheDocument();
+    expect(getByRole("heading", { name: "Transparência e confiança" })).toBeInTheDocument();
     expect(
       getByRole("heading", {
-        name: "Sua contribuicao amplia o cuidado.",
+        name: "Sua contribuição amplia o cuidado.",
       }),
     ).toBeInTheDocument();
 

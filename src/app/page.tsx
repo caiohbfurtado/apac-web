@@ -63,12 +63,12 @@ export default function Home() {
         ]}
       />
 
-      <Container className="py-12 sm:py-14 lg:py-16" size="wide" gutter="md">
+      <Container className="py-8 sm:py-10 lg:py-12" size="wide" gutter="md">
         <HomeHeroSection content={homeContent.hero} />
       </Container>
 
-      <Container className="py-16" size="content" gutter="md">
-        <Stack gap="lg">
+      <Container className="pt-4 pb-16 sm:pt-6 sm:pb-18 lg:pt-8 lg:pb-20" size="wide" gutter="md">
+        <Stack gap="md">
           <HomeInstitutionSection content={homeContent.institution} />
           <HomeSupportSection content={homeContent.support} />
           <HomeCampaignsSection content={homeEditorialContent.campaigns} />
