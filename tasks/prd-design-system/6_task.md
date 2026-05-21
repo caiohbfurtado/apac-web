@@ -25,10 +25,10 @@ Criar `Badge` e `Card` como componentes de apoio visual e composição de conte�
 
 ## Subtarefas
 
-- [ ] 6.1 Implementar `Badge` com tons adequados ao sistema institucional.
-- [ ] 6.2 Implementar `Card` como base de superfície reutilizável para blocos de conteúdo.
-- [ ] 6.3 Validar composição com tipografia, botões e seções.
-- [ ] 6.4 Escrever testes de variantes, estrutura e estados interativos.
+- [x] 6.1 Implementar `Badge` com tons adequados ao sistema institucional.
+- [x] 6.2 Implementar `Card` como base de superfície reutilizável para blocos de conteúdo.
+- [x] 6.3 Validar composição com tipografia, botões e seções.
+- [x] 6.4 Escrever testes de variantes, estrutura e estados interativos.
 
 ## Detalhes de Implementação
 
@@ -46,9 +46,9 @@ Referenciar no `techspec.md` as seções:
 
 ## Testes da Tarefa
 
-- [ ] Validação com `npm run lint`
-- [ ] Validação com `npm run build`
-- [ ] Testes de componente ou composição, se aplicável
+- [x] Validação com `npm run lint`
+- [x] Validação com `npm run build`
+- [x] Testes de componente ou composição, se aplicável
 - [ ] Testes E2E (se aplicável)
 
 <critical>SEMPRE CRIE E EXECUTE OS TESTES DA TAREFA ANTES DE CONSIDERÁ-LA FINALIZADA</critical>

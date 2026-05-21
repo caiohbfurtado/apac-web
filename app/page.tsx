@@ -1,5 +1,5 @@
 import { Container, Section, Stack } from "@/components/layout";
-import { Heading, PrimaryButton, SecondaryButton, Text, WhatsAppButton } from "@/components/ui";
+import { Badge, Card, Heading, PrimaryButton, SecondaryButton, Text, WhatsAppButton } from "@/components/ui";
 
 export default function Home() {
   return (
@@ -216,6 +216,88 @@ export default function Home() {
                   </WhatsAppButton>
                 </Stack>
               </Stack>
+            </div>
+          </Stack>
+        </Section>
+        <Section
+          id="playground-badges-cards"
+          heading={
+            <Stack gap="sm">
+              <Heading as="h2" size="lg">
+                Playground de badges e cards
+              </Heading>
+              <Text tone="muted">
+                Variacoes representativas para validar tom, superficie, padding e estados interativos.
+              </Text>
+            </Stack>
+          }
+        >
+          <Stack gap="lg">
+            <div className="space-y-3">
+              <Text size="sm" tone="muted">
+                Badge (tones)
+              </Text>
+              <div className="flex flex-wrap items-center gap-3">
+                <Badge tone="default">Default</Badge>
+                <Badge tone="brand">Brand</Badge>
+                <Badge tone="success">Success</Badge>
+                <Badge tone="info">Info</Badge>
+              </div>
+            </div>
+            <div className="space-y-3">
+              <Text size="sm" tone="muted">
+                Card (surfaces e padding)
+              </Text>
+              <div className="grid gap-6 sm:grid-cols-2">
+                <Card
+                  surface="default"
+                  padding="sm"
+                  title="Card default sm"
+                  description="Base neutra para blocos institucionais."
+                  action={<PrimaryButton size="sm">Explorar</PrimaryButton>}
+                >
+                  <Text size="sm" tone="muted">
+                    Conteudo livre para descricao complementar.
+                  </Text>
+                </Card>
+                <Card
+                  surface="muted"
+                  padding="md"
+                  title="Card muted md"
+                  description="Superficie suave para agrupamentos recorrentes."
+                  action={<SecondaryButton size="sm">Saiba mais</SecondaryButton>}
+                />
+                <Card
+                  surface="brand"
+                  padding="lg"
+                  title="Card brand lg"
+                  description="Destaque institucional com camada de marca."
+                  action={<Badge tone="brand">Destaque</Badge>}
+                >
+                  <Text size="sm" tone="muted">
+                    Use com parcimonia para nao competir com o CTA principal.
+                  </Text>
+                </Card>
+                <Card
+                  interactive
+                  title="Card interativo"
+                  description="Valida foco visivel, hover e semantica segura."
+                  action={<Badge tone="info">Ativo</Badge>}
+                />
+              </div>
+            </div>
+            <div className="space-y-3">
+              <Text size="sm" tone="muted">
+                Card (link)
+              </Text>
+              <Card
+                as="a"
+                href="#playground-badges-cards"
+                interactive
+                title="Card como link"
+                description="Exemplo de card acionavel com semantica de link."
+                action={<Badge tone="info">Ancora</Badge>}
+              />
             </div>
           </Stack>
         </Section>

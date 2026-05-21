@@ -144,6 +144,14 @@ Regras:
 - Estados interativos precisam ter hover, focus e disabled coerentes quando aplicável.
 - Controles desabilitados não devem reagir ao hover; o estado precisa parecer neutro e não convidar interação.
 - Controles acionáveis devem sinalizar interatividade com cursor pointer; estados desabilitados usam cursor not-allowed e não aceitam hover.
+- `Badge` (`components/ui/Badge.tsx`): selo curto para categorias, estados e marcadores editoriais.
+  - Use `tone="default"` para metadados neutros, `tone="brand"` para destaques institucionais, `tone="success"` para estados positivos e `tone="info"` para chamadas informativas.
+  - Mantenha o texto curto e legível; badge não é conteúdo editorial longo.
+  - Preserve `rounded-pill`, caixa alta e tracking amplo para reforçar leitura estrutural.
+- `Card` (`components/ui/Card.tsx`): superfície reutilizável para blocos de conteúdo.
+  - Use `surface` (`default`/`muted`/`brand`) e `padding` (`sm`/`md`/`lg`) para variar densidade sem criar novas classes locais.
+  - Prefira `icon`, `title`, `description` e `action` como slots simples; use `children` para o corpo livre do card.
+  - Quando `interactive` estiver ativo, o card pode ganhar hover e leve elevação, mas sem virar um botão disfarçado.
 
 ### Conteúdo e hierarquia
 
