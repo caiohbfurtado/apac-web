@@ -1,5 +1,14 @@
 import editorialContent from "./home-editorial-content.json";
 
+type HomeEditorialSection<TItem> = {
+  section: {
+    id: string;
+    heading: string;
+    description?: string;
+  };
+  items: TItem[];
+};
+
 export type HomeCampaign = {
   slug: string;
   badge: string;
@@ -16,32 +25,18 @@ export type HomeSponsor = {
 };
 
 export type HomeEditorialContent = {
-  campaigns: {
-    section: {
-      id: string;
-      heading: string;
-      description?: string;
-    };
-    items: HomeCampaign[];
-  };
-  sponsors: {
-    section: {
-      id: string;
-      heading: string;
-      description?: string;
-    };
-    items: HomeSponsor[];
-  };
+  campaigns: HomeEditorialSection<HomeCampaign>;
+  sponsors: HomeEditorialSection<HomeSponsor>;
 };
 
 export const homeEditorialContent = editorialContent as HomeEditorialContent;
 
-export function shouldRenderCampaigns(campaigns: readonly HomeCampaign[] = homeEditorialContent.campaigns.items) {
-  return campaigns.length > 0;
+export function shouldRenderCampaigns(campaigns: HomeEditorialContent["campaigns"] = homeEditorialContent.campaigns) {
+  return campaigns.items.length > 0;
 }
 
-export function shouldRenderSponsors(sponsors: readonly HomeSponsor[] = homeEditorialContent.sponsors.items) {
-  return sponsors.length > 0;
+export function shouldRenderSponsors(sponsors: HomeEditorialContent["sponsors"] = homeEditorialContent.sponsors) {
+  return sponsors.items.length > 0;
 }
 
 export const hasCampaigns = shouldRenderCampaigns();

@@ -6,34 +6,62 @@ import {
 
 describe("home editorial content", () => {
   it("permite listas vazias sem forcar seções artificiais", () => {
-    expect(shouldRenderCampaigns([])).toBe(false);
-    expect(shouldRenderSponsors([])).toBe(false);
+    expect(
+      shouldRenderCampaigns({
+        section: {
+          id: "campanhas",
+          heading: "Campanhas em destaque",
+        },
+        items: [],
+      }),
+    ).toBe(false);
+    expect(
+      shouldRenderSponsors({
+        section: {
+          id: "patrocinadores",
+          heading: "Patrocinadores e apoiadores",
+        },
+        items: [],
+      }),
+    ).toBe(false);
   });
 
   it("reconhece listas com conteúdo real", () => {
     expect(
-      shouldRenderCampaigns([
-        {
-          slug: "campanha-teste",
-          badge: "Teste",
-          title: "Campanha teste",
-          description: "Descricao de teste",
-          href: "#",
+      shouldRenderCampaigns({
+        section: {
+          id: "campanhas",
+          heading: "Campanhas em destaque",
         },
-      ])
+        items: [
+          {
+            slug: "campanha-teste",
+            badge: "Teste",
+            title: "Campanha teste",
+            description: "Descricao de teste",
+            href: "#",
+          },
+        ],
+      }),
     ).toBe(true);
 
     expect(
-      shouldRenderSponsors([
-        {
-          name: "Patrocinador teste",
-          description: "Descricao de teste",
-          href: "#",
-          logoLabel: "PT",
+      shouldRenderSponsors({
+        section: {
+          id: "patrocinadores",
+          heading: "Patrocinadores e apoiadores",
         },
-      ])
+        items: [
+          {
+            name: "Patrocinador teste",
+            description: "Descricao de teste",
+            href: "#",
+            logoLabel: "PT",
+          },
+        ],
+      }),
     ).toBe(true);
 
-    expect(shouldRenderSponsors(homeEditorialContent.sponsors.items)).toBe(true);
+    expect(shouldRenderSponsors(homeEditorialContent.sponsors)).toBe(true);
   });
 });

@@ -3,14 +3,14 @@
     "section": {
       "id": "campanhas",
       "heading": "Campanhas em destaque",
-      "description": "Ações sazonais e mobilizações que aparecem na home apenas quando há conteúdo real para destacar."
+      "description": "Ações sazonais e mobilizações que aparecem na home apenas quando houver conteúdo local real para destacar."
     },
     "items": [
       {
         "slug": "cesta-de-cuidado",
         "badge": "Doacao",
         "title": "Cesta de cuidado",
-        "description": "Monte kits com itens essenciais para familias em tratamento prolongado.",
+        "description": "Monte kits com itens essenciais para famílias em tratamento prolongado.",
         "href": "mailto:contato@apac.org.br?subject=Quero%20apoiar%20a%20campanha%20Cesta%20de%20cuidado"
       },
       {
@@ -26,7 +26,7 @@
     "section": {
       "id": "patrocinadores",
       "heading": "Patrocinadores e apoiadores",
-      "description": "Marcas parceiras aparecem em tiles leves, com espaço reservado para logos enquanto os assets finais ainda não existem."
+      "description": "Marcas parceiras aparecem em tiles leves, com espaço reservado para logos quando houver material disponível."
     },
     "items": [
       {

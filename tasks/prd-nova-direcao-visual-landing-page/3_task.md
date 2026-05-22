@@ -23,9 +23,9 @@ Evoluir os contratos de conteúdo locais da home para suportar a nova narrativa 
 
 ## Subtarefas
 
-- [ ] 3.1 Atualizar `src/lib/home-content.ts` para acomodar os novos blocos e a hierarquia editorial necessária.
-- [ ] 3.2 Revisar `src/lib/home-editorial-content.ts` e `src/lib/home-editorial-content.json` para garantir compatibilidade com campanhas e apoiadores opcionais.
-- [ ] 3.3 Validar se os contratos de conteúdo permanecem simples, legíveis e sustentáveis para a composição da home.
+- [x] 3.1 Atualizar `src/lib/home-content.ts` para acomodar os novos blocos e a hierarquia editorial necessária.
+- [x] 3.2 Revisar `src/lib/home-editorial-content.ts` e `src/lib/home-editorial-content.json` para garantir compatibilidade com campanhas e apoiadores opcionais.
+- [x] 3.3 Validar se os contratos de conteúdo permanecem simples, legíveis e sustentáveis para a composição da home.
 
 ## Detalhes de Implementação
 
