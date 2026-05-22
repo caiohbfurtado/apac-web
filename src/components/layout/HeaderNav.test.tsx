@@ -24,6 +24,14 @@ describe("HeaderNav", () => {
       "href",
       "#como-ajudar",
     );
+    expect(screen.getByRole("link", { name: "Falar no WhatsApp" })).toHaveAttribute(
+      "href",
+      "https://wa.me/5511999999999",
+    );
+    expect(screen.getByRole("link", { name: "Falar no WhatsApp" })).toHaveAttribute(
+      "target",
+      "_blank",
+    );
   });
 
   it("toggles the mobile menu and supports closing on escape", () => {
@@ -35,13 +43,19 @@ describe("HeaderNav", () => {
     expect(toggleButton).toHaveAttribute("aria-expanded", "false");
     expect(desktopAcoesLink).toHaveAttribute("href", "#preciso-de-apoio");
     expect(screen.queryAllByRole("link", { name: "Preciso de apoio" })).toHaveLength(2);
+    expect(screen.getAllByRole("link", { name: "Falar no WhatsApp" })).toHaveLength(1);
 
     fireEvent.click(toggleButton);
 
     expect(toggleButton).toHaveAttribute("aria-expanded", "true");
     expect(screen.queryAllByRole("link", { name: "Preciso de apoio" })).toHaveLength(4);
+    expect(screen.getAllByRole("link", { name: "Falar no WhatsApp" })).toHaveLength(2);
     const mobileAcoesLink = screen.getAllByRole("link", { name: "Preciso de apoio" })[2];
     expect(mobileAcoesLink).toHaveAttribute("href", "#preciso-de-apoio");
+    expect(screen.getAllByRole("link", { name: "Falar no WhatsApp" })[1]).toHaveAttribute(
+      "href",
+      "https://wa.me/5511999999999",
+    );
 
     mobileAcoesLink.focus();
     fireEvent.keyDown(mobileAcoesLink, { key: "Escape" });
@@ -49,6 +63,7 @@ describe("HeaderNav", () => {
     expect(toggleButton).toHaveAttribute("aria-expanded", "false");
     expect(toggleButton).toHaveFocus();
     expect(screen.queryAllByRole("link", { name: "Preciso de apoio" })).toHaveLength(2);
+    expect(screen.getAllByRole("link", { name: "Falar no WhatsApp" })).toHaveLength(1);
   });
 
   it("closes mobile menu when clicking one of its links", () => {
@@ -62,5 +77,6 @@ describe("HeaderNav", () => {
 
     expect(toggleButton).toHaveAttribute("aria-expanded", "false");
     expect(screen.queryAllByRole("link", { name: "Preciso de apoio" })).toHaveLength(2);
+    expect(screen.getAllByRole("link", { name: "Falar no WhatsApp" })).toHaveLength(1);
   });
 });

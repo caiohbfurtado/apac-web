@@ -41,7 +41,6 @@ const footerContactLinks = {
   links: [
     { href: "tel:+551134560000", label: "(11) 3456-0000" },
     { href: "mailto:contato@apac.org.br", label: "contato@apac.org.br" },
-    { href: homeContent.hero.ctas.whatsapp.href, label: "WhatsApp", external: true },
   ],
 };
 
@@ -62,6 +61,7 @@ export default function Home() {
             variant: "secondary",
           },
         ]}
+        contactCta={homeContent.hero.ctas.whatsapp}
       />
 
       <Container className="py-8 sm:py-10 lg:py-12" size="wide" gutter="md">
@@ -79,7 +79,11 @@ export default function Home() {
         </Stack>
       </Container>
 
-      <Footer primaryLinks={footerPrimaryLinks} contactLinks={footerContactLinks} />
+      <Footer
+        primaryLinks={footerPrimaryLinks}
+        contactLinks={footerContactLinks}
+        contactCta={homeContent.hero.ctas.whatsapp}
+      />
     </main>
   );
 }

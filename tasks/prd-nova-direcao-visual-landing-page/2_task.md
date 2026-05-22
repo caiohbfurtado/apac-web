@@ -24,9 +24,9 @@ Atualizar a navegação principal, o menu mobile e o footer para refletirem melh
 
 ## Subtarefas
 
-- [ ] 2.1 Ajustar `HeaderNav` para refletir a nova hierarquia narrativa e os pontos de navegação da home.
-- [ ] 2.2 Refinar `HeaderNavMobileMenu` para uma experiência mobile clara, acessível e com CTAs acionáveis.
-- [ ] 2.3 Ajustar `Footer` para encerrar a jornada com consistência institucional e reforço de confiança/contato.
+- [x] 2.1 Ajustar `HeaderNav` para refletir a nova hierarquia narrativa e os pontos de navegação da home.
+- [x] 2.2 Refinar `HeaderNavMobileMenu` para uma experiência mobile clara, acessível e com CTAs acionáveis.
+- [x] 2.3 Ajustar `Footer` para encerrar a jornada com consistência institucional e reforço de confiança/contato.
 
 ## Detalhes de Implementação
 
@@ -44,9 +44,9 @@ Referenciar `techspec.md`, especialmente:
 
 ## Testes da Tarefa
 
-- [ ] Validação com `npm run lint`
-- [ ] Validação com `npm run build`
-- [ ] Atualização dos testes de `HeaderNav` e `Footer`, se aplicável
+- [x] Validação com `npm run lint`
+- [x] Validação com `npm run build`
+- [x] Atualização dos testes de `HeaderNav` e `Footer`, se aplicável
 - [ ] Testes E2E (se aplicável)
 
 <critical>SEMPRE CRIE E EXECUTE OS TESTES DA TAREFA ANTES DE CONSIDERÁ-LA FINALIZADA</critical>

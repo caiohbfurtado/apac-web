@@ -6,9 +6,9 @@ describe("Footer", () => {
     render(<Footer />);
 
     expect(screen.getByRole("contentinfo")).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /apoio, acolhimento/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /fale com a apac/i })).toBeInTheDocument();
     expect(
-      screen.getByText(/atendimento de segunda a sexta, das 8h as 18h/i),
+      screen.getByText(/atendimento, orientação e confirmação de visita pelos canais oficiais/i),
     ).toBeInTheDocument();
   });
 
@@ -36,6 +36,15 @@ describe("Footer", () => {
     expect(within(institutionalNav).getByRole("link", { name: "Quero ajudar" })).toHaveAttribute(
       "href",
       "#como-ajudar",
+    );
+
+    expect(screen.getByRole("link", { name: "Falar no WhatsApp" })).toHaveAttribute(
+      "href",
+      "https://wa.me/5511999999999",
+    );
+    expect(screen.getByRole("link", { name: "Falar no WhatsApp" })).toHaveAttribute(
+      "target",
+      "_blank",
     );
 
     expect(within(contactNav).getByRole("link", { name: "(11) 3456-0000" })).toHaveAttribute(

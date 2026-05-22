@@ -53,6 +53,10 @@ describe("Home", () => {
       "href",
       `#${homeContent.trust.id}`,
     );
+    expect(within(banner).getByRole("link", { name: "Falar no WhatsApp" })).toHaveAttribute(
+      "href",
+      homeContent.hero.ctas.whatsapp.href,
+    );
     expect(within(banner).getByRole("link", { name: "Quero ajudar" })).toHaveAttribute(
       "href",
       `#${homeContent.closing.id}`,
@@ -118,5 +122,9 @@ describe("Home", () => {
 
     expect(within(footerNav).getByRole("navigation", { name: "Links institucionais" })).toBeInTheDocument();
     expect(within(footerNav).getByRole("navigation", { name: "Canais de contato" })).toBeInTheDocument();
+    expect(within(footerNav).getByRole("link", { name: "Falar no WhatsApp" })).toHaveAttribute(
+      "href",
+      homeContent.hero.ctas.whatsapp.href,
+    );
   });
 });

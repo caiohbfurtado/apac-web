@@ -1,4 +1,4 @@
-import { Heading, Text } from "@/components/ui";
+import { Heading, Text, WhatsAppButton } from "@/components/ui";
 import { Container } from "./Container";
 import { Stack } from "./Stack";
 
@@ -13,6 +13,8 @@ type FooterLinkGroup = {
   links: FooterLink[];
   ariaLabel: string;
 };
+
+type FooterContactCta = FooterLink;
 
 const defaultPrimaryLinks: FooterLinkGroup = {
   title: "Institucional",
@@ -32,8 +34,13 @@ const defaultContactLinks: FooterLinkGroup = {
   links: [
     { href: "tel:+551134560000", label: "(11) 3456-0000" },
     { href: "mailto:contato@apac.org.br", label: "contato@apac.org.br" },
-    { href: "https://wa.me/5511999999999", label: "WhatsApp", external: true },
   ],
+};
+
+const defaultContactCta: FooterContactCta = {
+  href: "https://wa.me/5511999999999",
+  label: "Falar no WhatsApp",
+  external: true,
 };
 
 const defaultSocialLinks: FooterLink[] = [
@@ -45,12 +52,14 @@ const defaultSocialLinks: FooterLink[] = [
 export type FooterProps = {
   primaryLinks?: FooterLinkGroup;
   contactLinks?: FooterLinkGroup;
+  contactCta?: FooterContactCta;
   socialLinks?: FooterLink[];
 };
 
 export function Footer({
   primaryLinks = defaultPrimaryLinks,
   contactLinks = defaultContactLinks,
+  contactCta = defaultContactCta,
   socialLinks = defaultSocialLinks,
 }: FooterProps) {
   const year = new Date().getFullYear();
@@ -65,10 +74,10 @@ export function Footer({
                 APAC
               </span>
               <Heading as="h2" size="sm">
-                Apoio, acolhimento e orientacao para familias em tratamento.
+                Fale com a APAC
               </Heading>
               <Text size="sm" tone="muted">
-                Rua Exemplo, 123 - Sao Paulo/SP. Atendimento de segunda a sexta, das 8h as 18h.
+                Atendimento, orientação e confirmação de visita pelos canais oficiais.
               </Text>
             </Stack>
 
@@ -97,6 +106,15 @@ export function Footer({
                 <Heading as="h3" size="xs" className="tracking-[0.08em] uppercase">
                   {contactLinks.title}
                 </Heading>
+                <WhatsAppButton
+                  href={contactCta.href}
+                  size="sm"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="w-full sm:w-fit"
+                >
+                  {contactCta.label}
+                </WhatsAppButton>
                 <nav aria-label={contactLinks.ariaLabel}>
                   <ul className="space-y-2">
                     {contactLinks.links.map((link) => (

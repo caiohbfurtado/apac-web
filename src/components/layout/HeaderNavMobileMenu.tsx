@@ -1,7 +1,7 @@
 "use client";
 
 import { useId, useRef, useState } from "react";
-import { PrimaryButton, SecondaryButton } from "@/components/ui";
+import { PrimaryButton, SecondaryButton, WhatsAppButton } from "@/components/ui";
 import { cn } from "@/lib/cn";
 
 type NavItem = {
@@ -16,9 +16,13 @@ type HeaderNavMobileMenuProps = {
     label: string;
     variant: "primary" | "secondary";
   }[];
+  contactCta: {
+    href: string;
+    label: string;
+  };
 };
 
-export function HeaderNavMobileMenu({ items, ctas }: HeaderNavMobileMenuProps) {
+export function HeaderNavMobileMenu({ items, ctas, contactCta }: HeaderNavMobileMenuProps) {
   const [open, setOpen] = useState(false);
   const menuId = useId();
   const toggleRef = useRef<HTMLButtonElement>(null);
@@ -75,6 +79,14 @@ export function HeaderNavMobileMenu({ items, ctas }: HeaderNavMobileMenuProps) {
                 </SecondaryButton>
               ),
             )}
+            <WhatsAppButton
+              href={contactCta.href}
+              size="sm"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              {contactCta.label}
+            </WhatsAppButton>
           </div>
         </div>
       </div>

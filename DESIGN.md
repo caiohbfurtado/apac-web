@@ -171,10 +171,12 @@ Regras:
   - Preserve `header` + `nav` com `aria-label="Principal"` e links de seção previsíveis para escaneabilidade.
   - Em mobile, limite o `use client` ao controle de abertura/fechamento (`aria-expanded`, `aria-controls`, fechamento com `Escape`).
   - CTAs institucionais no topo devem manter semântica de link e foco visível em todos os breakpoints.
+  - O WhatsApp pode aparecer como CTA funcional secundária no header, desde que fique visualmente e hierarquicamente abaixo de `Preciso de apoio`.
 - `Footer` (`components/layout/Footer.tsx`): fechamento institucional com contato, atalhos de navegação e confiança de marca.
   - Preserve `footer` com landmark `contentinfo` e grupos de navegação nomeados (`aria-label`) para links institucionais, contato e redes.
   - Estruture o conteúdo com `Container`, `Stack`, `Heading` e `Text`, mantendo leitura clara em mobile e colunas progressivas em telas amplas.
   - Links externos de contato e redes devem usar `target="_blank"` com `rel="noreferrer noopener"` para segurança e consistência.
+  - O bloco de contato pode destacar o WhatsApp com uma ação primária de contato antes da lista de telefone e e-mail.
 - Primitives de formulário (`components/ui/Field.tsx`, `components/ui/Input.tsx`, `components/ui/Textarea.tsx`):
   - Use `Field` como wrapper padrão para garantir associação entre `label`, `hint`, `error` e controle.
   - Prefira `Input` para textos curtos e `Textarea` para descrições longas, sempre consumindo tokens de borda, foco e superfície.

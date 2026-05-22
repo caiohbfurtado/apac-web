@@ -1,4 +1,4 @@
-import { PrimaryButton, SecondaryButton } from "@/components/ui";
+import { PrimaryButton, SecondaryButton, WhatsAppButton } from "@/components/ui";
 import { HeaderNavMobileMenu } from "./HeaderNavMobileMenu";
 
 type NavItem = {
@@ -10,6 +10,11 @@ type HeaderNavCta = {
   href: string;
   label: string;
   variant: "primary" | "secondary";
+};
+
+type HeaderNavContactCta = {
+  href: string;
+  label: string;
 };
 
 const defaultNavItems = [
@@ -28,9 +33,19 @@ const defaultCtas = [
 export type HeaderNavProps = {
   items?: NavItem[];
   ctas?: HeaderNavCta[];
+  contactCta?: HeaderNavContactCta;
 };
 
-export function HeaderNav({ items = [...defaultNavItems], ctas = [...defaultCtas] }: HeaderNavProps) {
+const defaultContactCta: HeaderNavContactCta = {
+  href: "https://wa.me/5511999999999",
+  label: "Falar no WhatsApp",
+};
+
+export function HeaderNav({
+  items = [...defaultNavItems],
+  ctas = [...defaultCtas],
+  contactCta = defaultContactCta,
+}: HeaderNavProps) {
   return (
     <header className="sticky top-0 z-20 border-b border-line/80 bg-surface/90 backdrop-blur-sm">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-6 py-4 sm:px-10 lg:px-16">
@@ -65,9 +80,18 @@ export function HeaderNav({ items = [...defaultNavItems], ctas = [...defaultCtas
               </SecondaryButton>
             ),
           )}
+          <WhatsAppButton
+            href={contactCta.href}
+            size="sm"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="whitespace-nowrap"
+          >
+            {contactCta.label}
+          </WhatsAppButton>
         </div>
 
-        <HeaderNavMobileMenu items={items} ctas={ctas} />
+        <HeaderNavMobileMenu items={items} ctas={ctas} contactCta={contactCta} />
       </div>
     </header>
   );
