@@ -40,16 +40,16 @@ describe("Footer", () => {
 
     expect(screen.getByRole("link", { name: "Falar no WhatsApp" })).toHaveAttribute(
       "href",
-      "https://wa.me/5511999999999",
+      "https://wa.me/5515997268405",
     );
     expect(screen.getByRole("link", { name: "Falar no WhatsApp" })).toHaveAttribute(
       "target",
       "_blank",
     );
 
-    expect(within(contactNav).getByRole("link", { name: "(11) 3456-0000" })).toHaveAttribute(
+    expect(within(contactNav).getByRole("link", { name: "(15) 3456-0000" })).toHaveAttribute(
       "href",
-      "tel:+551134560000",
+      "tel:+551534560000",
     );
     expect(
       within(contactNav).getByRole("link", { name: "contato@apac.org.br" }),

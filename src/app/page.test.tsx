@@ -21,8 +21,10 @@ describe("Home", () => {
     ).toBeInTheDocument();
     expect(getByRole("heading", { name: "Como a APAC ajuda" })).toBeInTheDocument();
     expect(getByRole("heading", { name: "Preciso de apoio" })).toBeInTheDocument();
+    expect(getByRole("heading", { name: "Como ajudar" })).toBeInTheDocument();
     expect(getByRole("heading", { name: "Campanhas em destaque" })).toBeInTheDocument();
     expect(getByRole("heading", { name: "Transparência e confiança" })).toBeInTheDocument();
+    expect(getByRole("heading", { name: "Patrocinadores e apoiadores" })).toBeInTheDocument();
     expect(
       getByRole("heading", {
         name: "Sua contribuição amplia o cuidado.",
@@ -41,6 +43,10 @@ describe("Home", () => {
       "href",
       `#${homeContent.support.id}`,
     );
+    expect(within(headerNav).getByRole("link", { name: "Quero ajudar" })).toHaveAttribute(
+      "href",
+      `#${homeContent.contribution.id}`,
+    );
     expect(within(headerNav).getByRole("link", { name: "Campanhas" })).toHaveAttribute(
       "href",
       `#${homeEditorialContent.campaigns.section.id}`,
@@ -57,22 +63,49 @@ describe("Home", () => {
       "href",
       homeContent.hero.ctas.whatsapp.href,
     );
-    expect(within(banner).getByRole("link", { name: "Quero ajudar" })).toHaveAttribute(
-      "href",
-      `#${homeContent.closing.id}`,
-    );
+    expect(
+      within(banner)
+        .getAllByRole("link", { name: "Quero ajudar" })
+        .some((link) => link.getAttribute("href") === `#${homeContent.contribution.id}`),
+    ).toBe(true);
 
     [
       homeContent.hero.id,
       homeContent.institution.id,
       homeContent.support.id,
+      homeContent.contribution.id,
       homeEditorialContent.campaigns.section.id,
-      homeEditorialContent.sponsors.section.id,
       homeContent.trust.id,
+      homeEditorialContent.sponsors.section.id,
       homeContent.closing.id,
     ].forEach((sectionId) => {
       expect(document.getElementById(sectionId)).toBeInTheDocument();
     });
+
+    const narrativeOrder = [
+      homeContent.hero.id,
+      homeContent.institution.id,
+      homeContent.support.id,
+      homeContent.contribution.id,
+      homeEditorialContent.campaigns.section.id,
+      homeContent.trust.id,
+      homeEditorialContent.sponsors.section.id,
+      homeContent.closing.id,
+    ].map((sectionId) => document.getElementById(sectionId));
+
+    narrativeOrder.forEach((section) => {
+      expect(section).not.toBeNull();
+    });
+    expect(
+      narrativeOrder.every((section, index, sections) => {
+        if (!section || index === 0) {
+          return true;
+        }
+
+        const previousSection = sections[index - 1];
+        return previousSection ? previousSection.compareDocumentPosition(section) & Node.DOCUMENT_POSITION_FOLLOWING : false;
+      }),
+    ).toBe(true);
 
     const heroSection = document.getElementById(homeContent.hero.id);
     const supportSection = document.getElementById(homeContent.support.id);
@@ -102,7 +135,7 @@ describe("Home", () => {
       );
       expect(within(supportSection).getByRole("link", { name: "Ligar agora" })).toHaveAttribute(
         "href",
-        "tel:+551134560000",
+        "tel:+551534560000",
       );
     }
 
@@ -110,7 +143,7 @@ describe("Home", () => {
     const whatsappLinks = getAllByRole("link", { name: "Falar no WhatsApp" });
     expect(whatsappLinks.length).toBeGreaterThan(0);
     whatsappLinks.forEach((link) => {
-      expect(link).toHaveAttribute("href", "https://wa.me/5511999999999");
+      expect(link).toHaveAttribute("href", "https://wa.me/5515997268405");
     });
 
     expect(queryByRole("heading", { name: "Playground de botoes" })).not.toBeInTheDocument();

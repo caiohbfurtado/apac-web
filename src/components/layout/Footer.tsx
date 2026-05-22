@@ -32,13 +32,13 @@ const defaultContactLinks: FooterLinkGroup = {
   title: "Contato",
   ariaLabel: "Canais de contato",
   links: [
-    { href: "tel:+551134560000", label: "(11) 3456-0000" },
+    { href: "tel:+551534560000", label: "(15) 3456-0000" },
     { href: "mailto:contato@apac.org.br", label: "contato@apac.org.br" },
   ],
 };
 
 const defaultContactCta: FooterContactCta = {
-  href: "https://wa.me/5511999999999",
+  href: "https://wa.me/5515997268405",
   label: "Falar no WhatsApp",
   external: true,
 };

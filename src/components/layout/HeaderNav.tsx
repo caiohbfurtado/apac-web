@@ -37,7 +37,7 @@ export type HeaderNavProps = {
 };
 
 const defaultContactCta: HeaderNavContactCta = {
-  href: "https://wa.me/5511999999999",
+  href: "https://wa.me/5515997268405",
   label: "Falar no WhatsApp",
 };
 

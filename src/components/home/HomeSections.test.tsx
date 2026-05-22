@@ -1,7 +1,9 @@
-import { render, screen, within } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import {
   HomeCampaignsSection,
   HomeClosingSection,
+  HomeContributionSection,
+  HomeHighlightsBand,
   HomeHeroSection,
   HomeInstitutionSection,
   HomeSponsorsSection,
@@ -31,22 +33,30 @@ describe("HomeHeroSection", () => {
     ).toHaveAttribute("href", homeContent.hero.ctas.whatsapp.href);
   });
 
-  it("renders the institutional contact block and stable visual placeholder", () => {
+  it("renders the institutional contact block and stable visual motif", () => {
     render(<HomeHeroSection content={homeContent.hero} />);
 
-    const contactCard = screen.getByRole("heading", { name: "Fale com a APAC" }).closest("article");
-    expect(contactCard).toBeTruthy();
+    const contactHeading = screen.getByRole("heading", { name: "Fale com a APAC Boituva" });
     expect(screen.getByText(homeContent.hero.contact.description)).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /\(11\) 3456-0000/i })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /\(15\) 3456-0000/i })).toHaveAttribute(
       "href",
-      "tel:+551134560000",
+      "tel:+551534560000",
     );
     expect(screen.getByText(/escuta inicial, rede de apoio e acompanhamento contínuo/i)).toBeInTheDocument();
     expect(screen.queryByText(/espaço visual reservado/i)).not.toBeInTheDocument();
+    expect(contactHeading).toBeInTheDocument();
+    expect(screen.getByText(/Aqui você não está sozinho/i)).toBeInTheDocument();
+  });
+});
 
-    if (contactCard) {
-      expect(within(contactCard).getByText(homeContent.hero.contact.items[0].note)).toBeInTheDocument();
-    }
+describe("HomeHighlightsBand", () => {
+  it("renders a short institutional highlight band without requiring an orphan heading", () => {
+    render(<HomeHighlightsBand content={homeContent.hero} />);
+
+    expect(screen.getByLabelText("Destaques da atuação da APAC")).toBeInTheDocument();
+    homeContent.hero.highlights.forEach((highlight) => {
+      expect(screen.getByText(highlight.title)).toBeInTheDocument();
+    });
   });
 });
 
@@ -81,13 +91,33 @@ describe("HomeSupportSection", () => {
     expect(screen.getByText("Comece por aqui")).toBeInTheDocument();
     expect(screen.getByText("Escolha o canal")).toBeInTheDocument();
     expect(screen.getByText("Conte o contexto")).toBeInTheDocument();
-    expect(screen.getByText(/Depois do primeiro contato/i)).toBeInTheDocument();
+    expect(screen.getByText(/não coleta dados sensíveis/i)).toBeInTheDocument();
+    expect(screen.getByText(/emergência médica/i)).toBeInTheDocument();
+    expect(screen.getByText("WhatsApp")).toBeInTheDocument();
+    expect(screen.getByText("Telefone")).toBeInTheDocument();
+    expect(screen.getByText("Endereço")).toBeInTheDocument();
     expect(
-      screen.getByRole("link", { name: homeContent.hero.ctas.whatsapp.label }),
-    ).toHaveAttribute("href", homeContent.hero.ctas.whatsapp.href);
+      screen.getByRole("link", { name: homeContent.support.ctas.whatsapp.label }),
+    ).toHaveAttribute("href", homeContent.support.ctas.whatsapp.href);
     expect(
       screen.getByRole("link", { name: "Ligar agora" }),
-    ).toHaveAttribute("href", "tel:+551134560000");
+    ).toHaveAttribute("href", "tel:+551534560000");
+  });
+});
+
+describe("HomeContributionSection", () => {
+  it("renders differentiated contribution trails before the closing CTA", () => {
+    render(<HomeContributionSection content={homeContent.contribution} />);
+
+    expect(screen.getByRole("heading", { name: "Como ajudar" })).toBeInTheDocument();
+    expect(screen.getByText(homeContent.contribution.description)).toBeInTheDocument();
+    expect(screen.getByText("Doação financeira")).toBeInTheDocument();
+    expect(screen.getByText("Doar cabelo")).toBeInTheDocument();
+    expect(screen.getByText("Voluntariado")).toBeInTheDocument();
+    expect(screen.getByText("Apoio empresarial")).toBeInTheDocument();
+    expect(screen.getAllByRole("link", { name: /quero participar/i })).toHaveLength(
+      homeContent.contribution.trails.length,
+    );
   });
 });
 
@@ -100,7 +130,7 @@ describe("HomeTrustSection", () => {
         name: "Transparência e confiança",
       }),
     ).toBeInTheDocument();
-    expect(screen.getByText("Prestacao de contas")).toBeInTheDocument();
+    expect(screen.getByText("Prestação de contas")).toBeInTheDocument();
     expect(screen.getByText("Rede parceira")).toBeInTheDocument();
     expect(screen.getByText("Governança clara")).toBeInTheDocument();
   });
@@ -209,5 +239,8 @@ describe("HomeClosingSection", () => {
     expect(
       screen.getByRole("link", { name: homeContent.hero.ctas.support.label }),
     ).toHaveAttribute("href", homeContent.hero.ctas.support.href);
+    expect(
+      screen.getByRole("link", { name: homeContent.hero.ctas.whatsapp.label }),
+    ).toHaveAttribute("href", homeContent.hero.ctas.whatsapp.href);
   });
 });

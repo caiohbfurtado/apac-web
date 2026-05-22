@@ -25,9 +25,9 @@ Reconstruir a composição central da homepage em `HomeSections.tsx` para reflet
 
 ## Subtarefas
 
-- [ ] 4.1 Reestruturar o hero, a faixa de destaques e os blocos centrais para refletirem a nova direção editorial.
-- [ ] 4.2 Refatorar as seções de apoio, contribuição, transparência, campanhas e apoiadores com composições diferenciadas e reutilizáveis.
-- [ ] 4.3 Revisar a semântica, a ordem de headings, os landmarks e os estados condicionais das seções.
+- [x] 4.1 Reestruturar o hero, a faixa de destaques e os blocos centrais para refletirem a nova direção editorial.
+- [x] 4.2 Refatorar as seções de apoio, contribuição, transparência, campanhas e apoiadores com composições diferenciadas e reutilizáveis.
+- [x] 4.3 Revisar a semântica, a ordem de headings, os landmarks e os estados condicionais das seções.
 
 ## Detalhes de Implementação
 
@@ -45,10 +45,10 @@ Referenciar `techspec.md`, especialmente:
 
 ## Testes da Tarefa
 
-- [ ] Validação com `npm run lint`
-- [ ] Validação com `npm run build`
-- [ ] Atualização dos testes de `HomeSections` e composição da home, se aplicável
-- [ ] Testes E2E (se aplicável)
+- [x] Validação com `npm run lint`
+- [x] Validação com `npm run build`
+- [x] Atualização dos testes de `HomeSections` e composição da home, se aplicável
+- [x] Testes E2E (não aplicável nesta fase; tech spec prevê Jest/RTL e revisão visual manual)
 
 <critical>SEMPRE CRIE E EXECUTE OS TESTES DA TAREFA ANTES DE CONSIDERÁ-LA FINALIZADA</critical>
 

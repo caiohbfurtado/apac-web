@@ -8,8 +8,9 @@ describe("home content", () => {
     expect(homeContent.support.channels).toHaveLength(3);
     expect(homeContent.support.ctas.whatsapp.label).toBe("Falar no WhatsApp");
     expect(homeContent.support.ctas.phone.label).toBe("Ligar agora");
-    expect(homeContent.closing.trails).toHaveLength(4);
-    expect(homeContent.closing.trails[0].title).toBe("Doação financeira");
-    expect(homeContent.closing.trails[3].href).toContain("empresa");
+    expect(homeContent.contribution.trails).toHaveLength(4);
+    expect(homeContent.contribution.trails[0].title).toBe("Doação financeira");
+    expect(homeContent.contribution.trails[3].href).toContain("empresa");
+    expect(homeContent.closing.id).toBe("fechamento");
   });
 });

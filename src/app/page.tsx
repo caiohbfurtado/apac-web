@@ -2,6 +2,8 @@ import { Container, Footer, HeaderNav, Stack } from "@/components/layout";
 import {
   HomeCampaignsSection,
   HomeClosingSection,
+  HomeContributionSection,
+  HomeHighlightsBand,
   HomeHeroSection,
   HomeInstitutionSection,
   HomeSponsorsSection,
@@ -15,13 +17,14 @@ const headerItems = [
   { href: `#${homeContent.hero.id}`, label: "Início" },
   { href: `#${homeContent.institution.id}`, label: "Atuação" },
   { href: `#${homeContent.support.id}`, label: "Preciso de apoio" },
+  { href: `#${homeContent.contribution.id}`, label: "Quero ajudar" },
   ...(hasCampaigns
     ? [{ href: `#${homeEditorialContent.campaigns.section.id}`, label: "Campanhas" }]
     : []),
+  { href: `#${homeContent.trust.id}`, label: "Transparência" },
   ...(hasSponsors
     ? [{ href: `#${homeEditorialContent.sponsors.section.id}`, label: "Patrocinadores" }]
     : []),
-  { href: `#${homeContent.trust.id}`, label: "Transparência" },
 ] as const;
 
 const footerPrimaryLinks = {
@@ -31,7 +34,7 @@ const footerPrimaryLinks = {
     { href: `#${homeContent.hero.id}`, label: "Início" },
     { href: `#${homeContent.institution.id}`, label: "Atuação" },
     { href: `#${homeContent.support.id}`, label: "Preciso de apoio" },
-    { href: `#${homeContent.closing.id}`, label: "Quero ajudar" },
+    { href: `#${homeContent.contribution.id}`, label: "Quero ajudar" },
   ],
 };
 
@@ -39,7 +42,7 @@ const footerContactLinks = {
   title: "Contato",
   ariaLabel: "Canais de contato",
   links: [
-    { href: "tel:+551134560000", label: "(11) 3456-0000" },
+    { href: "tel:+551534560000", label: "(15) 3456-0000" },
     { href: "mailto:contato@apac.org.br", label: "contato@apac.org.br" },
   ],
 };
@@ -66,15 +69,17 @@ export default function Home() {
 
       <Container className="py-8 sm:py-10 lg:py-12" size="wide" gutter="md">
         <HomeHeroSection content={homeContent.hero} />
+        <HomeHighlightsBand content={homeContent.hero} />
       </Container>
 
       <Container className="pt-4 pb-16 sm:pt-6 sm:pb-18 lg:pt-8 lg:pb-20" size="wide" gutter="md">
-        <Stack gap="md">
+        <Stack gap="xl">
           <HomeInstitutionSection content={homeContent.institution} />
           <HomeSupportSection content={homeContent.support} />
+          <HomeContributionSection content={homeContent.contribution} />
           <HomeCampaignsSection content={homeEditorialContent.campaigns} />
-          <HomeSponsorsSection content={homeEditorialContent.sponsors} />
           <HomeTrustSection content={homeContent.trust} />
+          <HomeSponsorsSection content={homeEditorialContent.sponsors} />
           <HomeClosingSection content={homeContent.closing} />
         </Stack>
       </Container>

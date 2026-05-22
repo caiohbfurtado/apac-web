@@ -73,6 +73,16 @@ type HomeContent = {
       };
     };
   };
+  contribution: {
+    id: string;
+    heading: string;
+    description: string;
+    trails: ReadonlyArray<{
+      title: string;
+      description: string;
+      href: string;
+    }>;
+  };
   trust: {
     id: string;
     heading: string;
@@ -86,11 +96,6 @@ type HomeContent = {
     id: string;
     heading: string;
     description: string;
-    trails: ReadonlyArray<{
-      title: string;
-      description: string;
-      href: string;
-    }>;
   };
 };
 
@@ -100,7 +105,7 @@ export const homeContent = {
     badge: "Acolhimento e orientacao",
     title: "Acolhimento, apoio e esperança para pessoas em tratamento contra o câncer.",
     description:
-      "A APAC oferece suporte social, emocional e comunitário com orientação clara desde o primeiro contato.",
+      "A APAC Boituva oferece suporte social, emocional e comunitário para pacientes e famílias que enfrentam o tratamento contra o câncer.",
     highlights: [
       {
         title: "Acolhimento",
@@ -127,13 +132,13 @@ export const homeContent = {
       items: [
         {
           label: "Telefone",
-          value: "(11) 3456-0000",
-          note: "Segunda a sexta, das 8h às 18h.",
-          href: "tel:+551134560000",
+          value: "(15) 3456-0000",
+          note: "Segunda a sexta, das 8h às 17h.",
+          href: "tel:+551534560000",
         },
         {
           label: "Endereço",
-          value: "Rua Exemplo, 123 - Sao Paulo/SP",
+          value: "Rua Expedicionário Souza Filho, 288 - Centro, Boituva/SP",
           note: "Atendimento presencial mediante agendamento.",
         },
         {
@@ -153,7 +158,7 @@ export const homeContent = {
         label: "Quero ajudar",
       },
       whatsapp: {
-        href: "https://wa.me/5511999999999",
+        href: "https://wa.me/5515997268405",
         label: "Falar no WhatsApp",
       },
     },
@@ -206,13 +211,13 @@ export const homeContent = {
       {
         label: "WhatsApp",
         description: "Canal mais rápido para primeiro contato e orientação inicial.",
-        href: "https://wa.me/5511999999999",
+        href: "https://wa.me/5515997268405",
         note: "Resposta rápida para quem precisa falar agora.",
       },
       {
         label: "Telefone",
         description: "Atendimento direto para quem prefere uma conversa por voz.",
-        href: "tel:+551134560000",
+        href: "tel:+551534560000",
         note: "Ligação em horário comercial.",
       },
       {
@@ -233,41 +238,20 @@ export const homeContent = {
     ],
     ctas: {
       whatsapp: {
-        href: "https://wa.me/5511999999999",
+        href: "https://wa.me/5515997268405",
         label: "Falar no WhatsApp",
       },
       phone: {
-        href: "tel:+551134560000",
+        href: "tel:+551534560000",
         label: "Ligar agora",
       },
     },
   },
-  trust: {
-    id: "transparencia",
-    heading: "Transparência e confiança",
-    description:
-      "A credibilidade da APAC vem de prestação de contas, parcerias consistentes e comunicação objetiva.",
-    cards: [
-      {
-        title: "Prestacao de contas",
-        description: "Publicamos resultados e alocação de recursos em ciclos regulares.",
-      },
-      {
-        title: "Rede parceira",
-        description: "Atuamos com hospitais, equipes técnicas e voluntariado qualificado.",
-      },
-      {
-        title: "Governança clara",
-        description:
-          "Fluxos objetivos ajudam a equipe a responder com responsabilidade e previsibilidade.",
-      },
-    ],
-  },
-  closing: {
+  contribution: {
     id: "como-ajudar",
-    heading: "Sua contribuição amplia o cuidado.",
+    heading: "Como ajudar",
     description:
-      "Com doação recorrente, voluntariado ou divulgação, você fortalece uma rede que acolhe quem mais precisa.",
+      "Pequenas atitudes geram grandes transformações quando viram continuidade para quem precisa de cuidado.",
     trails: [
       {
         title: "Doação financeira",
@@ -290,5 +274,32 @@ export const homeContent = {
         href: "mailto:contato@apac.org.br?subject=Quero%20apoiar%20a%20APAC%20como%20empresa",
       },
     ],
+  },
+  trust: {
+    id: "transparencia",
+    heading: "Transparência e confiança",
+    description:
+      "A credibilidade da APAC vem de prestação de contas, parcerias consistentes e comunicação objetiva.",
+    cards: [
+      {
+        title: "Prestação de contas",
+        description: "Publicamos resultados e alocação de recursos em ciclos regulares.",
+      },
+      {
+        title: "Rede parceira",
+        description: "Atuamos com hospitais, equipes técnicas e voluntariado qualificado.",
+      },
+      {
+        title: "Governança clara",
+        description:
+          "Fluxos objetivos ajudam a equipe a responder com responsabilidade e previsibilidade.",
+      },
+    ],
+  },
+  closing: {
+    id: "fechamento",
+    heading: "Sua contribuição amplia o cuidado.",
+    description:
+      "Com doação recorrente, voluntariado ou divulgação, você fortalece uma rede que acolhe quem mais precisa.",
   },
 } as const satisfies HomeContent;

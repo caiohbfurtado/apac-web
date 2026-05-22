@@ -26,7 +26,7 @@ describe("HeaderNav", () => {
     );
     expect(screen.getByRole("link", { name: "Falar no WhatsApp" })).toHaveAttribute(
       "href",
-      "https://wa.me/5511999999999",
+      "https://wa.me/5515997268405",
     );
     expect(screen.getByRole("link", { name: "Falar no WhatsApp" })).toHaveAttribute(
       "target",
@@ -54,7 +54,7 @@ describe("HeaderNav", () => {
     expect(mobileAcoesLink).toHaveAttribute("href", "#preciso-de-apoio");
     expect(screen.getAllByRole("link", { name: "Falar no WhatsApp" })[1]).toHaveAttribute(
       "href",
-      "https://wa.me/5511999999999",
+      "https://wa.me/5515997268405",
     );
 
     mobileAcoesLink.focus();

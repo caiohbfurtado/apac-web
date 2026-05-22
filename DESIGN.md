@@ -192,7 +192,7 @@ Regras:
 
 ### Home one-page
 
-- A home da rota raiz deve seguir a sequência `fundacao` -> `atuacao` -> `preciso-de-apoio` -> `campanhas` -> `patrocinadores` -> `transparencia` -> `como-ajudar`.
+- A home da rota raiz deve seguir a sequência `fundacao` -> faixa institucional de destaques -> `atuacao` -> `preciso-de-apoio` -> `como-ajudar` -> `campanhas` -> `transparencia` -> `patrocinadores` -> `fechamento`.
 - Seções opcionais, como campanhas e patrocinadores, só devem aparecer quando houver conteúdo local para elas; quando vazias, a narrativa deve continuar equilibrada sem blocos órfãos.
 - Os links de navegação do header e do footer precisam apontar para IDs existentes na mesma página.
 - O bloco de apoio da home deve usar canais reais ou placeholders sem formulário falso; CTAs devem ser links ou botões com ação explícita.
@@ -201,6 +201,7 @@ Regras:
 - O bloco institucional do hero deve incluir um resumo de contato com telefone, endereço e horário, usando links simples quando aplicável e sem depender de formulário ou integração.
 - O suporte visual do hero deve viver como composição livre, sem um grande card externo envolvendo todo o conteúdo.
 - A faixa institucional seguinte ao hero pode usar três destaques curtos para introduzir o caminho da ONG antes da seção explicativa principal.
+- A faixa institucional seguinte ao hero pode usar até quatro destaques curtos, com ícones SVG simples e sem heading visível obrigatório, desde que use `aria-label` para contexto e não crie headings órfãos.
 - A seção `Como a APAC ajuda` deve combinar uma faixa de highlights com um trio de cards de apoio, evitando grids idênticos demais e mantendo o conteúdo escaneável.
 - A seção `Como a APAC ajuda` deve preferir uma narrativa vertical única, com poucos pontos bem separados e linguagem complementar em vez de duas colunas competindo por atenção.
 - A seção `Como a APAC ajuda` deve ocupar a largura útil da página sem texto lateral solto, para que a leitura siga um único fluxo visual.
@@ -212,8 +213,9 @@ Regras:
 - Em `Preciso de apoio`, evite repetir a mesma orientação em vários blocos; concentre a explicação na frase principal, no rail de início e na lista de canais.
 - Em `Preciso de apoio`, não usar uma tabela ou lista comparativa de canais; a composição deve terminar com CTAs diretas e uma frase de orientação final.
 - Em `Preciso de apoio`, os CTAs finais devem ser apenas dois: `Falar no WhatsApp` e `Ligar agora`.
+- A seção `Como ajudar` deve existir antes de campanhas e apresentar as trilhas de contribuição (`doação financeira`, `doar cabelo`, `voluntariado`, `apoio empresarial`) como lista editorial aberta ou surface única, não como grid homogêneo de features.
 - A seção de transparência deve usar três pontos de confiança bem definidos, com surfaces alternadas para diferenciar o bloco sem exagero cromático.
-- O fechamento da home deve reforçar a CTA final em uma surface de destaque e manter a hierarquia de `Quero ajudar` e `Preciso de apoio` sem competir com o hero.
+- O fechamento da home deve ter ID próprio (`fechamento`), reforçar a CTA final em uma surface de destaque e manter a hierarquia de `Quero ajudar`, `Preciso de apoio` e `Falar no WhatsApp` sem competir com o hero.
 - Evitar “boxes dentro de boxes” como padrão visual: prefira uma única superfície por seção e use listas abertas, divisores, alinhamentos e badges quando a informação precisar respirar.
 - Superfícies internas só devem existir quando houver um ganho claro de hierarquia, e nunca como repetição automática de card sobre card.
 - As seções institucionais centrais da home devem priorizar layout aberto; caixas mais fortes ficam reservadas para momentos realmente transacionais, como formulários ou fluxos de ação específicos.

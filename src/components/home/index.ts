@@ -1,6 +1,8 @@
 export {
   HomeCampaignsSection,
   HomeClosingSection,
+  HomeContributionSection,
+  HomeHighlightsBand,
   HomeHeroSection,
   HomeInstitutionSection,
   HomeSponsorsSection,
