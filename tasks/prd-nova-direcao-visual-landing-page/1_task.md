@@ -24,9 +24,9 @@ Preparar a fundação visual necessária para a nova direção da landing, ajust
 
 ## Subtarefas
 
-- [ ] 1.1 Revisar os tokens e regras globais atuais que impactam cor, espaçamento, largura de conteúdo, superfícies e sombras da homepage.
-- [ ] 1.2 Ajustar `src/app/globals.css` para suportar a nova direção visual com ritmo editorial mais intencional.
-- [ ] 1.3 Validar se os novos tokens e regras globais funcionam bem em desktop e mobile sem quebrar a base existente.
+- [x] 1.1 Revisar os tokens e regras globais atuais que impactam cor, espaçamento, largura de conteúdo, superfícies e sombras da homepage.
+- [x] 1.2 Ajustar `src/app/globals.css` para suportar a nova direção visual com ritmo editorial mais intencional.
+- [x] 1.3 Validar se os novos tokens e regras globais funcionam bem em desktop e mobile sem quebrar a base existente.
 
 ## Detalhes de Implementação
 
@@ -44,9 +44,9 @@ Referenciar `techspec.md`, especialmente:
 
 ## Testes da Tarefa
 
-- [ ] Validação com `npm run lint`
-- [ ] Validação com `npm run build`
-- [ ] Verificação visual manual da base em desktop e mobile
+- [x] Validação com `npm run lint`
+- [x] Validação com `npm run build`
+- [x] Verificação visual manual da base em desktop e mobile
 - [ ] Testes E2E (se aplicável)
 
 <critical>SEMPRE CRIE E EXECUTE OS TESTES DA TAREFA ANTES DE CONSIDERÁ-LA FINALIZADA</critical>

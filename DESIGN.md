@@ -30,7 +30,7 @@ Este documento registra os padrões visuais, princípios de interface e regras d
 
 ## Referência visual oficial
 
-- A referência visual deste ciclo está em [tasks/design-system-reference.png](/Users/caiobarutti/Documents/www/apac-web/tasks/design-system-reference.png).
+- A referência visual deste ciclo está em [tasks/new-design-v3.png](/Users/caiobarutti/Documents/www/apac-web/tasks/new-design-v3.png).
 - Este board é a fonte principal para cor, tipografia, espaçamento, cantos, sombras e composição do sistema.
 - O padrão visual deve parecer um sistema institucional refinado, não uma landing genérica nem um dashboard pesado.
 
@@ -79,7 +79,10 @@ Regras:
 - Texto principal: `--foreground`
 - Superfície padrão: `--surface`
 - Superfície suave: `--surface-muted`
+- Superfície elevada: `--surface-elevated`
+- Superfície de acento suave: `--surface-tint`
 - Linha e contorno: `--line`
+- Linha suave de destaque: `--line-soft`
 - Cor de destaque institucional: `--accent`
 - Estado de destaque forte: `--accent-strong`
 - Variação suave de destaque: `--accent-soft`
@@ -94,27 +97,37 @@ Regras:
 - Azul e amarelo existem como cores de suporte para informação e atenção, sem competir com o acento principal.
 - Não introduzir novas cores de marca por conveniência local.
 - Estados não podem depender só de cor para comunicar significado.
+- O fundo base deve continuar claro, mas pode usar variações muito suaves de rosa e verde para dar profundidade editorial sem competir com o conteúdo.
 
 ### Espaçamento, raio e sombra
 
 - Escala base de spacing: `--spacing`
+- Largura útil principal: `--content-measure`
+- Largura útil ampla: `--content-measure-wide`
+- Ritmo vertical de seção: `--section-gap`
+- Ritmo vertical compacto: `--section-gap-tight`
 - Raios padrão: `--radius-xs`, `--radius-sm`, `--radius-md`, `--radius-lg`, `--radius-button`, `--radius-card`, `--radius-surface`, `--radius-pill`
-- Sombras padrão: `--shadow-soft`, `--shadow-card`
+- Sombras padrão: `--shadow-soft`, `--shadow-card`, `--shadow-elevated`
 
 Regras:
 
 - Prefira a escala existente antes de adicionar valores arbitrários.
 - Se um novo valor for recorrente, promova-o a token antes de espalhá-lo em componentes.
+- Use `--content-measure` para leitura editorial confortável e `--content-measure-wide` apenas quando a composição pedir mais respiro horizontal.
+- Se uma seção precisa parecer mais próxima da superfície do fundo, prefira `--shadow-soft`; se ela precisa se destacar como bloco principal, use `--shadow-card` ou `--shadow-elevated`.
 
 ### Motion
 
 - Curva principal: `--ease-standard`
+- Curva de ênfase: `--ease-emphasis`
 - Animação inicial disponível: `--animate-fade-in-up`
+- Animações auxiliares: `--animate-fade-in`, `--animate-rise-soft`
 - `prefers-reduced-motion` deve sempre ser respeitado
 
 Regras:
 
 - Motion deve ser curta, suave e funcional.
+- Use animações leves para revelar conteúdo e reforçar hierarquia, não para decorar a interface.
 - Evite animações chamativas, contínuas ou decorativas sem propósito claro.
 
 ## Regras de interface
@@ -125,6 +138,7 @@ Regras:
 - Expandir para múltiplas colunas só quando o conteúdo realmente pedir.
 - CTA principal pode ocupar largura total em mobile.
 - Containers e seções futuras devem preservar leitura confortável e respiro consistente.
+- O corpo da página pode usar gradientes muito sutis e camadas de sombra para criar profundidade, mas nunca uma aparência pesada ou hospitalar.
 
 #### Primitives de layout
 
