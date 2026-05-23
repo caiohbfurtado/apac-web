@@ -23,9 +23,9 @@ Atualizar `src/app/page.tsx` para integrar a nova composição da landing instit
 
 ## Subtarefas
 
-- [ ] 5.1 Integrar a composição refatorada da home em `src/app/page.tsx`.
-- [ ] 5.2 Garantir que a página continue montando corretamente campanhas e apoiadores apenas quando houver conteúdo.
-- [ ] 5.3 Revisar a experiência final da rota `/` com foco em estabilidade estrutural, landmarks e continuidade narrativa.
+- [x] 5.1 Integrar a composição refatorada da home em `src/app/page.tsx`.
+- [x] 5.2 Garantir que a página continue montando corretamente campanhas e apoiadores apenas quando houver conteúdo.
+- [x] 5.3 Revisar a experiência final da rota `/` com foco em estabilidade estrutural, landmarks e continuidade narrativa.
 
 ## Detalhes de Implementação
 
@@ -43,10 +43,10 @@ Referenciar `techspec.md`, especialmente:
 
 ## Testes da Tarefa
 
-- [ ] Validação com `npm run lint`
-- [ ] Validação com `npm run build`
-- [ ] Atualização dos testes de `src/app/page.test.tsx`, se aplicável
-- [ ] Testes E2E (se aplicável)
+- [x] Validação com `npm run lint`
+- [x] Validação com `npm run build`
+- [x] Atualização dos testes de `src/app/page.test.tsx`, se aplicável
+- [x] Testes E2E (não aplicável nesta fase, conforme `techspec.md`)
 
 <critical>SEMPRE CRIE E EXECUTE OS TESTES DA TAREFA ANTES DE CONSIDERÁ-LA FINALIZADA</critical>
 

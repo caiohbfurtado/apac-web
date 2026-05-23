@@ -11,32 +11,12 @@ import {
   HomeTrustSection,
 } from "@/components/home";
 import { homeContent } from "@/lib/home-content";
-import { hasCampaigns, hasSponsors, homeEditorialContent } from "@/lib/home-editorial-content";
-
-const headerItems = [
-  { href: `#${homeContent.hero.id}`, label: "Início" },
-  { href: `#${homeContent.institution.id}`, label: "Atuação" },
-  { href: `#${homeContent.support.id}`, label: "Preciso de apoio" },
-  { href: `#${homeContent.contribution.id}`, label: "Quero ajudar" },
-  ...(hasCampaigns
-    ? [{ href: `#${homeEditorialContent.campaigns.section.id}`, label: "Campanhas" }]
-    : []),
-  { href: `#${homeContent.trust.id}`, label: "Transparência" },
-  ...(hasSponsors
-    ? [{ href: `#${homeEditorialContent.sponsors.section.id}`, label: "Patrocinadores" }]
-    : []),
-] as const;
-
-const footerPrimaryLinks = {
-  title: "Institucional",
-  ariaLabel: "Links institucionais",
-  links: [
-    { href: `#${homeContent.hero.id}`, label: "Início" },
-    { href: `#${homeContent.institution.id}`, label: "Atuação" },
-    { href: `#${homeContent.support.id}`, label: "Preciso de apoio" },
-    { href: `#${homeContent.contribution.id}`, label: "Quero ajudar" },
-  ],
-};
+import {
+  homeEditorialContent,
+  shouldRenderCampaigns,
+  shouldRenderSponsors,
+  type HomeEditorialContent,
+} from "@/lib/home-editorial-content";
 
 const footerContactLinks = {
   title: "Contato",
@@ -47,11 +27,49 @@ const footerContactLinks = {
   ],
 };
 
-export default function Home() {
+type HomePageProps = {
+  editorialContent?: HomeEditorialContent;
+};
+
+function buildHeaderItems(editorialContent: HomeEditorialContent) {
+  const hasCampaigns = shouldRenderCampaigns(editorialContent.campaigns);
+  const hasSponsors = shouldRenderSponsors(editorialContent.sponsors);
+
+  return [
+    { href: `#${homeContent.hero.id}`, label: "Início" },
+    { href: `#${homeContent.institution.id}`, label: "Atuação" },
+    { href: `#${homeContent.support.id}`, label: "Preciso de apoio" },
+    { href: `#${homeContent.contribution.id}`, label: "Quero ajudar" },
+    ...(hasCampaigns
+      ? [{ href: `#${editorialContent.campaigns.section.id}`, label: "Campanhas" }]
+      : []),
+    { href: `#${homeContent.trust.id}`, label: "Transparência" },
+    ...(hasSponsors
+      ? [{ href: `#${editorialContent.sponsors.section.id}`, label: "Patrocinadores" }]
+      : []),
+  ] as const;
+}
+
+const footerPrimaryLinks = {
+  title: "Institucional",
+  ariaLabel: "Links institucionais",
+  links: [
+    { href: `#${homeContent.hero.id}`, label: "Início" },
+    { href: `#${homeContent.institution.id}`, label: "Atuação" },
+    { href: `#${homeContent.support.id}`, label: "Preciso de apoio" },
+    { href: `#${homeContent.trust.id}`, label: "Transparência" },
+    { href: `#${homeContent.contribution.id}`, label: "Quero ajudar" },
+  ],
+};
+
+export function HomePage({ editorialContent = homeEditorialContent }: HomePageProps) {
+  const hasCampaigns = shouldRenderCampaigns(editorialContent.campaigns);
+  const hasSponsors = shouldRenderSponsors(editorialContent.sponsors);
+
   return (
     <main>
       <HeaderNav
-        items={[...headerItems]}
+        items={[...buildHeaderItems(editorialContent)]}
         ctas={[
           {
             href: homeContent.hero.ctas.support.href,
@@ -77,9 +95,9 @@ export default function Home() {
           <HomeInstitutionSection content={homeContent.institution} />
           <HomeSupportSection content={homeContent.support} />
           <HomeContributionSection content={homeContent.contribution} />
-          <HomeCampaignsSection content={homeEditorialContent.campaigns} />
+          {hasCampaigns ? <HomeCampaignsSection content={editorialContent.campaigns} /> : null}
           <HomeTrustSection content={homeContent.trust} />
-          <HomeSponsorsSection content={homeEditorialContent.sponsors} />
+          {hasSponsors ? <HomeSponsorsSection content={editorialContent.sponsors} /> : null}
           <HomeClosingSection content={homeContent.closing} />
         </Stack>
       </Container>
@@ -91,4 +109,8 @@ export default function Home() {
       />
     </main>
   );
+}
+
+export default function Home() {
+  return <HomePage />;
 }

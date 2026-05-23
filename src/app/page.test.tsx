@@ -1,12 +1,21 @@
-import Home from "@/app/page";
+import { HomePage } from "@/app/page";
 import { homeContent } from "@/lib/home-content";
-import { homeEditorialContent } from "@/lib/home-editorial-content";
+import { type HomeEditorialContent, homeEditorialContent } from "@/lib/home-editorial-content";
 import { renderWithProviders } from "@/test/test-utils";
 import { within } from "@testing-library/react";
 
-describe("Home", () => {
+function createEditorialContent(
+  overrides: Partial<HomeEditorialContent> = {},
+): HomeEditorialContent {
+  return {
+    campaigns: overrides.campaigns ?? homeEditorialContent.campaigns,
+    sponsors: overrides.sponsors ?? homeEditorialContent.sponsors,
+  };
+}
+
+describe("HomePage", () => {
   it("renderiza landing institucional com landmarks, regioes e CTAs principais", () => {
-    const { getByRole, getAllByRole, queryByRole, queryByText } = renderWithProviders(<Home />);
+    const { getByRole, getAllByRole, queryByRole, queryByText } = renderWithProviders(<HomePage />);
     const banner = getByRole("banner");
     const headerNav = getByRole("navigation", { name: "Principal" });
     const footerNav = getByRole("contentinfo");
@@ -155,9 +164,51 @@ describe("Home", () => {
 
     expect(within(footerNav).getByRole("navigation", { name: "Links institucionais" })).toBeInTheDocument();
     expect(within(footerNav).getByRole("navigation", { name: "Canais de contato" })).toBeInTheDocument();
+    expect(within(footerNav).getByRole("link", { name: "Transparência" })).toHaveAttribute(
+      "href",
+      `#${homeContent.trust.id}`,
+    );
     expect(within(footerNav).getByRole("link", { name: "Falar no WhatsApp" })).toHaveAttribute(
       "href",
       homeContent.hero.ctas.whatsapp.href,
     );
+  });
+
+  it("omite a secao de campanhas e o link de ancora quando nao houver campanhas", () => {
+    const editorialContent = createEditorialContent({
+      campaigns: {
+        ...homeEditorialContent.campaigns,
+        items: [],
+      },
+    });
+
+    const { getByRole, queryByRole } = renderWithProviders(
+      <HomePage editorialContent={editorialContent} />,
+    );
+    const headerNav = getByRole("navigation", { name: "Principal" });
+
+    expect(queryByRole("heading", { name: "Campanhas em destaque" })).not.toBeInTheDocument();
+    expect(within(headerNav).queryByRole("link", { name: "Campanhas" })).not.toBeInTheDocument();
+    expect(document.getElementById(homeEditorialContent.campaigns.section.id)).not.toBeInTheDocument();
+    expect(getByRole("heading", { name: "Patrocinadores e apoiadores" })).toBeInTheDocument();
+  });
+
+  it("omite a secao de apoiadores e o link de ancora quando nao houver patrocinadores", () => {
+    const editorialContent = createEditorialContent({
+      sponsors: {
+        ...homeEditorialContent.sponsors,
+        items: [],
+      },
+    });
+
+    const { getByRole, queryByRole } = renderWithProviders(
+      <HomePage editorialContent={editorialContent} />,
+    );
+    const headerNav = getByRole("navigation", { name: "Principal" });
+
+    expect(queryByRole("heading", { name: "Patrocinadores e apoiadores" })).not.toBeInTheDocument();
+    expect(within(headerNav).queryByRole("link", { name: "Patrocinadores" })).not.toBeInTheDocument();
+    expect(document.getElementById(homeEditorialContent.sponsors.section.id)).not.toBeInTheDocument();
+    expect(getByRole("heading", { name: "Campanhas em destaque" })).toBeInTheDocument();
   });
 });
