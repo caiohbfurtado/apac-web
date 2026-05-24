@@ -1,0 +1,11 @@
+{
+  "browser": {
+    "contextOptions": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    }
+  },
+  "capabilities": ["core", "testing", "storage", "network", "devtools"]
+}

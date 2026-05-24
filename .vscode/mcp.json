@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest",
+        "--config",
+        "/Users/caiobarutti/Documents/www/apac-web/playwright.mcp.config.json"
+      ]
+    }
+  }
+}
