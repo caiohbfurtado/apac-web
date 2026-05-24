@@ -67,7 +67,7 @@ export function HomePage({ editorialContent = homeEditorialContent }: HomePagePr
   const hasSponsors = shouldRenderSponsors(editorialContent.sponsors);
 
   return (
-    <main>
+    <>
       <HeaderNav
         items={[...buildHeaderItems(editorialContent)]}
         ctas={[
@@ -85,29 +85,31 @@ export function HomePage({ editorialContent = homeEditorialContent }: HomePagePr
         contactCta={homeContent.hero.ctas.whatsapp}
       />
 
-      <Container className="py-8 sm:py-10 lg:py-12" size="wide" gutter="md">
-        <HomeHeroSection content={homeContent.hero} />
-        <HomeHighlightsBand content={homeContent.hero} />
-      </Container>
+      <main id="main-content">
+        <Container className="py-8 sm:py-10 lg:py-12" size="wide" gutter="md">
+          <HomeHeroSection content={homeContent.hero} />
+          <HomeHighlightsBand content={homeContent.hero} />
+        </Container>
 
-      <Container className="pt-4 pb-16 sm:pt-6 sm:pb-18 lg:pt-8 lg:pb-20" size="wide" gutter="md">
-        <Stack gap="xl">
-          <HomeInstitutionSection content={homeContent.institution} />
-          <HomeSupportSection content={homeContent.support} />
-          <HomeContributionSection content={homeContent.contribution} />
-          {hasCampaigns ? <HomeCampaignsSection content={editorialContent.campaigns} /> : null}
-          <HomeTrustSection content={homeContent.trust} />
-          {hasSponsors ? <HomeSponsorsSection content={editorialContent.sponsors} /> : null}
-          <HomeClosingSection content={homeContent.closing} />
-        </Stack>
-      </Container>
+        <Container className="pt-4 pb-16 sm:pt-6 sm:pb-18 lg:pt-8 lg:pb-20" size="wide" gutter="md">
+          <Stack gap="xl">
+            <HomeInstitutionSection content={homeContent.institution} />
+            <HomeSupportSection content={homeContent.support} />
+            <HomeContributionSection content={homeContent.contribution} />
+            {hasCampaigns ? <HomeCampaignsSection content={editorialContent.campaigns} /> : null}
+            <HomeTrustSection content={homeContent.trust} />
+            {hasSponsors ? <HomeSponsorsSection content={editorialContent.sponsors} /> : null}
+            <HomeClosingSection content={homeContent.closing} />
+          </Stack>
+        </Container>
+      </main>
 
       <Footer
         primaryLinks={footerPrimaryLinks}
         contactLinks={footerContactLinks}
         contactCta={homeContent.hero.ctas.whatsapp}
       />
-    </main>
+    </>
   );
 }
 

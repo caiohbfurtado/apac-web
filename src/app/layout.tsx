@@ -54,6 +54,12 @@ export default function RootLayout({
       className={`${brandSans.variable} ${brandDisplay.variable} ${brandMono.variable} h-full bg-canvas text-ink antialiased`}
     >
       <body suppressHydrationWarning className="min-h-full font-sans text-base leading-7">
+        <a
+          href="#main-content"
+          className="sr-only fixed top-4 left-4 z-50 rounded-button bg-surface px-4 py-3 text-sm font-semibold text-ink shadow-card focus:not-sr-only"
+        >
+          Pular para o conteúdo principal
+        </a>
         <div className="flex min-h-full flex-col">{children}</div>
       </body>
     </html>

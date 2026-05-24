@@ -223,10 +223,12 @@ Regras:
 ### Acessibilidade
 
 - Meta de WCAG AA.
+- O layout raiz deve expor um skip link visível em foco apontando para `#main-content`.
 - Foco visível sempre presente.
 - Labels, hints e mensagens de erro devem ser associados semanticamente.
 - Estrutura de headings deve refletir a hierarquia real da página.
 - Navegação por teclado deve continuar funcional em todos os fluxos interativos.
+- `#main-content` e seções com âncoras internas precisam de `scroll-margin-top` suficiente para não ficarem escondidos sob o header sticky.
 
 ## Regras de implementação
 

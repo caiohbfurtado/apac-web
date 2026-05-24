@@ -6,7 +6,10 @@ describe("RootLayout", () => {
     const layout = RootLayout({
       children: <main>Conteudo institucional</main>,
     }) as ReactElement<{
-      children: ReactElement<{ children: ReactNode; className: string }>;
+      children: ReactElement<{
+        children: [ReactElement<{ href: string; children: ReactNode }>, ReactElement<{ children: ReactNode; className: string }>];
+        className: string;
+      }>;
       className: string;
       lang: string;
     }>;
@@ -15,8 +18,13 @@ describe("RootLayout", () => {
     expect(layout.props.className).toContain("bg-canvas");
 
     const body = layout.props.children;
+    const [skipLink, wrapper] = body.props.children;
+
     expect(body.props.className).toContain("font-sans");
     expect(body.props.className).toContain("leading-7");
+    expect(skipLink.props.href).toBe("#main-content");
+    expect(skipLink.props.children).toBe("Pular para o conteúdo principal");
+    expect(wrapper.props.className).toContain("flex");
   });
 
   it("expõe metadata institucional base", () => {

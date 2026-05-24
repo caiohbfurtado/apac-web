@@ -167,6 +167,11 @@
     isolation: isolate;
   }
 
+  main[id],
+  main [id] {
+    scroll-margin-top: clamp(5rem, 10vw, 7rem);
+  }
+
   ::selection {
     background: rgb(230 0 126 / 0.16);
   }

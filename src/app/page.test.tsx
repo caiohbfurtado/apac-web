@@ -17,25 +17,31 @@ describe("HomePage", () => {
   it("renderiza landing institucional com landmarks, regioes e CTAs principais", () => {
     const { getByRole, getAllByRole, queryByRole, queryByText } = renderWithProviders(<HomePage />);
     const banner = getByRole("banner");
+    const main = getByRole("main");
     const headerNav = getByRole("navigation", { name: "Principal" });
     const footerNav = getByRole("contentinfo");
 
     expect(getByRole("banner")).toBeInTheDocument();
+    expect(main).toHaveAttribute("id", "main-content");
     expect(getByRole("contentinfo")).toBeInTheDocument();
+    expect(main).not.toContainElement(banner);
+    expect(main).not.toContainElement(footerNav);
 
     expect(
       getByRole("heading", {
+        level: 1,
         name: /acolhimento, apoio e esperança para pessoas em tratamento contra o câncer/i,
       })
     ).toBeInTheDocument();
-    expect(getByRole("heading", { name: "Como a APAC ajuda" })).toBeInTheDocument();
-    expect(getByRole("heading", { name: "Preciso de apoio" })).toBeInTheDocument();
-    expect(getByRole("heading", { name: "Como ajudar" })).toBeInTheDocument();
-    expect(getByRole("heading", { name: "Campanhas em destaque" })).toBeInTheDocument();
-    expect(getByRole("heading", { name: "Transparência e confiança" })).toBeInTheDocument();
-    expect(getByRole("heading", { name: "Patrocinadores e apoiadores" })).toBeInTheDocument();
+    expect(getByRole("heading", { level: 2, name: "Como a APAC ajuda" })).toBeInTheDocument();
+    expect(getByRole("heading", { level: 2, name: "Preciso de apoio" })).toBeInTheDocument();
+    expect(getByRole("heading", { level: 2, name: "Como ajudar" })).toBeInTheDocument();
+    expect(getByRole("heading", { level: 2, name: "Campanhas em destaque" })).toBeInTheDocument();
+    expect(getByRole("heading", { level: 2, name: "Transparência e confiança" })).toBeInTheDocument();
+    expect(getByRole("heading", { level: 2, name: "Patrocinadores e apoiadores" })).toBeInTheDocument();
     expect(
       getByRole("heading", {
+        level: 2,
         name: "Sua contribuição amplia o cuidado.",
       }),
     ).toBeInTheDocument();
@@ -123,6 +129,17 @@ describe("HomePage", () => {
     expect(supportSection).not.toBeNull();
 
     if (heroSection) {
+      const heroLinks = within(heroSection).getAllByRole("link");
+      const heroCtas = heroLinks
+        .map((link) => link.textContent?.trim())
+        .filter((label): label is string =>
+          [
+            homeContent.hero.ctas.support.label,
+            homeContent.hero.ctas.help.label,
+            homeContent.hero.ctas.whatsapp.label,
+          ].includes(label ?? ""),
+        );
+
       expect(within(heroSection).getByRole("link", { name: homeContent.hero.ctas.support.label })).toHaveAttribute(
         "href",
         homeContent.hero.ctas.support.href,
@@ -135,6 +152,11 @@ describe("HomePage", () => {
         "href",
         homeContent.hero.ctas.whatsapp.href,
       );
+      expect(heroCtas).toEqual([
+        homeContent.hero.ctas.support.label,
+        homeContent.hero.ctas.help.label,
+        homeContent.hero.ctas.whatsapp.label,
+      ]);
     }
 
     if (supportSection) {
@@ -172,6 +194,21 @@ describe("HomePage", () => {
       "href",
       homeContent.hero.ctas.whatsapp.href,
     );
+
+    const closingSection = document.getElementById(homeContent.closing.id);
+    expect(closingSection).not.toBeNull();
+
+    if (closingSection) {
+      const closingCtas = within(closingSection)
+        .getAllByRole("link")
+        .map((link) => link.textContent?.trim());
+
+      expect(closingCtas).toEqual([
+        homeContent.hero.ctas.help.label,
+        homeContent.hero.ctas.support.label,
+        homeContent.hero.ctas.whatsapp.label,
+      ]);
+    }
   });
 
   it("omite a secao de campanhas e o link de ancora quando nao houver campanhas", () => {
@@ -210,5 +247,41 @@ describe("HomePage", () => {
     expect(within(headerNav).queryByRole("link", { name: "Patrocinadores" })).not.toBeInTheDocument();
     expect(document.getElementById(homeEditorialContent.sponsors.section.id)).not.toBeInTheDocument();
     expect(getByRole("heading", { name: "Campanhas em destaque" })).toBeInTheDocument();
+  });
+
+  it("mantem a narrativa equilibrada quando campanhas e apoiadores nao estiverem disponiveis", () => {
+    const editorialContent = createEditorialContent({
+      campaigns: {
+        ...homeEditorialContent.campaigns,
+        items: [],
+      },
+      sponsors: {
+        ...homeEditorialContent.sponsors,
+        items: [],
+      },
+    });
+
+    const { getByRole, queryByRole } = renderWithProviders(
+      <HomePage editorialContent={editorialContent} />,
+    );
+    const headerNav = getByRole("navigation", { name: "Principal" });
+
+    expect(queryByRole("heading", { name: "Campanhas em destaque" })).not.toBeInTheDocument();
+    expect(queryByRole("heading", { name: "Patrocinadores e apoiadores" })).not.toBeInTheDocument();
+    expect(within(headerNav).queryByRole("link", { name: "Campanhas" })).not.toBeInTheDocument();
+    expect(within(headerNav).queryByRole("link", { name: "Patrocinadores" })).not.toBeInTheDocument();
+
+    const supportSection = document.getElementById(homeContent.support.id);
+    const trustSection = document.getElementById(homeContent.trust.id);
+    const closingSection = document.getElementById(homeContent.closing.id);
+
+    expect(supportSection).not.toBeNull();
+    expect(trustSection).not.toBeNull();
+    expect(closingSection).not.toBeNull();
+
+    if (supportSection && trustSection && closingSection) {
+      expect(supportSection.compareDocumentPosition(trustSection) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+      expect(trustSection.compareDocumentPosition(closingSection) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    }
   });
 });

@@ -23,9 +23,9 @@ Consolidar a validação técnica e funcional da nova landing com atualização 
 
 ## Subtarefas
 
-- [ ] 6.1 Atualizar testes unitários e de composição relacionados à home, header, footer e seções institucionais.
-- [ ] 6.2 Executar verificações de acessibilidade e semântica previstas no escopo da landing.
-- [ ] 6.3 Rodar as validações finais do projeto e registrar eventuais ajustes necessários antes de considerar a feature pronta.
+- [x] 6.1 Atualizar testes unitários e de composição relacionados à home, header, footer e seções institucionais.
+- [x] 6.2 Executar verificações de acessibilidade e semântica previstas no escopo da landing.
+- [x] 6.3 Rodar as validações finais do projeto e registrar eventuais ajustes necessários antes de considerar a feature pronta.
 
 ## Detalhes de Implementação
 
@@ -43,10 +43,10 @@ Referenciar `techspec.md`, especialmente:
 
 ## Testes da Tarefa
 
-- [ ] Validação com `npm run lint`
-- [ ] Validação com `npm run build`
-- [ ] Execução dos testes relevantes da homepage e componentes relacionados
-- [ ] Testes E2E (se aplicável)
+- [x] Validação com `npm run lint`
+- [x] Validação com `npm run build`
+- [x] Execução dos testes relevantes da homepage e componentes relacionados
+- [x] Testes E2E (não aplicável nesta fase; o tech spec mantém a cobertura em `Jest` + `React Testing Library`)
 
 <critical>SEMPRE CRIE E EXECUTE OS TESTES DA TAREFA ANTES DE CONSIDERÁ-LA FINALIZADA</critical>
 
@@ -58,3 +58,13 @@ Referenciar `techspec.md`, especialmente:
 - `src/components/home/HomeSections.tsx`
 - `src/components/layout/HeaderNav.tsx`
 - `src/components/layout/Footer.tsx`
+
+## Registro de Execução
+
+- Cobertura reforçada em `src/app/page.test.tsx` e `src/app/layout.test.tsx` para landmarks, ordem narrativa, hierarquia de headings, hierarquia de CTAs e cenários sem campanhas e sem apoiadores.
+- Acessibilidade ajustada com skip link para `#main-content`, `header` e `footer` fora de `main` e compensação de `scroll-margin-top` no alvo principal e nas âncoras internas.
+- Validações executadas:
+  - `npm test -- --runTestsByPath src/app/layout.test.tsx src/app/page.test.tsx src/components/layout/HeaderNav.test.tsx src/components/layout/Footer.test.tsx src/components/home/HomeSections.test.tsx`
+  - `npm run lint`
+  - `npm run build`
+- Review concluída com status `APROVADO` em `tasks/prd-nova-direcao-visual-landing-page/6_task_review.md`.

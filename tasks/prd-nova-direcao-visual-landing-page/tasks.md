@@ -7,4 +7,4 @@
 - [x] 3.0 Reestruturar contratos de conteúdo da landing
 - [x] 4.0 Refatorar a composição principal das seções da homepage
 - [x] 5.0 Integrar a nova narrativa na rota `/`
-- [ ] 6.0 Validar comportamento, acessibilidade e qualidade
+- [x] 6.0 Validar comportamento, acessibilidade e qualidade
